@@ -126,5 +126,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             timer2.Start();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login dashboard = new Login();
+            dashboard.Show();   
+        }
     }
 }

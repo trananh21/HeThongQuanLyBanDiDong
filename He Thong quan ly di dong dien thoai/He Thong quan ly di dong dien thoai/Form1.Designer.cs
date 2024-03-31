@@ -54,6 +54,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_ddQuanLy = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.paneldropdown = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -63,10 +67,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_logo = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.panel_ddQuanLy = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.Bt_QuanLy = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -117,9 +117,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_ddQuanLy.SuspendLayout();
             this.paneldropdown.SuspendLayout();
             this.panel_logo.SuspendLayout();
-            this.panel_ddQuanLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -185,6 +185,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button1.TabIndex = 5;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -426,6 +427,60 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel2.Size = new System.Drawing.Size(220, 984);
             this.panel2.TabIndex = 12;
             // 
+            // panel_ddQuanLy
+            // 
+            this.panel_ddQuanLy.Controls.Add(this.pictureBox18);
+            this.panel_ddQuanLy.Controls.Add(this.button9);
+            this.panel_ddQuanLy.Controls.Add(this.button8);
+            this.panel_ddQuanLy.Controls.Add(this.button2);
+            this.panel_ddQuanLy.Controls.Add(this.Bt_QuanLy);
+            this.panel_ddQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_ddQuanLy.Location = new System.Drawing.Point(0, 247);
+            this.panel_ddQuanLy.MaximumSize = new System.Drawing.Size(220, 250);
+            this.panel_ddQuanLy.MinimumSize = new System.Drawing.Size(220, 60);
+            this.panel_ddQuanLy.Name = "panel_ddQuanLy";
+            this.panel_ddQuanLy.Size = new System.Drawing.Size(220, 60);
+            this.panel_ddQuanLy.TabIndex = 3;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button9.Location = new System.Drawing.Point(0, 160);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(220, 50);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Khuyến Mãi";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button8.Location = new System.Drawing.Point(0, 110);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(220, 50);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Nhân viên";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(0, 60);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(220, 50);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Báo Cáo và thông kê";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // paneldropdown
             // 
             this.paneldropdown.Controls.Add(this.pictureBox1);
@@ -526,60 +581,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             // 
             this.timer2.Interval = 15;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // panel_ddQuanLy
-            // 
-            this.panel_ddQuanLy.Controls.Add(this.pictureBox18);
-            this.panel_ddQuanLy.Controls.Add(this.button9);
-            this.panel_ddQuanLy.Controls.Add(this.button8);
-            this.panel_ddQuanLy.Controls.Add(this.button2);
-            this.panel_ddQuanLy.Controls.Add(this.Bt_QuanLy);
-            this.panel_ddQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_ddQuanLy.Location = new System.Drawing.Point(0, 247);
-            this.panel_ddQuanLy.MaximumSize = new System.Drawing.Size(220, 250);
-            this.panel_ddQuanLy.MinimumSize = new System.Drawing.Size(220, 60);
-            this.panel_ddQuanLy.Name = "panel_ddQuanLy";
-            this.panel_ddQuanLy.Size = new System.Drawing.Size(220, 60);
-            this.panel_ddQuanLy.TabIndex = 3;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(0, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Báo Cáo và thông kê";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(0, 110);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(220, 50);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Nhân viên";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(0, 160);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(220, 50);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Khuyến Mãi";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // pictureBox18
             // 
@@ -1146,9 +1147,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel_ddQuanLy.ResumeLayout(false);
             this.paneldropdown.ResumeLayout(false);
             this.panel_logo.ResumeLayout(false);
-            this.panel_ddQuanLy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
