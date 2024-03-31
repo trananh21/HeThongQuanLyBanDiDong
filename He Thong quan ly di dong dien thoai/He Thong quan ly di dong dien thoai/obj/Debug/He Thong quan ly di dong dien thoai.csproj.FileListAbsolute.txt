@@ -1,0 +1,19 @@
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.exe.config
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.exe
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.pdb
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.AssemblyReference.cache
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.resources
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.GenerateResource.cache
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.CoreCompileInputs.cache
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.exe
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.pdb
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\Bunifu.Licensing.dll
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\Bunifu.UI.WinForms.dll
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\Guna.UI2.dll
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\MetroFramework.Design.dll
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\MetroFramework.dll
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.CopyComplete
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\84346\source\repos\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.btu_QuanLy.resources
