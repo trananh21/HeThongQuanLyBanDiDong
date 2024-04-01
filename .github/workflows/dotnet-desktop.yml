@@ -58,9 +58,6 @@ jobs:
     env:
       Solution_Name: He_Thong_quan_ly_di_dong_dien_thoai.sln # Replace with your solution name, i.e. MyWpfApp.sln.
       Test_Project_Path: He_Thong_quan_ly_di_dong_dien_thoai/He_Thong_quan_ly_di_dong_dien_thoai/He_Thong_quan_ly_di_dong_dien_thoai.csproj # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
-      Wap_Project_Directory: He_Thong_quan_ly_di_dong_dien_thoai.Package    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
-      Wap_Project_Path: He_Thong_quan_ly_di_dong_dien_thoai.Package.wapproj  # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
-
     steps:
     - name: Checkout
       uses: actions/checkout@v4
