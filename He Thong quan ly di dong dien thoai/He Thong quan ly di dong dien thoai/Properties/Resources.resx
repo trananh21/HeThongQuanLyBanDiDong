@@ -127,6 +127,9 @@
   <data name="icondropDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icondropDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="background-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconExpand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconExpand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,9 +166,6 @@
   <data name="icon-delete-white-color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-delete-white-color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icondropDown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icondropDown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon-dropdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-dropdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,6 +180,9 @@
   </data>
   <data name="iPhone-11-64GB-Chính-hãng-VN-A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iPhone-11-64GB-Chính-hãng-VN-A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OPPO-Find-N3-16GB-512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OPPO-Find-N3-16GB-512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,10 +205,10 @@
   <data name="icon-dropdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-dropdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OPPO-Find-N3-16GB-512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OPPO-Find-N3-16GB-512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icondropDown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icondropDown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

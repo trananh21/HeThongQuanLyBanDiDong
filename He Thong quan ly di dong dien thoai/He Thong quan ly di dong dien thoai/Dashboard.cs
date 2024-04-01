@@ -117,5 +117,17 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             sanphamForm.Show();
             this.Hide(); // Ẩn form Dashboard nếu bạn muốn
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            // Hiển thị form Sản phẩm
+            SanPham formSanPham = new SanPham();
+            formSanPham.ShowDialog();
+
+            // Hiển thị lại form Dashboard sau khi đóng form Sản phẩm
+            this.Show();
+        }
     }
 }

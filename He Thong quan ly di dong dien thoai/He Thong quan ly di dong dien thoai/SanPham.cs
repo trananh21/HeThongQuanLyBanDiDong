@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using He_Thong_quan_ly_di_dong_dien_thoai.Properties;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class SanPham : Form
@@ -39,7 +39,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void guna2CircleButton2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Login : Form
     {
-        private string connectionString = "Data Source=VICTORE\\SQLEXPRESS01;Initial Catalog=quanlybdtdd;Integrated Security=True;";
+        private string connectionString = "Data Source=PEGGY;Initial Catalog=qlbdtdd;Integrated Security=True;";
         public Login()
         {
             InitializeComponent();

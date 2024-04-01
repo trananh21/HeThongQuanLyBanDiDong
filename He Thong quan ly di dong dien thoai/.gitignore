@@ -1,0 +1,8 @@
+# Ignore Visual Studio temporary files and folders
+.vs/
+*.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.sln.ide
