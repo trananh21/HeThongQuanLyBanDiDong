@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
-    public partial class btu_QuanLy : Form
+    public partial class form1 : Form
     {
         
         private float radius;
         private bool isCollapsed;
        
-        public btu_QuanLy()
+        public form1()
         {
             InitializeComponent();
             RoundPanel(panel, 20);

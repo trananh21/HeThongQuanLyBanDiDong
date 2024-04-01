@@ -16,7 +16,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new btu_QuanLy());
+            Application.Run(new form1());
         }
     }
 }
