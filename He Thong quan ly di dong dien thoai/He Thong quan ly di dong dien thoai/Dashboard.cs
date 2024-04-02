@@ -103,7 +103,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void label10_Click(object sender, EventArgs e)
         {
-
+            timer3.Start();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -128,6 +128,36 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
             // Hiển thị lại form Dashboard sau khi đóng form Sản phẩm
             this.Show();
+        }
+
+        private void panelLogout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer3_Tick_1(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                //Bt_QuanLy.Image = Resources.icondropDown;
+                panelLogout.Height += 10;
+                if (panelLogout.Size == panelLogout.MaximumSize)
+                {
+                    timer3.Stop();
+                    isCollapsed = false;
+                }
+
+            }
+            else
+            {
+                //Bt_QuanLy.Image = Resources.IconExpand;
+                panelLogout.Height -= 10;
+                if (panelLogout.Size == panelLogout.MinimumSize)
+                {
+                    timer3.Stop();
+                    isCollapsed = true;
+                }
+            }
         }
     }
 }
