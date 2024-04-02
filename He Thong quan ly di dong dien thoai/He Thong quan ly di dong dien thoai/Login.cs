@@ -17,24 +17,28 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         public Login()
         {
             InitializeComponent();
+            txtUsername.KeyPress += TextBox_KeyPressEnter;
+            txtPassword.KeyPress += TextBox_KeyPressEnter;
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-       
-        private void btn_login_Click(object sender, EventArgs e)
-        {
-          
-        }
+
 
         private void guna2ControlBox1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void TextBox_KeyPressEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                PerformLogin();
+            }
+        }
+        private void PerformLogin()
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
@@ -51,6 +55,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             {
                 MessageBox.Show("Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.");
             }
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            PerformLogin();
         }
         private bool AuthenticateUser(string username, string password)
         {
