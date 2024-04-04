@@ -51,7 +51,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = @"SELECT * FROM SanPham WHERE MaSanPham = @MaSanPham1 OR TenSanPham LIKE @TenSanPham1+'%' ORDER BY MaSanPham ASC";
+                cmd.CommandText = @"SELECT sp.MaSanPham, sp.TenSanPham, sp.MaDanhMuc, sp.Gia, sp.MoTa, dm.TenDanhMuc 
+                                    FROM SanPham sp
+                                    INNER JOIN DanhMucSanPham dm ON sp.MaDanhMuc = dm.MaDanhMuc
+                                    WHERE sp.MaSanPham = @MaSanPham1 OR sp.TenSanPham LIKE @TenSanPham1 + '%'
+                                    ORDER BY sp.MaSanPham ASC;
+                                   ";
                 cmd.Parameters.Add(@"MaSanPham1", SqlDbType.Int).Value = spMaSanPham;
                 cmd.Parameters.Add(@"TenSanPham1", SqlDbType.NVarChar).Value = spTenSanPham;
                 //cmd.Parameters.Add(@"MaDanhMuc", SqlDbType.Int).Value = spMaDanhMuc1;
@@ -64,6 +69,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                         var spModel = new SPModel();
                         spModel.MaSanPham1 = (int)reader[0];
                         spModel.TenSanPham1 = reader[1].ToString();
+                        spModel.TenDanhMuc1 = reader[2].ToString();
                         spModel.MaDanhMuc1 = (int)reader[2];
                         spModel.Gia1 = (decimal)reader[3]; 
                         spModel.MoTa1 = reader[4].ToString();

@@ -4,6 +4,7 @@ GO
 USE qlbdtdd
 GO
 
+
 -- Bảng danh mục sản phẩm
 CREATE TABLE DanhMucSanPham (
     MaDanhMuc INT PRIMARY KEY IDENTITY,
