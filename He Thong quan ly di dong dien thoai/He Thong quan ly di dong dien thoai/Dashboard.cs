@@ -159,5 +159,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 }
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

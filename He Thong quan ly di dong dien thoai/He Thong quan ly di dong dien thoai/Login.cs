@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Data.SqlClient;
+using System.Configuration;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Login : Form
     {
-        private string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=qlbdtdd;Integrated Security=True;";
+        string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         public Login()
         {
             InitializeComponent();

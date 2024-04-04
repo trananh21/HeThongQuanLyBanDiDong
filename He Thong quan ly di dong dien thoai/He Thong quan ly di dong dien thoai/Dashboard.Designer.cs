@@ -1133,6 +1133,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.label2.TabIndex = 1;
             this.label2.Text = "Iphone 15 Pro Max 1TB | Chính hãng\r\n44.990.000 đ\r\nUNETI SMARTPHONE\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox19
             // 
