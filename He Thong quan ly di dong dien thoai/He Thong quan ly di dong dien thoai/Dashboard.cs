@@ -9,17 +9,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using He_Thong_quan_ly_di_dong_dien_thoai.View;
+using He_Thong_quan_ly_di_dong_dien_thoai._Repositories;
+using He_Thong_quan_ly_di_dong_dien_thoai.Presenter;
+using He_Thong_quan_ly_di_dong_dien_thoai.Model;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Dashboard : Form
     {
+        private ProductPresenter productPresenter;
         private bool isCollapsed;
-        public Dashboard(string username)
+        public Dashboard(string username, iSPRepository repository)
         {
             InitializeComponent();
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
+            productPresenter = new ProductPresenter(new productView(), repository);
         }
+        private Dashboard formCon;
+        private BindingSource spBlingdingSource;
+
+        private void OpenFormCon(Form childForm)
+        {
+            if (formCon != null)
+            {
+                formCon.Close();
+            }
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel_Body.Controls.Add(childForm);
+            panel_Body.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
@@ -113,21 +139,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SanPham sanphamForm = new SanPham();
-            sanphamForm.Show();
-            this.Hide(); // Ẩn form Dashboard nếu bạn muốn
+            
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-
-            // Hiển thị form Sản phẩm
-            SanPham formSanPham = new SanPham();
-            formSanPham.ShowDialog();
-
-            // Hiển thị lại form Dashboard sau khi đóng form Sản phẩm
-            this.Show();
+            OpenFormCon(productPresenter.GetProductViewForm());
         }
 
         private void panelLogout_Paint(object sender, PaintEventArgs e)

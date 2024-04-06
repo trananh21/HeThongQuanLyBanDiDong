@@ -24,8 +24,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             iSPView view = new productView();
             iSPRepository repository = new SpRepository(sqlConnectionString);
             new ProductPresenter(view, repository);
-            //Application.Run(new form1());
-            Application.Run((Form)view);
+            //Application.Run(new Dashboard("", repository));
+            Application.Run(new Login());
+            //Application.Run((Form)view);
+
         }
     }
 }

@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Data.SqlClient;
 using System.Configuration;
+using He_Thong_quan_ly_di_dong_dien_thoai._Repositories;
+using He_Thong_quan_ly_di_dong_dien_thoai.Model;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Login : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        
         public Login()
         {
             InitializeComponent();
@@ -43,11 +46,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-
+            iSPRepository repository = new SpRepository(connectionString);
             if (AuthenticateUser(username, password))
             {
                 this.Hide();
-                Dashboard dboard = new Dashboard(username);
+                Dashboard dboard = new Dashboard(username, repository);
                 dboard.Show();
                 this.Hide();
                 // Thực hiện các hành động sau khi đăng nhập thành công

@@ -55,7 +55,6 @@ D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly d
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.form1.resources
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.Login.resources
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.resources
-D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.SanPham.resources
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.GenerateResource.cache
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.CoreCompileInputs.cache
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong.F54CD154.Up2Date
