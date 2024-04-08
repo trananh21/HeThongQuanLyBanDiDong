@@ -165,6 +165,27 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             dgvSanPham.DataSource = productList;
         }
 
+
+        // duy nhat 1 form san pham khi nhan vao nut san pham 
+        private static productView instance; 
+        public static productView GetInstance(Form parentContainer)
+        {
+            if(instance == null || instance.IsDisposed)
+            {
+                instance = new productView();
+                instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            } 
+            else
+            {
+                if(instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
 

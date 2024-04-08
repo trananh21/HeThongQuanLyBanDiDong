@@ -33,47 +33,51 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelLogout = new System.Windows.Forms.Panel();
             this.guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.lblHelloAdmin = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_ddQuanLy = new System.Windows.Forms.Panel();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Bt_QuanLy = new System.Windows.Forms.Button();
             this.paneldropdown = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
-            this.btu_danhmuc = new System.Windows.Forms.Button();
-            this.icbtu_Trangchu = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.Bt_QuanLy = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btu_danhmuc = new System.Windows.Forms.Button();
+            this.icbtu_Trangchu = new FontAwesome.Sharp.IconButton();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelLogout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel_ddQuanLy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.paneldropdown.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.panel1.Controls.Add(this.guna2ControlBox4);
+            this.panel1.Controls.Add(this.guna2ControlBox3);
             this.panel1.Controls.Add(this.panelLogout);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.guna2ControlBox2);
@@ -81,7 +85,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 112);
+            this.panel1.Size = new System.Drawing.Size(1100, 112);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -90,7 +94,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panelLogout.Controls.Add(this.guna2Button18);
             this.panelLogout.Controls.Add(this.pictureBoxIcon);
             this.panelLogout.Controls.Add(this.lblHelloAdmin);
-            this.panelLogout.Location = new System.Drawing.Point(968, 3);
+            this.panelLogout.Location = new System.Drawing.Point(216, 3);
             this.panelLogout.MaximumSize = new System.Drawing.Size(250, 85);
             this.panelLogout.MinimumSize = new System.Drawing.Size(250, 41);
             this.panelLogout.Name = "panelLogout";
@@ -115,15 +119,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button18.TabIndex = 5;
             this.guna2Button18.Text = "Đăng xuất";
             // 
-            // pictureBoxIcon
-            // 
-            this.pictureBoxIcon.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(20, 20);
-            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxIcon.TabIndex = 4;
-            this.pictureBoxIcon.TabStop = false;
-            // 
             // lblHelloAdmin
             // 
             this.lblHelloAdmin.AutoSize = true;
@@ -141,19 +136,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(217, 112);
+            this.panel3.Size = new System.Drawing.Size(200, 112);
             this.panel3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources._430862985_371150232405676_9062037825342231506_n;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // guna2ControlBox2
             // 
@@ -161,7 +145,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1202, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(210, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(63, 41);
             this.guna2ControlBox2.TabIndex = 1;
@@ -172,7 +156,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1271, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(279, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(63, 41);
             this.guna2ControlBox1.TabIndex = 0;
@@ -187,7 +171,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 112);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 635);
+            this.panel2.Size = new System.Drawing.Size(200, 635);
             this.panel2.TabIndex = 1;
             // 
             // panel_ddQuanLy
@@ -204,16 +188,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_ddQuanLy.Name = "panel_ddQuanLy";
             this.panel_ddQuanLy.Size = new System.Drawing.Size(220, 60);
             this.panel_ddQuanLy.TabIndex = 5;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_admin;
-            this.pictureBox18.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 4;
-            this.pictureBox18.TabStop = false;
             // 
             // button9
             // 
@@ -254,24 +228,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button2.Text = "Báo Cáo và thông kê";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Bt_QuanLy
-            // 
-            this.Bt_QuanLy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Bt_QuanLy.FlatAppearance.BorderSize = 0;
-            this.Bt_QuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bt_QuanLy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_QuanLy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Bt_QuanLy.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
-            this.Bt_QuanLy.Location = new System.Drawing.Point(0, 0);
-            this.Bt_QuanLy.Name = "Bt_QuanLy";
-            this.Bt_QuanLy.Size = new System.Drawing.Size(220, 60);
-            this.Bt_QuanLy.TabIndex = 0;
-            this.Bt_QuanLy.Text = "Quản Lý";
-            this.Bt_QuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Bt_QuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Bt_QuanLy.UseVisualStyleBackColor = true;
-            this.Bt_QuanLy.Click += new System.EventHandler(this.Bt_QuanLy_Click);
-            // 
             // paneldropdown
             // 
             this.paneldropdown.Controls.Add(this.pictureBox2);
@@ -288,16 +244,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.paneldropdown.Name = "paneldropdown";
             this.paneldropdown.Size = new System.Drawing.Size(220, 60);
             this.paneldropdown.TabIndex = 4;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_menu3;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
             // 
             // button7
             // 
@@ -370,6 +316,89 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btnSP.UseVisualStyleBackColor = true;
             this.btnSP.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 15;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 15;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
+            // 
+            // panel_Body
+            // 
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_Body.Location = new System.Drawing.Point(197, 112);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(903, 635);
+            this.panel_Body.TabIndex = 15;
+            // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1052, 3);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox3.TabIndex = 6;
+            this.guna2ControlBox3.Click += new System.EventHandler(this.guna2ControlBox3_Click);
+            // 
+            // guna2ControlBox4
+            // 
+            this.guna2ControlBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox4.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(177)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox4.Location = new System.Drawing.Point(1001, 3);
+            this.guna2ControlBox4.Name = "guna2ControlBox4";
+            this.guna2ControlBox4.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox4.TabIndex = 6;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_admin;
+            this.pictureBox18.Location = new System.Drawing.Point(8, 11);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 4;
+            this.pictureBox18.TabStop = false;
+            // 
+            // Bt_QuanLy
+            // 
+            this.Bt_QuanLy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Bt_QuanLy.FlatAppearance.BorderSize = 0;
+            this.Bt_QuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bt_QuanLy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_QuanLy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Bt_QuanLy.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
+            this.Bt_QuanLy.Location = new System.Drawing.Point(0, 0);
+            this.Bt_QuanLy.Name = "Bt_QuanLy";
+            this.Bt_QuanLy.Size = new System.Drawing.Size(220, 60);
+            this.Bt_QuanLy.TabIndex = 0;
+            this.Bt_QuanLy.Text = "Quản Lý";
+            this.Bt_QuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bt_QuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.Bt_QuanLy.UseVisualStyleBackColor = true;
+            this.Bt_QuanLy.Click += new System.EventHandler(this.Bt_QuanLy_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_menu3;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // btu_danhmuc
             // 
             this.btu_danhmuc.Dock = System.Windows.Forms.DockStyle.Top;
@@ -400,42 +429,41 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.icbtu_Trangchu.IconChar = FontAwesome.Sharp.IconChar.House;
             this.icbtu_Trangchu.IconColor = System.Drawing.Color.White;
             this.icbtu_Trangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtu_Trangchu.IconSize = 40;
+            this.icbtu_Trangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtu_Trangchu.Location = new System.Drawing.Point(0, 0);
             this.icbtu_Trangchu.Name = "icbtu_Trangchu";
-            this.icbtu_Trangchu.Size = new System.Drawing.Size(220, 60);
+            this.icbtu_Trangchu.Size = new System.Drawing.Size(200, 60);
             this.icbtu_Trangchu.TabIndex = 2;
-            this.icbtu_Trangchu.Text = "Trang Chủ";
+            this.icbtu_Trangchu.Text = " Trang Chủ";
+            this.icbtu_Trangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtu_Trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtu_Trangchu.UseVisualStyleBackColor = true;
             // 
-            // timer1
+            // pictureBoxIcon
             // 
-            this.timer1.Interval = 15;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.pictureBoxIcon.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxIcon.Name = "pictureBoxIcon";
+            this.pictureBoxIcon.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxIcon.TabIndex = 4;
+            this.pictureBoxIcon.TabStop = false;
             // 
-            // timer2
+            // pictureBox1
             // 
-            this.timer2.Interval = 15;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 15;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
-            // 
-            // panel_Body
-            // 
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Body.Location = new System.Drawing.Point(223, 112);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1117, 635);
-            this.panel_Body.TabIndex = 15;
+            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.logoUS_ver2;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 747);
+            this.ClientSize = new System.Drawing.Size(1100, 747);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel1);
@@ -447,14 +475,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel1.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
             this.panelLogout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel_ddQuanLy.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.paneldropdown.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -490,5 +518,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private Guna.UI2.WinForms.Guna2Button guna2Button18;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Panel panel_Body;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
     }
 }

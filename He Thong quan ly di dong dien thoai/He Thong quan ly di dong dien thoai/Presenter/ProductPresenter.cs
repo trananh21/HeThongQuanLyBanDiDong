@@ -21,7 +21,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
         public ProductPresenter(iSPView view, iSPRepository repository)
         {
 
-            this.spBindlingSource = new BindingSource();
+            
             this._view = view;
             this._repository = repository;
 
@@ -32,7 +32,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             this._view.SaveEvent += luuSanPham;
             this._view.CancelEvent += huySanPham;
             // set blinding for product 
-
+            this.spBindlingSource = new BindingSource();
             this._view.SetProductBlindingSource(spBindlingSource);
 
             // load product

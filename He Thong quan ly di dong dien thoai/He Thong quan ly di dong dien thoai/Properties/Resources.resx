@@ -127,6 +127,9 @@
   <data name="icondropDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icondropDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-back-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-back-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +159,9 @@
   </data>
   <data name="icon-admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_uneti-smartphone-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_uneti-smartphone-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Samsung-Galax-S24-Ultra-12GB-256GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Samsung-Galax-S24-Ultra-12GB-256GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +217,7 @@
   <data name="OPPO-Find-N3-16GB-512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OPPO-Find-N3-16GB-512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-back-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-back-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logoUS-ver2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoUS-ver2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

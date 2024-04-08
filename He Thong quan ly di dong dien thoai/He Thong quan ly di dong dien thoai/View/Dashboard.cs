@@ -15,19 +15,37 @@ using He_Thong_quan_ly_di_dong_dien_thoai.Presenter;
 using He_Thong_quan_ly_di_dong_dien_thoai.Model;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
-    public partial class Dashboard : Form
+    public partial class Dashboard : Form, iMainView
     {
         private ProductPresenter productPresenter;
         private bool isCollapsed;
+        private Form productForm;
         public Dashboard(string username, iSPRepository repository)
         {
             InitializeComponent();
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
             productPresenter = new ProductPresenter(new productView(), repository);
+            btnSP.Click += delegate { ShowProductForm(); };
         }
+
+        private void ShowProductForm()
+        {
+            if (productForm == null || productForm.IsDisposed) // Kiểm tra xem form đã được khởi tạo chưa
+            {
+                productForm = productPresenter.GetProductViewForm(); // Lấy form productView từ presenter
+            }
+
+            // Hiển thị form productView
+            OpenFormCon(productForm);
+        }
+
         private Dashboard formCon;
         private BindingSource spBlingdingSource;
+
+        public event EventHandler ShowSPView;
+        public event EventHandler ShowOnwerView;
+        public event EventHandler ShowVetsView;
 
         private void OpenFormCon(Form childForm)
         {
@@ -144,7 +162,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            OpenFormCon(productPresenter.GetProductViewForm());
+            Form productForm = productPresenter.GetProductViewForm(); // Lấy form productView từ presenter
+            OpenFormCon(productForm); 
         }
 
         private void panelLogout_Paint(object sender, PaintEventArgs e)
@@ -180,6 +199,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2ControlBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

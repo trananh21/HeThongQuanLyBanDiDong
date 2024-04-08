@@ -323,6 +323,26 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_uneti_smartphone_1 {
+            get {
+                object obj = ResourceManager.GetObject("logo_uneti-smartphone-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoUS_ver2 {
+            get {
+                object obj = ResourceManager.GetObject("logoUS-ver2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OPPO_Find_N3_16GB_512GB {
             get {
                 object obj = ResourceManager.GetObject("OPPO-Find-N3-16GB-512GB", resourceCulture);

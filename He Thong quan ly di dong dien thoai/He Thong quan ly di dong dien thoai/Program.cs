@@ -21,11 +21,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-            iSPView view = new productView();
-            iSPRepository repository = new SpRepository(sqlConnectionString);
-            new ProductPresenter(view, repository);
+            iMainView view = new form1();
+            new MainPresenter(view, sqlConnectionString);
             //Application.Run(new Dashboard("", repository));
-            Application.Run(new Login());
+            Application.Run((Form)view);
             //Application.Run((Form)view);
 
         }

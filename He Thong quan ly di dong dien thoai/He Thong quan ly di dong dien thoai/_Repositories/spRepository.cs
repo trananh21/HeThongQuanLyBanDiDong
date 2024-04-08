@@ -59,9 +59,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                                    ";
                 cmd.Parameters.Add(@"MaSanPham1", SqlDbType.Int).Value = spMaSanPham;
                 cmd.Parameters.Add(@"TenSanPham1", SqlDbType.NVarChar).Value = spTenSanPham;
-                //cmd.Parameters.Add(@"MaDanhMuc", SqlDbType.Int).Value = spMaDanhMuc1;
-                //cmd.Parameters.Add(@"Gia", SqlDbType.Int).Value = spGia1;
-                //cmd.Parameters.Add(@"MoTa", SqlDbType.Int).Value = spMoTa1;
                 using (var reader = cmd.ExecuteReader()) // đọc dữ liệu 
                 {
                     while (reader.Read())

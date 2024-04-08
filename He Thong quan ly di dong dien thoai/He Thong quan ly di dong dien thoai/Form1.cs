@@ -1,5 +1,6 @@
 ﻿
 using He_Thong_quan_ly_di_dong_dien_thoai.Properties;
+using He_Thong_quan_ly_di_dong_dien_thoai.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,12 +13,16 @@ using System.Windows.Forms;
 
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
-    public partial class form1 : Form
+    public partial class form1 : Form, iMainView
     {
         
         private float radius;
         private bool isCollapsed;
-       
+
+        public event EventHandler ShowSPView;
+        public event EventHandler ShowOnwerView;
+        public event EventHandler ShowVetsView;
+
         public form1()
         {
             InitializeComponent();

@@ -46,14 +46,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            iSPRepository repository = new SpRepository(connectionString);
+            iSPRepository repository = new SpRepository(connectionString); // truy 
             if (AuthenticateUser(username, password))
             {
                 this.Hide();
+
+                // Hiển thị form Dashboard
                 Dashboard dboard = new Dashboard(username, repository);
                 dboard.Show();
-                this.Hide();
-                // Thực hiện các hành động sau khi đăng nhập thành công
             }
             else
             {
@@ -70,14 +70,29 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string queryString = "SELECT COUNT(*) FROM login WHERE username = '" + txtUsername.Text + "' AND password = '" + txtPassword.Text + "'";
+                string queryString = "SELECT COUNT(*) FROM login WHERE username = @Username AND password = @Password";
                 SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Password", password);
+
                 connection.Open();
 
                 result = (int)command.ExecuteScalar();
             }
 
-            return result > 0;
+            if (result > 0)
+            {
+                return true; // Đăng nhập thành công
+            }
+            else
+            {
+                return false; // Đăng nhập thất bại
+            }
+        }
+
+        private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
