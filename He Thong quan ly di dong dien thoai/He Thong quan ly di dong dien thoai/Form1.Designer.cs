@@ -254,6 +254,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button16.Name = "guna2Button16";
             this.guna2Button16.Size = new System.Drawing.Size(76, 37);
             this.guna2Button16.TabIndex = 34;
+            this.guna2Button16.Visible = false;
             // 
             // guna2Button17
             // 
@@ -271,6 +272,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button17.Name = "guna2Button17";
             this.guna2Button17.Size = new System.Drawing.Size(76, 37);
             this.guna2Button17.TabIndex = 33;
+            this.guna2Button17.Visible = false;
             // 
             // guna2Button14
             // 
@@ -288,6 +290,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button14.Name = "guna2Button14";
             this.guna2Button14.Size = new System.Drawing.Size(76, 37);
             this.guna2Button14.TabIndex = 32;
+            this.guna2Button14.Visible = false;
             // 
             // guna2Button15
             // 
@@ -305,6 +308,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button15.Name = "guna2Button15";
             this.guna2Button15.Size = new System.Drawing.Size(76, 37);
             this.guna2Button15.TabIndex = 31;
+            this.guna2Button15.Visible = false;
             // 
             // guna2Button12
             // 
@@ -322,6 +326,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button12.Name = "guna2Button12";
             this.guna2Button12.Size = new System.Drawing.Size(76, 37);
             this.guna2Button12.TabIndex = 30;
+            this.guna2Button12.Visible = false;
             // 
             // guna2Button13
             // 
@@ -339,6 +344,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button13.Name = "guna2Button13";
             this.guna2Button13.Size = new System.Drawing.Size(76, 37);
             this.guna2Button13.TabIndex = 29;
+            this.guna2Button13.Visible = false;
             // 
             // guna2Button9
             // 
@@ -356,6 +362,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.Size = new System.Drawing.Size(76, 37);
             this.guna2Button9.TabIndex = 28;
+            this.guna2Button9.Visible = false;
             // 
             // guna2Button11
             // 
@@ -373,6 +380,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button11.Name = "guna2Button11";
             this.guna2Button11.Size = new System.Drawing.Size(76, 37);
             this.guna2Button11.TabIndex = 27;
+            this.guna2Button11.Visible = false;
             // 
             // guna2Button7
             // 
@@ -390,6 +398,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(76, 37);
             this.guna2Button7.TabIndex = 26;
+            this.guna2Button7.Visible = false;
             // 
             // guna2Button8
             // 
@@ -407,6 +416,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.Size = new System.Drawing.Size(76, 37);
             this.guna2Button8.TabIndex = 25;
+            this.guna2Button8.Visible = false;
             // 
             // guna2Button5
             // 
@@ -424,6 +434,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(76, 37);
             this.guna2Button5.TabIndex = 24;
+            this.guna2Button5.Visible = false;
             // 
             // guna2Button6
             // 
@@ -441,6 +452,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(76, 37);
             this.guna2Button6.TabIndex = 23;
+            this.guna2Button6.Visible = false;
             // 
             // guna2Button3
             // 
@@ -458,6 +470,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(76, 37);
             this.guna2Button3.TabIndex = 22;
+            this.guna2Button3.Visible = false;
             // 
             // guna2Button4
             // 
@@ -475,6 +488,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(76, 37);
             this.guna2Button4.TabIndex = 21;
+            this.guna2Button4.Visible = false;
             // 
             // guna2Button10
             // 
@@ -492,6 +506,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button10.Name = "guna2Button10";
             this.guna2Button10.Size = new System.Drawing.Size(76, 37);
             this.guna2Button10.TabIndex = 20;
+            this.guna2Button10.Visible = false;
             // 
             // guna2Button2
             // 
@@ -509,6 +524,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(76, 37);
             this.guna2Button2.TabIndex = 12;
+            this.guna2Button2.Visible = false;
             // 
             // panel6
             // 

@@ -81,7 +81,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             var model = new SPModel();
             // không cần phải convert từ string về int đối với SPID
             // khoong canaf phair them ma danh muc 
-            model.MaSanPham1 = _view.SPID;
+            model.MaSanPham1 = (int)_view.SPID;
             model.TenSanPham1 = _view.TenSanPham;
             model.TenDanhMuc1 = _view.TenDanhMuc;
             model.Gia1 = _view.Gia;
@@ -133,7 +133,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             try
             {
                 var sp = (SPModel)spBindlingSource.Current;
-                _repository.XoaThongTin(sp.MaSanPham1);
+                _repository.XoaThongTin((int)sp.MaSanPham1);
                 _view.isSuccessful = true;
                 _view.Message = "Đã xoá sản phẩm thành công!";
                 LoadAllProductList();

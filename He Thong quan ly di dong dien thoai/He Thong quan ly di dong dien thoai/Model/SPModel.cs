@@ -10,7 +10,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
     public class SPModel
     {
         // ánh xạ vào các trường trong bảng Sản phẩm SQL
-        private int MaSanPham; 
+        private long MaSanPham; 
         private string TenSanPham;
         private string TenDanhMuc;
         private int MaDanhMuc;
@@ -22,7 +22,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
         // get để lấy dữ liệu,
         // set để thiết lập dữ liệu
         [DisplayName("ID")]
-        public int MaSanPham1 { get => MaSanPham; set => MaSanPham = value; }
+        public long MaSanPham1 { get => MaSanPham; set => MaSanPham = value; }
 
         [DisplayName("Tên Sản Phẩm")]
         [Required(ErrorMessage = "Tên sản phẩm không được để trống")]

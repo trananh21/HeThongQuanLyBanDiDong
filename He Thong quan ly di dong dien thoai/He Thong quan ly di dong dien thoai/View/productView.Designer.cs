@@ -46,6 +46,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvSanPham = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabPageProductDetail = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,7 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaSanPham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageProductList.SuspendLayout();
@@ -162,9 +162,9 @@
             this.panel1.Controls.Add(this.btnSuaSanPham);
             this.panel1.Controls.Add(this.btnThemSanPham);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(715, 63);
+            this.panel1.Location = new System.Drawing.Point(745, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(161, 475);
+            this.panel1.Size = new System.Drawing.Size(131, 475);
             this.panel1.TabIndex = 4;
             // 
             // btnXoaSanPham
@@ -178,7 +178,7 @@
             this.btnXoaSanPham.FillColor = System.Drawing.Color.Red;
             this.btnXoaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnXoaSanPham.Location = new System.Drawing.Point(22, 164);
+            this.btnXoaSanPham.Location = new System.Drawing.Point(6, 164);
             this.btnXoaSanPham.Name = "btnXoaSanPham";
             this.btnXoaSanPham.Size = new System.Drawing.Size(120, 45);
             this.btnXoaSanPham.TabIndex = 3;
@@ -195,7 +195,7 @@
             this.btnSuaSanPham.FillColor = System.Drawing.Color.Blue;
             this.btnSuaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSuaSanPham.Location = new System.Drawing.Point(22, 99);
+            this.btnSuaSanPham.Location = new System.Drawing.Point(6, 99);
             this.btnSuaSanPham.Name = "btnSuaSanPham";
             this.btnSuaSanPham.Size = new System.Drawing.Size(120, 45);
             this.btnSuaSanPham.TabIndex = 3;
@@ -212,7 +212,7 @@
             this.btnThemSanPham.FillColor = System.Drawing.Color.Green;
             this.btnThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnThemSanPham.Location = new System.Drawing.Point(22, 33);
+            this.btnThemSanPham.Location = new System.Drawing.Point(6, 33);
             this.btnThemSanPham.Name = "btnThemSanPham";
             this.btnThemSanPham.Size = new System.Drawing.Size(120, 45);
             this.btnThemSanPham.TabIndex = 3;
@@ -262,7 +262,8 @@
             this.dgvSanPham.Location = new System.Drawing.Point(0, 66);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.RowHeadersVisible = false;
-            this.dgvSanPham.Size = new System.Drawing.Size(706, 476);
+            this.dgvSanPham.RowTemplate.Height = 60;
+            this.dgvSanPham.Size = new System.Drawing.Size(746, 476);
             this.dgvSanPham.TabIndex = 1;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -282,7 +283,7 @@
             this.dgvSanPham.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSanPham.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvSanPham.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvSanPham.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvSanPham.ThemeStyle.RowsStyle.Height = 60;
             this.dgvSanPham.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSanPham.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -308,6 +309,16 @@
             this.tabPageProductDetail.TabIndex = 1;
             this.tabPageProductDetail.Text = "Thông Tin Chi Tiết";
             this.tabPageProductDetail.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(208, 412);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(456, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "*Lưu ý: Tên Danh Mục phải là những tên có sẵn trong bảng";
             // 
             // btnCancel
             // 
@@ -499,16 +510,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Sản Phẩm:";
             this.label2.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(208, 412);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(456, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "*Lưu ý: Tên Danh Mục phải là những tên có sẵn trong bảng";
             // 
             // productView
             // 

@@ -22,10 +22,10 @@ TRUNCATE TABLE SanPham;  -- hoặc DELETE FROM SanPham;
 DBCC CHECKIDENT ('SanPham', RESEED, 0);
 -- Bảng sản phẩm
 CREATE TABLE SanPham (
-    MaSanPham INT PRIMARY KEY IDENTITY,
+    MaSanPham BIGINT PRIMARY KEY IDENTITY,
     TenSanPham NVARCHAR(100) NOT NULL,
     MaDanhMuc INT,
-    Gia DECIMAL(10, 2),
+    Gia DECIMAL(38, 2),
     MoTa NVARCHAR(MAX),
     FOREIGN KEY (MaDanhMuc) REFERENCES DanhMucSanPham(MaDanhMuc)
 );
@@ -57,12 +57,13 @@ VALUES
 	(N'Iphone 14 128GB', 8, 17390000, N'Compact, sleek smartphone with versatility.'),
 	(N'Iphone 15 256GB', 9, 17390000, N'Compact, sleek smartphone with versatility.'),
 	(N'Iphone 6 128GB', 10, 17390000, N'Compact, sleek smartphone with versatility.');
-
+/*
 INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa) 
 VALUES ('Tên Sản Phẩm Mới', (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = 'Tên Danh Mục'), 100000, 'Mô tả cho sản phẩm mới')
+*/
 select * from sanpham
 -- chèn  từ 1 đến 8 mã danh mục vào bảng DANHMUCSANPHAM và chỉ có 3 tên danh mục vì vậy sẽ chạy từ 1 đến 8 và lặp lại 3 danh mục
--- Bảng khách hàng
+/*
 INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa)
 SELECT 
     N'Iphone 15 Pro Max 1TB',
@@ -70,7 +71,8 @@ SELECT
     44990000,
     N'Compact, sleek smartphone with versatility.'
 WHERE EXISTS (SELECT 1 FROM DanhMucSanPham WHERE MaDanhMuc = 1);
-SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = N'Danh mục 10'
+*/
+-- Bảng khách hàng
 CREATE TABLE KhachHang (
     MaKhachHang INT PRIMARY KEY IDENTITY, -- IDENTITY là giá trị tự tăng dần
     Ho NVARCHAR(50),

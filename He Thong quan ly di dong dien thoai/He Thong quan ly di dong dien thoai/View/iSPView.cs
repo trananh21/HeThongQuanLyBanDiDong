@@ -18,7 +18,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             private string MoTa;
         */
         // Thuoc tinh  - truong
-        int SPID { get; set; }
+
+        long SPID { get; set; }
         string TenSanPham { get; set; }
         //int MaDanhMuc { get; set; }
         decimal Gia { get; set; }

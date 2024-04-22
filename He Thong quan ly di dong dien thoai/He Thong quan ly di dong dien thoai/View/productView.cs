@@ -89,28 +89,31 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             };
         }
 
-        public int SPID
+        public long SPID
         {
             get
             {
-                // Convert string to int
-                int result;
-                if (int.TryParse(txtMaSanPham.Text, out result))
+                // Convert string to long
+                long result;
+                if (long.TryParse(txtMaSanPham.Text, out result))
                 {
                     return result;
                 }
                 else
                 {
-                    // Handle parsing error, maybe throw an exception or return a default value
-                    throw new InvalidOperationException("Invalid input for MaDanhMuc.");
+                    // Handle parsing error, maybe show an error message to the user
+                    MessageBox.Show("ID không hợp lệ. Vui lòng nhập lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 0; // Return a default value or throw an exception
                 }
             }
             set
             {
-                // Convert int to string
+                // Convert long to string
                 txtMaSanPham.Text = value.ToString();
             }
         }
+
+
         public string TenSanPham
         {
             get { return txtTenSanPham.Text; }
