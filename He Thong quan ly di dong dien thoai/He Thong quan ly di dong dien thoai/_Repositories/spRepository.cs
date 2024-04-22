@@ -88,7 +88,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                 conn.Open();
                 cmd.Connection = conn;
 
-                cmd.CommandText = @" INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa) VALUES (@TenSanPham1, (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1), @Gia1, @MoTa1)";
+                cmd.CommandText = @"INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa) VALUES (@TenSanPham1, (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1), @Gia1, @MoTa1)";
 
                 cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
                 cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.TenDanhMuc1);

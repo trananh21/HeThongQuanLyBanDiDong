@@ -252,6 +252,8 @@
   <ItemGroup>
     <None Include="Resources\logoUS-ver2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo_uneti-smartphone-2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -333,6 +333,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_uneti_smartphone_2 {
+            get {
+                object obj = ResourceManager.GetObject("logo_uneti-smartphone-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoUS_ver2 {
             get {
                 object obj = ResourceManager.GetObject("logoUS-ver2", resourceCulture);

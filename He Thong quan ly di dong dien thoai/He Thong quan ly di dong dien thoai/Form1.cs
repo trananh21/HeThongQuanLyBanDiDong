@@ -27,7 +27,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             InitializeComponent();
             RoundPanel(panel, 20);
-            
+            panel.Size = new System.Drawing.Size(1123, 746);
+            panel.AutoScroll = true;
+
+
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -138,10 +141,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             Login dashboard = new Login();
             dashboard.Show();   
         }
+        
 
         private void form1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
