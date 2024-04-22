@@ -180,9 +180,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_ddQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_ddQuanLy.Location = new System.Drawing.Point(0, 120);
             this.panel_ddQuanLy.MaximumSize = new System.Drawing.Size(220, 250);
-            this.panel_ddQuanLy.MinimumSize = new System.Drawing.Size(220, 60);
+            this.panel_ddQuanLy.MinimumSize = new System.Drawing.Size(200, 60);
             this.panel_ddQuanLy.Name = "panel_ddQuanLy";
-            this.panel_ddQuanLy.Size = new System.Drawing.Size(220, 60);
+            this.panel_ddQuanLy.Size = new System.Drawing.Size(200, 60);
             this.panel_ddQuanLy.TabIndex = 5;
             // 
             // button9
@@ -242,9 +242,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.paneldropdown.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneldropdown.Location = new System.Drawing.Point(0, 60);
             this.paneldropdown.MaximumSize = new System.Drawing.Size(220, 320);
-            this.paneldropdown.MinimumSize = new System.Drawing.Size(220, 60);
+            this.paneldropdown.MinimumSize = new System.Drawing.Size(200, 60);
             this.paneldropdown.Name = "paneldropdown";
-            this.paneldropdown.Size = new System.Drawing.Size(220, 60);
+            this.paneldropdown.Size = new System.Drawing.Size(200, 60);
             this.paneldropdown.TabIndex = 4;
             // 
             // button7
@@ -258,7 +258,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button7.Location = new System.Drawing.Point(0, 265);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(220, 50);
+            this.button7.Size = new System.Drawing.Size(200, 50);
             this.button7.TabIndex = 5;
             this.button7.Text = "Thanh Toán";
             this.button7.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button6.Location = new System.Drawing.Point(0, 215);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(220, 50);
+            this.button6.Size = new System.Drawing.Size(200, 50);
             this.button6.TabIndex = 4;
             this.button6.Text = "Kho";
             this.button6.UseVisualStyleBackColor = true;
@@ -290,7 +290,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button5.Location = new System.Drawing.Point(0, 165);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(220, 50);
+            this.button5.Size = new System.Drawing.Size(200, 50);
             this.button5.TabIndex = 3;
             this.button5.Text = "Đơn Hàng";
             this.button5.UseVisualStyleBackColor = true;
@@ -306,7 +306,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Location = new System.Drawing.Point(0, 115);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(220, 50);
+            this.button4.Size = new System.Drawing.Size(200, 50);
             this.button4.TabIndex = 2;
             this.button4.Text = "Khách Hàng";
             this.button4.UseVisualStyleBackColor = true;
@@ -322,7 +322,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btnSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSP.Location = new System.Drawing.Point(0, 65);
             this.btnSP.Name = "btnSP";
-            this.btnSP.Size = new System.Drawing.Size(220, 50);
+            this.btnSP.Size = new System.Drawing.Size(200, 50);
             this.btnSP.TabIndex = 1;
             this.btnSP.Text = "Sản Phẩm";
             this.btnSP.UseVisualStyleBackColor = true;
@@ -346,9 +346,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             // panel_Body
             // 
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Body.Location = new System.Drawing.Point(196, 112);
+            this.panel_Body.Location = new System.Drawing.Point(197, 112);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(904, 635);
+            this.panel_Body.Size = new System.Drawing.Size(903, 635);
             this.panel_Body.TabIndex = 15;
             // 
             // pictureBox18
@@ -373,7 +373,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.Bt_QuanLy.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
             this.Bt_QuanLy.Location = new System.Drawing.Point(0, 0);
             this.Bt_QuanLy.Name = "Bt_QuanLy";
-            this.Bt_QuanLy.Size = new System.Drawing.Size(220, 60);
+            this.Bt_QuanLy.Size = new System.Drawing.Size(200, 60);
             this.Bt_QuanLy.TabIndex = 0;
             this.Bt_QuanLy.Text = "Quản Lý";
             this.Bt_QuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -402,10 +402,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btu_danhmuc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btu_danhmuc.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
             this.btu_danhmuc.Location = new System.Drawing.Point(0, 0);
-            this.btu_danhmuc.MaximumSize = new System.Drawing.Size(220, 310);
-            this.btu_danhmuc.MinimumSize = new System.Drawing.Size(220, 60);
+            this.btu_danhmuc.MaximumSize = new System.Drawing.Size(200, 310);
+            this.btu_danhmuc.MinimumSize = new System.Drawing.Size(200, 60);
             this.btu_danhmuc.Name = "btu_danhmuc";
-            this.btu_danhmuc.Size = new System.Drawing.Size(220, 65);
+            this.btu_danhmuc.Size = new System.Drawing.Size(200, 65);
             this.btu_danhmuc.TabIndex = 0;
             this.btu_danhmuc.Text = "Danh Mục";
             this.btu_danhmuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

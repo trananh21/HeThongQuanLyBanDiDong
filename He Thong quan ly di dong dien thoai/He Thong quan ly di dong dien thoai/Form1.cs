@@ -1,4 +1,5 @@
 ﻿
+using Guna.UI2.WinForms;
 using He_Thong_quan_ly_di_dong_dien_thoai.Properties;
 using He_Thong_quan_ly_di_dong_dien_thoai.View;
 using System;
@@ -27,12 +28,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             InitializeComponent();
             RoundPanel(panel, 20);
-            panel.Size = new System.Drawing.Size(1123, 746);
             panel.AutoScroll = true;
-
-
         }
-
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -51,13 +48,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void guna2Panel1_Paint_1(object sender, PaintEventArgs e)
         {
-            //Rectangle bounds = new Rectangle(0, 0, panel.Width, panel.Height);
-            //System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            //path.AddArc(bounds.X, bounds.Y, radius, radius, 180, 90);
-            //path.AddArc(bounds.X + bounds.Width - radius, bounds.Y, radius, radius, 270, 90);
-            //path.AddArc(bounds.X + bounds.Width - radius, bounds.Y + bounds.Height - radius, radius, radius, 0, 90);
-            //path.AddArc(bounds.X, bounds.Y + bounds.Height - radius, radius, radius, 90, 90);
-            //panel.Region = new Region(path);
+            
             RoundPanel(panel, 20);
         }
 
@@ -145,7 +136,18 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void form1_Load(object sender, EventArgs e)
         {
-            
+           
+        }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
