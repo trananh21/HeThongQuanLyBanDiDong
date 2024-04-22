@@ -219,12 +219,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void productView_Load(object sender, EventArgs e)
         {
-
+           
         }
         // Methods SetProductBlindingSource()
         public void SetProductBlindingSource(BindingSource productList)
         {
             dgvSanPham.DataSource = productList;
+            
         }
 
 
@@ -259,6 +260,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
