@@ -1147,6 +1147,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.Name = "form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

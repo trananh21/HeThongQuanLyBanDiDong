@@ -23,21 +23,30 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
         // set để thiết lập dữ liệu
         [DisplayName("ID")]
         public int MaSanPham1 { get => MaSanPham; set => MaSanPham = value; }
+
         [DisplayName("Tên Sản Phẩm")]
-        [Required(ErrorMessage = "Tên sản phẩm bắt buộc phải có")]
+        [Required(ErrorMessage = "Tên sản phẩm không được để trống")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Tên sản phẩm không được nhỏ hơn 3 ký tự và quá 50 ký tự")]
         public string TenSanPham1 { get => TenSanPham; set => TenSanPham = value; }
+
+
         [DisplayName("Tên Danh Mục")]
-        public string TenDanhMuc1 { get => TenDanhMuc; set => TenDanhMuc = value; }
-        [DisplayName("Mã Danh Mục")]
-        [Required(ErrorMessage = "Tên danh mục bắt buộc phải có")]
+
+        [Required(ErrorMessage = "Tên danh mục không được để trống")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Tên danh mục không được nhỏ hơn 3 ký tự và quá 50 ký tự")]
-        public int MaDanhMuc1 { get => MaDanhMuc; set => MaDanhMuc = value; }
+        public string TenDanhMuc1 { get => TenDanhMuc; set => TenDanhMuc = value; }
+
+        // có thể có hoặc không tại vì Mã Danh Mục theo SQL thì sẽ luôn tăng tự động nếu sửa mã danh mục => nguy cơ trùng mã
+        // nên không cần Validate ô nhập txtMaDanhMuc => bỏ phần nhập liệu mã danh mục
+        //[DisplayName("Mã Danh Mục")]
+        //public int MaDanhMuc1 { get => MaDanhMuc; set => MaDanhMuc = value; }
+
         [DisplayName("Giá")]
         [Required(ErrorMessage = "Giá tiền không được để trống")]
         public decimal Gia1 { get => Gia; set => Gia = value; }
+
         [DisplayName("Mô Tả")]
-        [Required(ErrorMessage = "Mô tảkhông được để trống")]
+        [Required(ErrorMessage = "Mô tả không được để trống")]
         public string MoTa1 { get => MoTa; set => MoTa = value; }
     }
 }

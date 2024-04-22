@@ -138,5 +138,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             Login dashboard = new Login();
             dashboard.Show();   
         }
+
+        private void form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

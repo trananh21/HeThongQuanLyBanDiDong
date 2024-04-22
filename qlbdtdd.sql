@@ -39,9 +39,12 @@ VALUES
 	(N'Danh mục 5'), 
 	(N'Danh mục 6'), 
 	(N'Danh mục 7'), 
-	(N'Danh mục 8');
+	(N'Danh mục 8'),
+	(N'Danh mục 9'),
+	(N'Danh mục 10');
 
 -- Thêm dữ liệu vào bảng SanPham và sử dụng các giá trị MaDanhMuc hợp lệ
+-- thêm sản phẩm
 INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa)
 VALUES 
     (N'Iphone 15 Pro Max 1TB', 1, 44990000, N'Compact, sleek smartphone with versatility.'),
@@ -51,9 +54,23 @@ VALUES
 	(N'OPPO Find N3 16GB 512GB', 5, 41990000, N'Compact, sleek smartphone with versatility.'),
 	(N'iPhone 11 64GB', 6, 7890000, N'Compact, sleek smartphone with versatility.'),
 	(N'Xiaomi 14 (12GB 256GB)', 7, 14000000, N'Compact, sleek smartphone with versatility.'),
-	(N'Ihone 14 128GB', 8, 17390000, N'Compact, sleek smartphone with versatility.');
+	(N'Iphone 14 128GB', 8, 17390000, N'Compact, sleek smartphone with versatility.'),
+	(N'Iphone 15 256GB', 9, 17390000, N'Compact, sleek smartphone with versatility.'),
+	(N'Iphone 6 128GB', 10, 17390000, N'Compact, sleek smartphone with versatility.');
+
+INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa) 
+VALUES ('Tên Sản Phẩm Mới', (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = 'Tên Danh Mục'), 100000, 'Mô tả cho sản phẩm mới')
+select * from sanpham
 -- chèn  từ 1 đến 8 mã danh mục vào bảng DANHMUCSANPHAM và chỉ có 3 tên danh mục vì vậy sẽ chạy từ 1 đến 8 và lặp lại 3 danh mục
 -- Bảng khách hàng
+INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa)
+SELECT 
+    N'Iphone 15 Pro Max 1TB',
+    CASE WHEN EXISTS (SELECT 1 FROM DanhMucSanPham WHERE MaDanhMuc = 1) THEN 1 ELSE NULL END,
+    44990000,
+    N'Compact, sleek smartphone with versatility.'
+WHERE EXISTS (SELECT 1 FROM DanhMucSanPham WHERE MaDanhMuc = 1);
+SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = N'Danh mục 10'
 CREATE TABLE KhachHang (
     MaKhachHang INT PRIMARY KEY IDENTITY, -- IDENTITY là giá trị tự tăng dần
     Ho NVARCHAR(50),
@@ -62,6 +79,29 @@ CREATE TABLE KhachHang (
     DienThoai NVARCHAR(20),
     DiaChi NVARCHAR(255)
 );
+
+INSERT INTO KhachHang (Ho, Ten, Email, DienThoai, DiaChi)
+VALUES 
+    (N'Phạm', N'Trần Anh', N'phamtrananh16@gmail.com', N'0346016810', N'Hà Nội'),
+    (N'Trần', N'Văn Chiến', N'tranvanchien24022003@gmail.com', N'0862587229', N'Hải Phòng'),
+    (N'Hoàng', N'Văn Hùng', N'hoangvanhung03768@gmail.com', N'0376806872', N'Tuần Lề - Đông Anh'),
+	(N'Nguyễn', N'Đăng Khánh', N'nguyendangkhanh@gmail.com', N'0963076253', N'Hà Giang'),
+	(N'Lưu', N'Quang Hùng', N'luuquanghung16@gmail.com', N'0369337753', N'Thanh Hóa'),
+	(N'Mai', N'Phi Hiếu', N'maiphihieu@gmail.com', N'0982363100', N'Thanh Hóa'),
+	(N'Phạm', N'Hồng Hạnh', N'phamhonghanh@gmail.com', N'0346016810', N'Thái Nguyên'),
+	(N'Nguyễn', N'Duy Kiên', N'nguyenduykien@gmail.com', N'0346016810', N'Vĩnh Phúc'),
+	(N'Võ', N'Quốc Việt', N'vietviet23@gmail.com', N'0367020403', N'Nghệ An'),
+	(N'Lê', N'Thiện Nguyên', N'lethiennguyen@gmail.com', N'0347018588', N'Thái Bình');
+/*
+UPDATE KhachHang SET Ho = @Ho, Ten = @Ten, Email = @Email, DienThoai = @DienThoai, DiaChi = @DiaChi WHERE MaKhachHang = @id
+*/
+-- sửa sản phẩm
+UPDATE KhachHang 
+SET Ho = 'Tran', Ten = 'Van Chien', Email = 'tranvnachine@gmail.com', DienThoai = '123456789', DiaChi = 'HP' 
+WHERE MaKhachHang = 1;
+-- xoá sản phẩm
+DELETE FROM SanPham WHERE MaSanPham = 1
+select * from KhachHang
 
 -- Bảng đơn hàng
 CREATE TABLE DonHang (
@@ -72,6 +112,60 @@ CREATE TABLE DonHang (
     TrangThai NVARCHAR(50),
     FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang)
 );
+DELETE FROM DonHang
+
+----
+-- Giả sử nhân viên nhập một mã đơn hàng sẽ hiển thị ra thông tin của khách hàng và đơn hàng đó
+-- se hiển thị ra các trường dưới đây
+SELECT dh.MaDonHang, dh.MaKhachHang, kh.Ho, kh.Ten, kh.Email, kh.DienThoai, kh.DiaChi, dh.NgayDat, dh.TongTien, dh.TrangThai
+FROM DonHang dh
+JOIN KhachHang kh ON dh.MaKhachHang = kh.MaKhachHang
+ORDER BY dh.MaDonHang DESC;
+/*
+
+string query = @"
+	SELECT dh.MaDonHang, dh.MaKhachHang, kh.Ho, kh.Ten, kh.Email, kh.DienThoai, kh.DiaChi, dh.NgayDat, dh.TongTien, dh.TrangThai
+	FROM DonHang dh
+	JOIN KhachHang kh ON dh.MaKhachHang = kh.MaKhachHang
+	ORDER BY dh.MaDonHang DESC
+";
+string conn = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+
+using (SqlConnection connection = new SqlConnection(conn))
+{
+    SqlDataAdapter sda = new SqlDataAdapter(query, connection);
+    DataTable dt = new DataTable();
+    sda.Fill(dt);
+    
+    // Kiểm tra dữ liệu đã được lấy thành công hay không
+    if (dt.Rows.Count > 0)
+    {
+        // Dữ liệu đã được lấy thành công, sử dụng DataTable dt trong đây 
+        // ...
+    }
+    else
+    {
+        // Không có dữ liệu được trả về từ câu truy vấn
+        // ...
+    }
+}
+
+*/
+
+----
+
+INSERT INTO DonHang(MaKhachHang, NgayDat, TongTien, TrangThai)
+VALUES 
+    (1, '2023-04-01', 44990000, N'Đã bán'),
+    (2, '2024-04-16', 6290000, N'Đã bán'),
+    (3, '2021-02-21', 28000000, N'Đã bán'),
+    (4, '2022-11-01', 17390000, N'Đã bán'),
+    (5, '2019-09-17', 8190000, N'Đã bán'),
+    (6, '2023-08-01', 14000000, N'Đã bán'),
+	(7, '2023-08-01', 14000000, N'Đã bán'),
+	(8, '2023-08-01', 14000000, N'Đã bán'),
+	(9, '2023-08-01', 14000000, N'Đã bán'),
+	(10, '2023-08-01', 14000000, N'Đã bán');
 
 -- Bảng chi tiết đơn hàng
 CREATE TABLE ChiTietDonHang (

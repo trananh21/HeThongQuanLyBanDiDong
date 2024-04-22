@@ -79,6 +79,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenter\Common\ModelDataValidation.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="View\Dashboard.cs">
       <SubType>Form</SubType>
@@ -251,5 +252,6 @@
   <ItemGroup>
     <None Include="Resources\logoUS-ver2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
