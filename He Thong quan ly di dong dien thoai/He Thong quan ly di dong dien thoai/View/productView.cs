@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Configuration;
+using System.Data.SqlClient;
 namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 {
     public partial class productView : Form, iSPView
@@ -17,13 +18,60 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         private string _message;
         private bool _isSuccessful;
         private bool _isEdit;
-
         // Constructor
         public productView()
         {
             InitializeComponent();
-            LienKetVaNangCaoLuotXem(); // Associate And Raise View Events
+            LienKetVaNangCaoLuotXem(); 
             tabControl1.TabPages.Remove(tabPageProductDetail);
+            LoadDanhMuc();
+        }
+        // Phương thức để load danh mục vào combo box
+        private void LoadDanhMuc()
+        {
+            // Lấy danh sách danh mục từ cơ sở dữ liệu
+            List<string> danhMucList = GetDanhMucListFromDatabase(); // Viết phương thức này để lấy danh sách danh mục từ cơ sở dữ liệu
+
+            // Đổ danh sách danh mục vào combo box
+            foreach (string danhMuc in danhMucList)
+            {
+                cbDanhMuc.Items.Add(danhMuc);
+            }
+        }
+        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        private List<string> GetDanhMucListFromDatabase()
+        {
+            List<string> danhMucList = new List<string>();
+            // Khởi tạo kết nối tới cơ sở dữ liệu
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                // Mở kết nối
+                conn.Open();
+
+                // Khởi tạo câu lệnh SQL để lấy danh sách danh mục
+                string query = "SELECT TenDanhMuc FROM DanhMucSanPham";
+
+                // Khởi tạo đối tượng SqlCommand
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Thực thi câu lệnh SQL và đọc kết quả
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        // Duyệt qua các dòng kết quả
+                        while (reader.Read())
+                        {
+                            // Đọc giá trị của cột TenDanhMuc
+                            string tenDanhMuc = reader["TenDanhMuc"].ToString();
+
+                            // Thêm vào danh sách danh mục
+                            danhMucList.Add(tenDanhMuc);
+                        }
+                    }
+                }
+            }
+
+            // Trả về danh sách danh mục đã lấy được từ cơ sở dữ liệu
+            return danhMucList;
         }
 
         private void LienKetVaNangCaoLuotXem()
@@ -93,17 +141,26 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         {
             get
             {
-                // Convert string to long
-                long result;
-                if (long.TryParse(txtMaSanPham.Text, out result))
+                // Kiểm tra xem ô nhập mã sản phẩm có được kích hoạt hay không
+                if (txtMaSanPham.Enabled)
                 {
-                    return result;
+                    // Convert string to long
+                    long result;
+                    if (long.TryParse(txtMaSanPham.Text, out result))
+                    {
+                        return result;
+                    }
+                    else
+                    {
+                        // Handle parsing error, maybe show an error message to the user
+                        MessageBox.Show("ID không hợp lệ. Vui lòng nhập lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return 0; // Return a default value or throw an exception
+                    }
                 }
                 else
                 {
-                    // Handle parsing error, maybe show an error message to the user
-                    MessageBox.Show("ID không hợp lệ. Vui lòng nhập lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return 0; // Return a default value or throw an exception
+                    // Trả về giá trị mặc định khi không cần nhập mã sản phẩm
+                    return 0;
                 }
             }
             set
@@ -174,8 +231,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
         public string TenDanhMuc
         {
-            get { return txtTenDanhMuc.Text; }
-            set { txtTenDanhMuc.Text = value; }
+            get { return cbDanhMuc.SelectedText; }
+            set { cbDanhMuc.SelectedText = value; }
         }
         public string TimKiem
         {
@@ -222,7 +279,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
            
         }
         // Methods SetProductBlindingSource()
-        public void SetProductBlindingSource(BindingSource productList)
+        public void SetProductBindingSource(BindingSource productList)
         {
             dgvSanPham.DataSource = productList;
         }
@@ -269,6 +326,22 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabPageProductDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

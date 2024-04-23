@@ -61,7 +61,7 @@ VALUES
 INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa) 
 VALUES ('Tên Sản Phẩm Mới', (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = 'Tên Danh Mục'), 100000, 'Mô tả cho sản phẩm mới')
 */
-select * from sanpham
+select *, TenDanhMuc from sanpham sp INNER JOIN DanhMucSanPham dm ON sp.MaSanPham = dm.MaDanhMuc;
 -- chèn  từ 1 đến 8 mã danh mục vào bảng DANHMUCSANPHAM và chỉ có 3 tên danh mục vì vậy sẽ chạy từ 1 đến 8 và lặp lại 3 danh mục
 /*
 INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa)

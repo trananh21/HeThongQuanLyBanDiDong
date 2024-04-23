@@ -80,30 +80,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         }
 
-        private void btu_danhmuc_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btu_danhmuc_Click_1(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (isCollapsed)
-            {
-                Bt_QuanLy.Image = Resources.icondropDown;
-                panel_ddQuanLy.Height += 10;
-                if (panel_ddQuanLy.Size == panel_ddQuanLy.MaximumSize)
-                {
-                    timer2.Stop();
-                    isCollapsed = false;
-                }
-
-            }
-            else
             {
                 Bt_QuanLy.Image = Resources.IconExpand;
                 panel_ddQuanLy.Height -= 10;
@@ -111,6 +90,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 {
                     timer2.Stop();
                     isCollapsed = true;
+                }
+            }
+            else
+            {
+                Bt_QuanLy.Image = Resources.icondropDown;
+                panel_ddQuanLy.Height += 10;
+                if (panel_ddQuanLy.Size == panel_ddQuanLy.MaximumSize)
+                {
+                    timer2.Stop();
+                    isCollapsed = false;
                 }
             }
         }
@@ -126,7 +115,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                     timer1.Stop();
                     isCollapsed = false;
                 }
-
             }
             else
             {
@@ -138,11 +126,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                     isCollapsed = true;
                 }
             }
-        }
-
-        private void Bt_QuanLy_Click(object sender, EventArgs e)
-        {
-            timer2.Start();
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -157,13 +140,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             Form productForm = productPresenter.GetProductViewForm(); // Lấy form productView từ presenter
-            OpenFormCon(productForm); 
+            OpenFormCon(productForm);
         }
 
         private void panelLogout_Paint(object sender, PaintEventArgs e)
@@ -204,6 +187,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private void guna2ControlBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btu_danhmuc_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void Bt_QuanLy_Click_1(object sender, EventArgs e)
+        {
+            timer2.Start();
         }
     }
 }

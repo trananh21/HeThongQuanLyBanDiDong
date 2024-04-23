@@ -48,7 +48,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 
-        void SetProductBlindingSource(BindingSource productList);
+        void SetProductBindingSource(BindingSource productList);
         void Show();
 
 

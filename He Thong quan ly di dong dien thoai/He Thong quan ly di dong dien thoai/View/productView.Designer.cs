@@ -46,15 +46,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvSanPham = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabPageProductDetail = new System.Windows.Forms.TabPage();
+            this.cbDanhMuc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTenDanhMuc = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGiaTien = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtTenSanPham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaSanPham = new Guna.UI2.WinForms.Guna2TextBox();
@@ -291,15 +291,15 @@
             // 
             // tabPageProductDetail
             // 
+            this.tabPageProductDetail.Controls.Add(this.cbDanhMuc);
             this.tabPageProductDetail.Controls.Add(this.label5);
             this.tabPageProductDetail.Controls.Add(this.btnCancel);
             this.tabPageProductDetail.Controls.Add(this.btnSave);
             this.tabPageProductDetail.Controls.Add(this.txtMoTa);
-            this.tabPageProductDetail.Controls.Add(this.txtTenDanhMuc);
             this.tabPageProductDetail.Controls.Add(this.txtGiaTien);
-            this.tabPageProductDetail.Controls.Add(this.label7);
             this.tabPageProductDetail.Controls.Add(this.txtTenSanPham);
             this.tabPageProductDetail.Controls.Add(this.label6);
+            this.tabPageProductDetail.Controls.Add(this.label8);
             this.tabPageProductDetail.Controls.Add(this.label4);
             this.tabPageProductDetail.Controls.Add(this.label3);
             this.tabPageProductDetail.Controls.Add(this.txtMaSanPham);
@@ -311,6 +311,25 @@
             this.tabPageProductDetail.TabIndex = 1;
             this.tabPageProductDetail.Text = "Thông Tin Chi Tiết";
             this.tabPageProductDetail.UseVisualStyleBackColor = true;
+            this.tabPageProductDetail.Click += new System.EventHandler(this.tabPageProductDetail_Click);
+            // 
+            // cbDanhMuc
+            // 
+            this.cbDanhMuc.AutoRoundedCorners = true;
+            this.cbDanhMuc.BackColor = System.Drawing.Color.Transparent;
+            this.cbDanhMuc.BorderRadius = 17;
+            this.cbDanhMuc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDanhMuc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDanhMuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDanhMuc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbDanhMuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbDanhMuc.ItemHeight = 30;
+            this.cbDanhMuc.Location = new System.Drawing.Point(447, 181);
+            this.cbDanhMuc.Name = "cbDanhMuc";
+            this.cbDanhMuc.Size = new System.Drawing.Size(200, 36);
+            this.cbDanhMuc.TabIndex = 4;
+            this.cbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -377,27 +396,6 @@
             this.txtMoTa.Size = new System.Drawing.Size(425, 36);
             this.txtMoTa.TabIndex = 1;
             // 
-            // txtTenDanhMuc
-            // 
-            this.txtTenDanhMuc.AutoRoundedCorners = true;
-            this.txtTenDanhMuc.BorderRadius = 17;
-            this.txtTenDanhMuc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDanhMuc.DefaultText = "";
-            this.txtTenDanhMuc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenDanhMuc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenDanhMuc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenDanhMuc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenDanhMuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDanhMuc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenDanhMuc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDanhMuc.Location = new System.Drawing.Point(447, 181);
-            this.txtTenDanhMuc.Name = "txtTenDanhMuc";
-            this.txtTenDanhMuc.PasswordChar = '\0';
-            this.txtTenDanhMuc.PlaceholderText = "";
-            this.txtTenDanhMuc.SelectedText = "";
-            this.txtTenDanhMuc.Size = new System.Drawing.Size(200, 36);
-            this.txtTenDanhMuc.TabIndex = 1;
-            // 
             // txtGiaTien
             // 
             this.txtGiaTien.AutoRoundedCorners = true;
@@ -418,16 +416,6 @@
             this.txtGiaTien.SelectedText = "";
             this.txtGiaTien.Size = new System.Drawing.Size(200, 36);
             this.txtGiaTien.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(443, 155);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 19);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Tên Danh Mục:";
             // 
             // txtTenSanPham
             // 
@@ -460,6 +448,17 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Giá Tiền:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(443, 157);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 19);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Tên danh mục:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -490,28 +489,28 @@
             this.txtMaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaSanPham.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaSanPham.Enabled = false;
             this.txtMaSanPham.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaSanPham.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaSanPham.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSanPham.Location = new System.Drawing.Point(671, 43);
+            this.txtMaSanPham.Location = new System.Drawing.Point(447, 103);
             this.txtMaSanPham.Name = "txtMaSanPham";
             this.txtMaSanPham.PasswordChar = '\0';
             this.txtMaSanPham.PlaceholderText = "";
             this.txtMaSanPham.SelectedText = "";
             this.txtMaSanPham.Size = new System.Drawing.Size(200, 36);
             this.txtMaSanPham.TabIndex = 1;
-            this.txtMaSanPham.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(667, 17);
+            this.label2.Location = new System.Drawing.Point(443, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Sản Phẩm:";
-            this.label2.Visible = false;
             // 
             // productView
             // 
@@ -561,13 +560,13 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtGiaTien;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenDanhMuc;
-        private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2ComboBox cbDanhMuc;
+        private System.Windows.Forms.Label label8;
     }
 }

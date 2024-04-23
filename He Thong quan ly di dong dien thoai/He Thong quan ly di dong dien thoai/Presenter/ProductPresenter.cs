@@ -23,6 +23,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             this._view = view;
             this._repository = repository;
 
+            // su kien 
             this._view.SearchEvent += searchProduct;
             this._view.AddNewEvent += themSanPhamMoi;
             this._view.EditEvent += suaSanPham;
@@ -31,7 +32,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             this._view.CancelEvent += huySanPham;
             // set blinding for product 
             this.spBindlingSource = new BindingSource();
-            this._view.SetProductBlindingSource(spBindlingSource);
+            this._view.SetProductBindingSource(spBindlingSource);
 
             // load product
 
@@ -68,12 +69,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             var product = (SPModel)spBindlingSource.Current;
             // do methods SPID để là int => không cần phải product.MaSanPham1.ToString()
             // khoong canaf phair them ma danh muc 
-            _view.SPID = product.MaSanPham1;
-            _view.TenSanPham = product.TenSanPham1;
-            _view.TenDanhMuc = product.TenDanhMuc1;
-            _view.Gia = product.Gia1;
-            _view.MoTa = product.MoTa1;
-            _view.isEdit = true;
+            _view.SPID = product.MaSanPham1; // ispview & spmodel
+            _view.TenSanPham = product.TenSanPham1;// ispview & spmodel
+            _view.TenDanhMuc = product.cbDanhMuc;// ispview & spmodel
+            _view.Gia = product.Gia1;// ispview & spmodel
+            _view.MoTa = product.MoTa1;// ispview & spmodel
+            _view.isEdit = true;// ispview & spmodel
 
         }
         private void luuSanPham(object sender, EventArgs e)
@@ -83,7 +84,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             // khoong canaf phair them ma danh muc 
             model.MaSanPham1 = (int)_view.SPID;
             model.TenSanPham1 = _view.TenSanPham;
-            model.TenDanhMuc1 = _view.TenDanhMuc;
+            model.cbDanhMuc = _view.TenDanhMuc;
             model.Gia1 = _view.Gia;
             model.MoTa1 = _view.MoTa;
             try
@@ -138,7 +139,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
                 _view.Message = "Đã xoá sản phẩm thành công!";
                 LoadAllProductList();
             }
-            catch (Exception ex)
+            catch 
             {   
                 _view.isSuccessful = false;
                 _view.Message = "Đã xảy ra lỗi, không thể xoá sản phẩm";

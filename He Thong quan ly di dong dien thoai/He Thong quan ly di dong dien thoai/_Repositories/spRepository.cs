@@ -32,7 +32,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                         var spModel = new SPModel();
                         spModel.MaSanPham1 = (int)reader[0];
                         spModel.TenSanPham1 = reader[1].ToString();
-                        spModel.TenDanhMuc1 = reader[2].ToString();
+                        spModel.cbDanhMuc = reader[2].ToString();
                         spModel.Gia1 = (decimal)reader[3];
                         spModel.MoTa1 = reader[4].ToString();
                         spList.Add(spModel);
@@ -41,6 +41,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             }
             return spList;
         }
+
 
         public IEnumerable<SPModel> GetByValue(string value)
         {
@@ -52,7 +53,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = @"SELECT sp.MaSanPham, sp.TenSanPham, sp.Gia, sp.MoTa, dm.TenDanhMuc 
+                cmd.CommandText = @"SELECT sp.MaSanPham, sp.TenSanPham, dm.TenDanhMuc, sp.Gia, sp.MoTa 
                             FROM SanPham sp
                             INNER JOIN DanhMucSanPham dm ON sp.MaDanhMuc = dm.MaDanhMuc
                             WHERE sp.MaSanPham = @MaSanPham1 OR sp.TenSanPham LIKE @TenSanPham1 + '%'
@@ -64,34 +65,59 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                     while (reader.Read())
                     {
                         var spModel = new SPModel();
-                        spModel.MaSanPham1 = (int)reader[0];
-                        spModel.TenSanPham1 = reader[1].ToString();
-                        // Cột thứ 3 là Gia
-                        spModel.Gia1 = (decimal)reader[2];
-                        // Cột thứ 4 là MoTa
-                        spModel.MoTa1 = reader[3].ToString();
-                        // Cột thứ 5 là TenDanhMuc
-                        spModel.TenDanhMuc1 = reader[4].ToString();
-                        spList.Add(spModel);
+                        spModel.MaSanPham1 = (int)reader[0]; // Mã sản phẩm
+                        spModel.TenSanPham1 = reader[1].ToString(); // Tên sản phẩm
+                        spModel.cbDanhMuc = reader[2].ToString(); // Tên danh mục
+                        spModel.Gia1 = (decimal)reader[3]; // Giá
+                        spModel.MoTa1 = reader[4].ToString(); // Mô tả
+                        spList.Add(spModel); // Thêm đối tượng SPModel vào danh sách
                     }
                 }
             }
-            return spList;
+            return spList; // Trả về danh sách SPModel
         }
-
+        // Hàm để lấy danh sách các danh mục từ cơ sở dữ liệu
+        public IEnumerable<string> GetCategories()
+        {
+            var categories = new List<string>();
+            using (var conn = new SqlConnection(connectionString))
+            using (var cmd = new SqlCommand())
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT TenDanhMuc FROM DanhMucSanPham;";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string categoryName = reader["TenDanhMuc"].ToString();
+                        categories.Add(categoryName);
+                    }
+                }
+            }
+            return categories;
+        }
         // không cần nhập mã danh mục
         public void ThemThongTin(SPModel spModel)
         {
+            if (string.IsNullOrEmpty(spModel.cbDanhMuc))
+            {
+                // Hiển thị thông báo lỗi nếu tên danh mục rỗng hoặc null
+                throw new ArgumentException("Tên danh mục không được để trống.");
+            }
+
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand())
             {
                 conn.Open();
                 cmd.Connection = conn;
 
+                // Thêm truy vấn để lấy mã danh mục dựa trên tên danh mục được chọn từ combo box
                 cmd.CommandText = @"INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa) VALUES (@TenSanPham1, (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1), @Gia1, @MoTa1)";
 
+                // Sử dụng parameters để tránh các vấn đề liên quan đến SQL injection
                 cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
-                cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.TenDanhMuc1);
+                cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.cbDanhMuc); // Thay vì nhập mã danh mục, bạn sẽ chọn tên danh mục từ combo box
                 cmd.Parameters.AddWithValue("@Gia1", spModel.Gia1);
                 cmd.Parameters.AddWithValue("@MoTa1", spModel.MoTa1);
 
