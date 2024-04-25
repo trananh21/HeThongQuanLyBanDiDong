@@ -229,10 +229,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             get { return txtMoTa.Text; }
             set { txtMoTa.Text = value; }
         }
-        public string TenDanhMuc
+        public string CbDanhMuc
         {
-            get { return cbDanhMuc.SelectedText; }
-            set { cbDanhMuc.SelectedText = value; }
+            get { return cbDanhMuc.SelectedItem.ToString(); }
+            set { cbDanhMuc.SelectedItem = value; }
         }
         public string TimKiem
         {
@@ -333,7 +333,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            //LoadDanhMuc();
         }
 
         private void tabPageProductDetail_Click(object sender, EventArgs e)

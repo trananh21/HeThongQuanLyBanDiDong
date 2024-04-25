@@ -13,8 +13,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
         // ánh xạ vào các trường trong bảng Sản phẩm SQL
         private long MaSanPham; 
         private string TenSanPham;
-        private string TenDanhMuc;
         //private int MaDanhMuc;
+        public string cbDanhMuc;
         private int _maDanhMuc;
         private decimal Gia;
         private string MoTa;
@@ -46,24 +46,19 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
         [DisplayName("Tên Danh Mục")]
         [Required(ErrorMessage = "Tên danh mục không được để trống")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Tên danh mục không được nhỏ hơn 3 ký tự và quá 50 ký tự")]
-        public string cbDanhMuc
+        public string CbDanhMuc
         {
-            get => TenDanhMuc;
-            set
-            {
-                TenDanhMuc = value;
-            }
+            get => cbDanhMuc; set => cbDanhMuc = value;
         }
-
         // có thể có hoặc không tại vì Mã Danh Mục theo SQL thì sẽ luôn tăng tự động nếu sửa mã danh mục => nguy cơ trùng mã
         // nên không cần Validate ô nhập txtMaDanhMuc => bỏ phần nhập liệu mã danh mục
 
-        [DisplayName("Mã Danh Mục")]
-        public int MaDanhMuc
-        {
-            get => _maDanhMuc;
-            set => _maDanhMuc = value;
-        }
+        //[DisplayName("Mã Danh Mục")]
+        //public int MaDanhMuc
+        //{
+        //    get => _maDanhMuc;
+        //    set => _maDanhMuc = value;
+        //}
 
 
         // Giá tiền 

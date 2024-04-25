@@ -449,6 +449,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_Body.Name = "panel_Body";
             this.panel_Body.Size = new System.Drawing.Size(903, 668);
             this.panel_Body.TabIndex = 15;
+            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
             // Dashboard
             // 

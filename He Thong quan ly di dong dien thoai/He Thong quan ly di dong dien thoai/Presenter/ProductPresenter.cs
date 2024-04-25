@@ -71,7 +71,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             // khoong canaf phair them ma danh muc 
             _view.SPID = product.MaSanPham1; // ispview & spmodel
             _view.TenSanPham = product.TenSanPham1;// ispview & spmodel
-            _view.TenDanhMuc = product.cbDanhMuc;// ispview & spmodel
+            _view.CbDanhMuc = product.cbDanhMuc;// ispview & spmodel
             _view.Gia = product.Gia1;// ispview & spmodel
             _view.MoTa = product.MoTa1;// ispview & spmodel
             _view.isEdit = true;// ispview & spmodel
@@ -80,16 +80,21 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
         private void luuSanPham(object sender, EventArgs e)
         {
             var model = new SPModel();
-            // không cần phải convert từ string về int đối với SPID
-            // khoong canaf phair them ma danh muc 
             model.MaSanPham1 = (int)_view.SPID;
             model.TenSanPham1 = _view.TenSanPham;
-            model.cbDanhMuc = _view.TenDanhMuc;
+            model.CbDanhMuc = _view.CbDanhMuc;
             model.Gia1 = _view.Gia;
             model.MoTa1 = _view.MoTa;
             try
             {
+                // Kiểm tra trường CbDanhMuc trước khi lưu
+                if (string.IsNullOrWhiteSpace(model.CbDanhMuc))
+                {
+                    throw new Exception("Tên danh mục không được để trống!");
+                }
+
                 new Common.ModelDataValidation().Validate(model);
+
                 if (_view.isEdit)
                 {
                     _repository.SuaThongTin(model);
@@ -118,7 +123,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
         {
             _view.SPID = 0;
             _view.TenSanPham = "";
-            _view.TenDanhMuc = "";
+            _view.CbDanhMuc = "";
             _view.Gia = 0;
             _view.MoTa = "";
         }

@@ -117,13 +117,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
 
                 // Sử dụng parameters để tránh các vấn đề liên quan đến SQL injection
                 cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
-                cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.cbDanhMuc); // Thay vì nhập mã danh mục, bạn sẽ chọn tên danh mục từ combo box
+                cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.cbDanhMuc); // Sửa thành mã danh mục
                 cmd.Parameters.AddWithValue("@Gia1", spModel.Gia1);
                 cmd.Parameters.AddWithValue("@MoTa1", spModel.MoTa1);
 
                 cmd.ExecuteNonQuery();
             }
         }
+
 
         public void XoaThongTin(int id)
         {
@@ -149,16 +150,19 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                 cmd.Connection = conn;
                 cmd.CommandText = "UPDATE SanPham " +
                                   "SET TenSanPham = @TenSanPham1, " +
+                                  "    MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1), " + // Thay đổi thành mã danh mục
                                   "    Gia = @Gia1, " +
                                   "    MoTa = @MoTa1 " +
-                                  "WHERE MaSanPham = @MaSanPham1";
+                                  "WHERE MaSanPham  = @MaSanPham1";
 
                 cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
+                cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.cbDanhMuc); // Truyền tên danh mục vào tham số
                 cmd.Parameters.AddWithValue("@Gia1", spModel.Gia1);
                 cmd.Parameters.AddWithValue("@MoTa1", spModel.MoTa1);
                 cmd.Parameters.AddWithValue("@MaSanPham1", spModel.MaSanPham1);
                 cmd.ExecuteNonQuery();
             }
         }
+
     }
 }

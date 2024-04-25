@@ -72,6 +72,16 @@ SELECT
     N'Compact, sleek smartphone with versatility.'
 WHERE EXISTS (SELECT 1 FROM DanhMucSanPham WHERE MaDanhMuc = 1);
 */
+select * from DanhMucSanPham
+select * from sanpham
+UPDATE sanpham 
+SET TenSanPham = 'tran van chien', 
+    MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = N'Danh mục 2'), 
+    Gia = '123456', 
+    MoTa = 'testaaaa' 
+WHERE MaSanPham = 36;
+
+
 -- Bảng khách hàng
 CREATE TABLE KhachHang (
     MaKhachHang INT PRIMARY KEY IDENTITY, -- IDENTITY là giá trị tự tăng dần

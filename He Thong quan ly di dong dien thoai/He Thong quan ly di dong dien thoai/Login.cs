@@ -17,19 +17,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
     public partial class Login : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-        
+
         public Login()
         {
             InitializeComponent();
             txtUsername.KeyPress += TextBox_KeyPressEnter;
             txtPassword.KeyPress += TextBox_KeyPressEnter;
         }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
 
         private void guna2ControlBox1_Click_1(object sender, EventArgs e)
         {
@@ -49,11 +43,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             iSPRepository repository = new SpRepository(connectionString); // truy 
             if (AuthenticateUser(username, password))
             {
-                this.Hide();
+                // Hiển thị form Dashboard nếu chưa hiển thị
+                if (Application.OpenForms.OfType<Dashboard>().Count() == 0)
+                {
+                    Dashboard dboard = new Dashboard(username, repository);
+                    dboard.Show();
+                }
 
-                // Hiển thị form Dashboard
-                Dashboard dboard = new Dashboard(username, repository);
-                dboard.Show();
+                // Ẩn form LoginForm
+                this.Hide();
             }
             else
             {
@@ -80,14 +78,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 result = (int)command.ExecuteScalar();
             }
 
-            if (result > 0)
-            {
-                return true; // Đăng nhập thành công
-            }
-            else
-            {
-                return false; // Đăng nhập thất bại
-            }
+            return result > 0; // Trả về true nếu result > 0, ngược lại trả về false
         }
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)

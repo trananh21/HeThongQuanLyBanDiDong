@@ -26,9 +26,18 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
             productPresenter = new ProductPresenter(new productView(), repository);
-            btnSP.Click += delegate { ShowProductForm(); };
+            btnSP.Click += delegate { ShowProductForm(); }; // khi nhấn vào nút sản phẩm 
+                                                            // Kiểm tra và chỉ hiển thị form Dashboard khi ứng dụng chạy
+            if (productForm == null || productForm.IsDisposed)
+            {
+                ShowDashboard();
+            }
         }
-
+        private void ShowDashboard()
+        {
+            // Hiển thị form Dashboard
+            this.Show();
+        }
         private void ShowProductForm()
         {
             if (productForm == null || productForm.IsDisposed) // Kiểm tra xem form đã được khởi tạo chưa
@@ -40,8 +49,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             OpenFormCon(productForm);
         }
 
+
         private Dashboard formCon;
-        private BindingSource spBlingdingSource;
+
 
         public event EventHandler ShowSPView;
         public event EventHandler ShowOnwerView;
@@ -61,6 +71,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             panel_Body.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
         }
 
 
@@ -197,6 +208,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private void Bt_QuanLy_Click_1(object sender, EventArgs e)
         {
             timer2.Start();
+        }
+
+        private void panel_Body_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

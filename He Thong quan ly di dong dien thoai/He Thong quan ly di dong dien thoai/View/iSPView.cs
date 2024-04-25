@@ -24,7 +24,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         //int MaDanhMuc { get; set; }
         decimal Gia { get; set; }
         string MoTa { get; set; }
-        string TenDanhMuc { get; set; }
+        string CbDanhMuc { get; set; }
         string TimKiem { get; set; } // tim kiem san pham trong danh sách
         bool isEdit {  get; set; }
         bool isSuccessful {  get; set; }
