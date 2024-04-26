@@ -29,6 +29,28 @@ CREATE TABLE SanPham (
     MoTa NVARCHAR(MAX),
     FOREIGN KEY (MaDanhMuc) REFERENCES DanhMucSanPham(MaDanhMuc)
 );
+
+UPDATE SanPham
+SET TenSanPham = 'Iphone 15 Max Pro',
+    MaDanhMuc = DMSP.MaDanhMuc, 
+    Gia = 1531623,
+    MoTa = 'Iphone 15 Max Pro is beauty'
+FROM SanPham SP
+INNER JOIN DanhMucSanPham DMSP ON SP.MaDanhMuc = DMSP.MaDanhMuc
+WHERE SP.MaSanPham = 33;
+
+UPDATE SanPham
+SET TenSanPham = 'Iphone 15 Max Pro',
+    MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc), 
+    Gia = 1531623,
+    MoTa = 'Iphone 15 Max Pro is beauty'
+WHERE MaSanPham = 33;
+
+
+
+
+delete from SanPham where MaSanPham = 35
+select * from sanpham
 -- Thêm dữ liệu vào bảng DanhMucSanPham
 INSERT INTO DanhMucSanPham (TenDanhMuc)
 VALUES 

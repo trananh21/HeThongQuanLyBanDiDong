@@ -140,7 +140,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
         }
 
 
-        // khong can update ma san pham va ma danh muc
+        // Không cần update Mã Sản Phẩm và Mã Danh Mục
         public void SuaThongTin(SPModel spModel)
         {
             using (var conn = new SqlConnection(connectionString))
@@ -148,13 +148,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "UPDATE SanPham " +
-                                  "SET TenSanPham = @TenSanPham1, " +
-                                  "    MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1), " + // Thay đổi thành mã danh mục
-                                  "    Gia = @Gia1, " +
-                                  "    MoTa = @MoTa1 " +
-                                  "WHERE MaSanPham  = @MaSanPham1";
-
+                cmd.CommandText = "UPDATE SanPham SET TenSanPham = @TenSanPham1, MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1), Gia = @Gia1, MoTa = @MoTa1";
                 cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
                 cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.cbDanhMuc); // Truyền tên danh mục vào tham số
                 cmd.Parameters.AddWithValue("@Gia1", spModel.Gia1);
