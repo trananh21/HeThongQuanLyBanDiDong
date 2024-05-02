@@ -69,7 +69,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             var product = (SPModel)spBindlingSource.Current;
             // do methods SPID để là int => không cần phải product.MaSanPham1.ToString()
             // khoong canaf phair them ma danh muc 
-            _view.SPID = product.MaSanPham1; // ispview & spmodel
+            if(product.MaSanPham1 != null)
+            {
+                _view.SPID = (int)product.MaSanPham1; // ispview & spmodel
+            } else
+            {
+                MessageBox.Show("Mã sản phẩm không tồn tại!", "Error");
+            }
             _view.TenSanPham = product.TenSanPham1;// ispview & spmodel
             _view.CbDanhMuc = product.cbDanhMuc;// ispview & spmodel
             _view.Gia = product.Gia1;// ispview & spmodel
@@ -80,9 +86,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
         private void luuSanPham(object sender, EventArgs e)
         {
             var model = new SPModel();
-            model.MaSanPham1 = (int)_view.SPID;
+            model.MaSanPham1 = _view.SPID;
             model.TenSanPham1 = _view.TenSanPham;
-            model.CbDanhMuc = _view.CbDanhMuc;
+            model.CbDanhMuc = _view.CbDanhMuc; // Ensure that CbDanhMuc is correctly typed as string
+
             model.Gia1 = _view.Gia;
             model.MoTa1 = _view.MoTa;
             try

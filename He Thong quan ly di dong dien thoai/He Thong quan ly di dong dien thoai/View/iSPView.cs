@@ -19,7 +19,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         */
         // Thuoc tinh  - truong
 
-        long SPID { get; set; }
+        int SPID { get; set; }
         string TenSanPham { get; set; }
         //int MaDanhMuc { get; set; }
         decimal Gia { get; set; }

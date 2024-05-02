@@ -39,15 +39,17 @@ FROM SanPham SP
 INNER JOIN DanhMucSanPham DMSP ON SP.MaDanhMuc = DMSP.MaDanhMuc
 WHERE SP.MaSanPham = 33;
 
-UPDATE SanPham
-SET TenSanPham = 'Iphone 15 Max Pro',
-    MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc), 
-    Gia = 1531623,
-    MoTa = 'Iphone 15 Max Pro is beauty'
-WHERE MaSanPham = 33;
-
-
-
+UPDATE SanPham SET TenSanPham = 'test222', 
+MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = N'Danh mục 5'),
+Gia = 123456, 
+MoTa = 'test222'
+WHERE MaSanPham = 42
+UPDATE SanPham SET TenSanPham = 'IPHONE 3 Plus', 
+MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = N'Danh mục 5'), 
+Gia = 12312412, MoTa = 'IPHONE 3 Plus'
+WHERE MaSanPham = (SELECT MaSanPham FROM SanPham WHERE MaSanPham = 29)
+select * from sanpham
+SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = N'Danh mục 5'
 
 delete from SanPham where MaSanPham = 35
 select * from sanpham
@@ -78,7 +80,7 @@ VALUES
 	(N'Xiaomi 14 (12GB 256GB)', 7, 14000000, N'Compact, sleek smartphone with versatility.'),
 	(N'Iphone 14 128GB', 8, 17390000, N'Compact, sleek smartphone with versatility.'),
 	(N'Iphone 15 256GB', 9, 17390000, N'Compact, sleek smartphone with versatility.'),
-	(N'Iphone 6 128GB', 10, 17390000, N'Compact, sleek smartphone with versatility.');
+	(N'Iphone 6 128GB', 10, 17390000, N'Compact, sleek smartphone with versatility.');    
 /*
 INSERT INTO SanPham (TenSanPham, MaDanhMuc, Gia, MoTa) 
 VALUES ('Tên Sản Phẩm Mới', (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = 'Tên Danh Mục'), 100000, 'Mô tả cho sản phẩm mới')

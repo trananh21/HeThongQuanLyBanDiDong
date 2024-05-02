@@ -137,7 +137,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             };
         }
 
-        public long SPID
+        public int SPID
         {
             get
             {
@@ -145,8 +145,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 if (txtMaSanPham.Enabled)
                 {
                     // Convert string to long
-                    long result;
-                    if (long.TryParse(txtMaSanPham.Text, out result))
+                    int result;
+                    if (int.TryParse(txtMaSanPham.Text, out result))
                     {
                         return result;
                     }
@@ -231,9 +231,21 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
         public string CbDanhMuc
         {
-            get { return cbDanhMuc.SelectedItem.ToString(); }
+            get
+            {
+                if (cbDanhMuc.SelectedItem != null)
+                {
+                    return cbDanhMuc.SelectedItem.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Tên danh mục không được để trống!", "Warning");
+                    return null; // Return null if no item is selected
+                }
+            }
             set { cbDanhMuc.SelectedItem = value; }
         }
+
         public string TimKiem
         {
             get { return searchProduct.Text; }

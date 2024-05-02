@@ -36,13 +36,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageProductList = new System.Windows.Forms.TabPage();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.searchProduct = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnXoaSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSuaSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThemSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoaSanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThemSanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSuaSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvSanPham = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabPageProductDetail = new System.Windows.Forms.TabPage();
@@ -62,7 +61,7 @@
             this.guna2Panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageProductList.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.tabPageProductDetail.SuspendLayout();
@@ -97,42 +96,22 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 63);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(887, 574);
+            this.tabControl1.Size = new System.Drawing.Size(887, 566);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPageProductList
             // 
-            this.tabPageProductList.Controls.Add(this.btnSearch);
             this.tabPageProductList.Controls.Add(this.searchProduct);
-            this.tabPageProductList.Controls.Add(this.panel1);
             this.tabPageProductList.Controls.Add(this.panel2);
             this.tabPageProductList.Controls.Add(this.panel3);
             this.tabPageProductList.Location = new System.Drawing.Point(4, 29);
             this.tabPageProductList.Name = "tabPageProductList";
             this.tabPageProductList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProductList.Size = new System.Drawing.Size(879, 541);
+            this.tabPageProductList.Size = new System.Drawing.Size(879, 533);
             this.tabPageProductList.TabIndex = 0;
             this.tabPageProductList.Text = "Sản Phẩm";
             this.tabPageProductList.UseVisualStyleBackColor = true;
             this.tabPageProductList.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.BorderRadius = 16;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
-            this.btnSearch.Location = new System.Drawing.Point(661, 17);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(35, 35);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // searchProduct
             // 
@@ -147,7 +126,7 @@
             this.searchProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.searchProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.searchProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchProduct.Location = new System.Drawing.Point(14, 16);
+            this.searchProduct.Location = new System.Drawing.Point(14, 10);
             this.searchProduct.Name = "searchProduct";
             this.searchProduct.PasswordChar = '\0';
             this.searchProduct.PlaceholderText = "Tìm kiếm sản phẩm...";
@@ -156,21 +135,41 @@
             this.searchProduct.TabIndex = 0;
             this.searchProduct.TextChanged += new System.EventHandler(this.searchProduct_TextChanged);
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.btnXoaSanPham);
-            this.panel1.Controls.Add(this.btnSuaSanPham);
-            this.panel1.Controls.Add(this.btnThemSanPham);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(745, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(131, 475);
-            this.panel1.TabIndex = 4;
+            this.panel2.Controls.Add(this.btnSearch);
+            this.panel2.Controls.Add(this.btnXoaSanPham);
+            this.panel2.Controls.Add(this.btnThemSanPham);
+            this.panel2.Controls.Add(this.btnSuaSanPham);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(873, 49);
+            this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.BorderRadius = 16;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
+            this.btnSearch.Location = new System.Drawing.Point(647, 7);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 35);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnXoaSanPham
             // 
             this.btnXoaSanPham.AutoRoundedCorners = true;
-            this.btnXoaSanPham.BorderRadius = 21;
+            this.btnXoaSanPham.BorderRadius = 16;
             this.btnXoaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnXoaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnXoaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -178,16 +177,35 @@
             this.btnXoaSanPham.FillColor = System.Drawing.Color.Red;
             this.btnXoaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnXoaSanPham.Location = new System.Drawing.Point(6, 164);
+            this.btnXoaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_remove;
+            this.btnXoaSanPham.Location = new System.Drawing.Point(764, 7);
             this.btnXoaSanPham.Name = "btnXoaSanPham";
-            this.btnXoaSanPham.Size = new System.Drawing.Size(120, 45);
+            this.btnXoaSanPham.Size = new System.Drawing.Size(35, 35);
             this.btnXoaSanPham.TabIndex = 3;
-            this.btnXoaSanPham.Text = "Xoá Sản Phẩm";
+            // 
+            // btnThemSanPham
+            // 
+            this.btnThemSanPham.AutoRoundedCorners = true;
+            this.btnThemSanPham.BackgroundImage = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang;
+            this.btnThemSanPham.BorderRadius = 16;
+            this.btnThemSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemSanPham.FillColor = System.Drawing.Color.Green;
+            this.btnThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnThemSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang1;
+            this.btnThemSanPham.Location = new System.Drawing.Point(688, 8);
+            this.btnThemSanPham.Name = "btnThemSanPham";
+            this.btnThemSanPham.Size = new System.Drawing.Size(35, 35);
+            this.btnThemSanPham.TabIndex = 3;
+            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
             // 
             // btnSuaSanPham
             // 
             this.btnSuaSanPham.AutoRoundedCorners = true;
-            this.btnSuaSanPham.BorderRadius = 21;
+            this.btnSuaSanPham.BorderRadius = 16;
             this.btnSuaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSuaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSuaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -195,38 +213,11 @@
             this.btnSuaSanPham.FillColor = System.Drawing.Color.Blue;
             this.btnSuaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSuaSanPham.Location = new System.Drawing.Point(6, 99);
+            this.btnSuaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_edit1;
+            this.btnSuaSanPham.Location = new System.Drawing.Point(726, 8);
             this.btnSuaSanPham.Name = "btnSuaSanPham";
-            this.btnSuaSanPham.Size = new System.Drawing.Size(120, 45);
+            this.btnSuaSanPham.Size = new System.Drawing.Size(35, 35);
             this.btnSuaSanPham.TabIndex = 3;
-            this.btnSuaSanPham.Text = "Sửa Sản Phẩm";
-            // 
-            // btnThemSanPham
-            // 
-            this.btnThemSanPham.AutoRoundedCorners = true;
-            this.btnThemSanPham.BorderRadius = 21;
-            this.btnThemSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemSanPham.FillColor = System.Drawing.Color.Green;
-            this.btnThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnThemSanPham.Location = new System.Drawing.Point(6, 33);
-            this.btnThemSanPham.Name = "btnThemSanPham";
-            this.btnThemSanPham.Size = new System.Drawing.Size(120, 45);
-            this.btnThemSanPham.TabIndex = 3;
-            this.btnThemSanPham.Text = "Thêm Sản Phẩm";
-            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(873, 60);
-            this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -234,7 +225,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(873, 535);
+            this.panel3.Size = new System.Drawing.Size(873, 527);
             this.panel3.TabIndex = 6;
             // 
             // dgvSanPham
@@ -259,12 +250,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSanPham.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSanPham.Location = new System.Drawing.Point(0, 66);
+            this.dgvSanPham.Location = new System.Drawing.Point(0, 46);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.RowHeadersVisible = false;
             this.dgvSanPham.RowTemplate.Height = 60;
-            this.dgvSanPham.Size = new System.Drawing.Size(746, 476);
+            this.dgvSanPham.Size = new System.Drawing.Size(873, 481);
             this.dgvSanPham.TabIndex = 1;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -307,7 +299,7 @@
             this.tabPageProductDetail.Location = new System.Drawing.Point(4, 29);
             this.tabPageProductDetail.Name = "tabPageProductDetail";
             this.tabPageProductDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProductDetail.Size = new System.Drawing.Size(879, 541);
+            this.tabPageProductDetail.Size = new System.Drawing.Size(879, 533);
             this.tabPageProductDetail.TabIndex = 1;
             this.tabPageProductDetail.Text = "Thông Tin Chi Tiết";
             this.tabPageProductDetail.UseVisualStyleBackColor = true;
@@ -516,7 +508,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 637);
+            this.ClientSize = new System.Drawing.Size(887, 629);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -530,7 +522,7 @@
             this.guna2Panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPageProductList.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.tabPageProductDetail.ResumeLayout(false);
@@ -562,7 +554,6 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;

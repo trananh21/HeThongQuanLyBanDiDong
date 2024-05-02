@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using He_Thong_quan_ly_di_dong_dien_thoai.Model;
+using System.Windows;
 namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
 {
     public class SpRepository : BaseRepository, iSPRepository
@@ -146,15 +147,31 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand())
             {
-                conn.Open();
-                cmd.Connection = conn;
-                cmd.CommandText = "UPDATE SanPham SET TenSanPham = @TenSanPham1, MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1), Gia = @Gia1, MoTa = @MoTa1";
-                cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
-                cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.cbDanhMuc); // Truyền tên danh mục vào tham số
-                cmd.Parameters.AddWithValue("@Gia1", spModel.Gia1);
-                cmd.Parameters.AddWithValue("@MoTa1", spModel.MoTa1);
-                cmd.Parameters.AddWithValue("@MaSanPham1", spModel.MaSanPham1);
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = @"
+                                        UPDATE SanPham
+                                        SET TenSanPham = @TenSanPham1,
+                                            MaDanhMuc = (SELECT MaDanhMuc FROM DanhMucSanPham WHERE TenDanhMuc = @TenDanhMuc1),
+                                            Gia = @Gia1,
+                                            MoTa = @MoTa1
+                                        WHERE MaSanPham = @MaSanPham1
+                                      ";
+                    cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
+                    cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.CbDanhMuc.ToString());
+                    cmd.Parameters.AddWithValue("@Gia1", spModel.Gia1);
+                    cmd.Parameters.AddWithValue("@MoTa1", spModel.MoTa1);
+                    cmd.Parameters.AddWithValue("@MaSanPham1", spModel.MaSanPham1);
+
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
             }
         }
 
