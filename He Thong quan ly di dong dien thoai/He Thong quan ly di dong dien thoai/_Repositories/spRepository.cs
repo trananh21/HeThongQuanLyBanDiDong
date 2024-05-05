@@ -161,16 +161,18 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                                         WHERE MaSanPham = @MaSanPham1
                                       ";
                     cmd.Parameters.AddWithValue("@TenSanPham1", spModel.TenSanPham1);
-                    cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.CbDanhMuc.ToString());
+                    cmd.Parameters.AddWithValue("@TenDanhMuc1", spModel.CbDanhMuc);
                     cmd.Parameters.AddWithValue("@Gia1", spModel.Gia1);
                     cmd.Parameters.AddWithValue("@MoTa1", spModel.MoTa1);
                     cmd.Parameters.AddWithValue("@MaSanPham1", spModel.MaSanPham1);
 
                     cmd.ExecuteNonQuery();
+                    //cmd.ExecuteReader(); 
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception(ex.Message);
+                    //throw new Exception(ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

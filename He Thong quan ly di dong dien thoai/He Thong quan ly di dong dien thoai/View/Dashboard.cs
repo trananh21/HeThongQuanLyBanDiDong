@@ -19,15 +19,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
     {
         private ProductPresenter productPresenter;
         private bool isCollapsed;
-        private Form productForm;
+        private productView productForm;
         public Dashboard(string username, iSPRepository repository)
         {
             InitializeComponent();
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
             productPresenter = new ProductPresenter(new productView(), repository);
-            btnSP.Click += delegate { ShowProductForm(); }; // khi nhấn vào nút sản phẩm 
-                                                            // Kiểm tra và chỉ hiển thị form Dashboard khi ứng dụng chạy
+            btnSP.Click += delegate {
+                ShowProductForm(); 
+            };                                   
             if (productForm == null || productForm.IsDisposed)
             {
                 ShowDashboard();
@@ -35,15 +36,23 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         }
         private void ShowDashboard()
         {
+            // Ẩn form productView (nếu đã khởi tạo)
+            if (productForm != null)
+            {
+                productForm.Visible = false;
+            }
             // Hiển thị form Dashboard
             this.Show();
         }
         private void ShowProductForm()
         {
-            if (productForm == null || productForm.IsDisposed) // Kiểm tra xem form đã được khởi tạo chưa
+            if (productForm == null || productForm.IsDisposed)
             {
-                productForm = productPresenter.GetProductViewForm(); // Lấy form productView từ presenter
+                productForm = (productView)productPresenter.GetProductViewForm();
             }
+
+            // Hiển thị form productView
+            productForm.Visible = true;
 
             // Hiển thị form productView
             OpenFormCon(productForm);
@@ -213,6 +222,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private void panel_Body_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button18_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
+            productView prdV = new productView();
+            prdV.Visible = false;
         }
     }
 }

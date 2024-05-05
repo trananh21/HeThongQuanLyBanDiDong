@@ -26,8 +26,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             //Application.Run(new Dashboard("", repository));
             Application.Run((Form)view);
 
-
-
         }
     }
 }

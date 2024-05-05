@@ -11,7 +11,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
     {
         // Mọi thứ được code trong Models sẽ luôn phải Data Validates
         // ánh xạ vào các trường trong bảng Sản phẩm SQL
-        private long MaSanPham; 
+        private int MaSanPham; 
         private string TenSanPham;
         //private int MaDanhMuc;
         public string cbDanhMuc;
@@ -21,7 +21,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
 
         // mã sản phẩm
         [DisplayName("ID")]
-        public long MaSanPham1 { get => MaSanPham; set => MaSanPham = value; }
+        [Required(ErrorMessage = "Mã sản phẩm không được để trống")]
+        public int MaSanPham1 { get => MaSanPham; set => MaSanPham = value; }
 
 
         // tên sản phẩm 

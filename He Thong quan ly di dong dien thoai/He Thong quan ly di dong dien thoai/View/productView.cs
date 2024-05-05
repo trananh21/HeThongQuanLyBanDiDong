@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using He_Thong_quan_ly_di_dong_dien_thoai.Model;
+using System.Security.Cryptography.X509Certificates;
+using System.Web.UI.WebControls;
 namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 {
     public partial class productView : Form, iSPView
@@ -18,6 +21,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         private string _message;
         private bool _isSuccessful;
         private bool _isEdit;
+        private int selectIdProduct;
         // Constructor
         public productView()
         {
@@ -26,6 +30,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             tabControl1.TabPages.Remove(tabPageProductDetail);
             LoadDanhMuc();
         }
+
         // Phương thức để load danh mục vào combo box
         private void LoadDanhMuc()
         {
@@ -96,6 +101,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 tabControl1.SelectedTab = tabPageProductDetail; // Chọn tabPageProductDetail để hiển thị
                 tabPageProductDetail.Text = "Thêm sản phẩm mới";
             };
+
             // Edit product
             btnSuaSanPham.Click += delegate
             {
@@ -117,6 +123,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 }
                 MessageBox.Show(Message);
             };
+
             // Cancel product
             btnCancel.Click += delegate
             {
@@ -137,7 +144,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             };
         }
 
-        public int SPID
+        public int MaSanPham
         {
             get
             {
@@ -160,7 +167,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 else
                 {
                     // Trả về giá trị mặc định khi không cần nhập mã sản phẩm
-                    return 0;
+                    return selectIdProduct;
                 }
             }
             set
@@ -177,28 +184,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             set { txtTenSanPham.Text = value; }
         }
 
-        //public int MaDanhMuc
-        //{
-        //    get
-        //    {
-        //        // Convert string to int
-        //        int result;
-        //        if (int.TryParse(txtMaDanhMuc.Text, out result))
-        //        {
-        //            return result;
-        //        }
-        //        else
-        //        {
-        //            // Handle parsing error, maybe throw an exception or return a default value
-        //            throw new InvalidOperationException("Invalid input for MaDanhMuc.");
-        //        }
-        //    }
-        //    set
-        //    {
-        //        // Convert int to string
-        //        txtMaDanhMuc.Text = value.ToString();
-        //    }
-        //}
+
 
         public decimal Gia
         {
@@ -354,6 +340,33 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuaSanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0) // Chắc chắn rằng người dùng đã chọn một hàng hợp lệ
+            {
+                DataGridViewRow row = dgvSanPham.Rows[e.RowIndex];
+
+                // Lấy giá trị của trường mã sản phẩm từ hàng được chọn và gán vào txtMaSanPham
+                txtMaSanPham.Text = row.Cells[0].Value.ToString();
+                selectIdProduct = int.Parse(row.Cells[0].Value.ToString());
+            }
+        }
+
+        private void txtMaSanPham_TextChanged(object sender, EventArgs e)
         {
 
         }

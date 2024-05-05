@@ -19,9 +19,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         */
         // Thuoc tinh  - truong
 
-        int SPID { get; set; }
+        int MaSanPham { get; set; }
         string TenSanPham { get; set; }
-        //int MaDanhMuc { get; set; }
+
         decimal Gia { get; set; }
         string MoTa { get; set; }
         string CbDanhMuc { get; set; }
@@ -50,6 +50,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         void SetProductBindingSource(BindingSource productList);
         void Show();
+
 
 
 

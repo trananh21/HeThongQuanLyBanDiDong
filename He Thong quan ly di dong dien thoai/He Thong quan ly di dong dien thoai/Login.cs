@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using He_Thong_quan_ly_di_dong_dien_thoai._Repositories;
 using He_Thong_quan_ly_di_dong_dien_thoai.Model;
+using He_Thong_quan_ly_di_dong_dien_thoai.View;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Login : Form
@@ -48,6 +49,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 {
                     Dashboard dboard = new Dashboard(username, repository);
                     dboard.Show();
+                    productView prdV = new productView();
+                    prdV.Visible = false;
+                    prdV.SendToBack();
                 }
 
                 // Ẩn form LoginForm

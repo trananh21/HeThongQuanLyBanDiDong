@@ -218,6 +218,7 @@
             this.btnSuaSanPham.Name = "btnSuaSanPham";
             this.btnSuaSanPham.Size = new System.Drawing.Size(35, 35);
             this.btnSuaSanPham.TabIndex = 3;
+            this.btnSuaSanPham.Click += new System.EventHandler(this.btnSuaSanPham_Click);
             // 
             // panel3
             // 
@@ -279,6 +280,7 @@
             this.dgvSanPham.ThemeStyle.RowsStyle.Height = 60;
             this.dgvSanPham.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSanPham.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
             // 
             // tabPageProductDetail
@@ -366,6 +368,7 @@
             this.btnSave.Size = new System.Drawing.Size(180, 45);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtMoTa
             // 
@@ -492,6 +495,7 @@
             this.txtMaSanPham.SelectedText = "";
             this.txtMaSanPham.Size = new System.Drawing.Size(200, 36);
             this.txtMaSanPham.TabIndex = 1;
+            this.txtMaSanPham.TextChanged += new System.EventHandler(this.txtMaSanPham_TextChanged);
             // 
             // label2
             // 

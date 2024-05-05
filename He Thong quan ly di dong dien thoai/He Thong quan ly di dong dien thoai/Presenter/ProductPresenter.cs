@@ -66,39 +66,33 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
         }
         private void suaSanPham(object sender, EventArgs e)
         {
-            var product = (SPModel)spBindlingSource.Current;
-            // do methods SPID để là int => không cần phải product.MaSanPham1.ToString()
-            // khoong canaf phair them ma danh muc 
-            if(product.MaSanPham1 != null)
+            try
             {
-                _view.SPID = (int)product.MaSanPham1; // ispview & spmodel
-            } else
-            {
-                MessageBox.Show("Mã sản phẩm không tồn tại!", "Error");
+                var product = (SPModel)spBindlingSource.Current;
+                _view.MaSanPham = product.MaSanPham1;
+                _view.TenSanPham = product.TenSanPham1;// ispview & spmodel
+                _view.CbDanhMuc = product.cbDanhMuc;// ispview & spmodel
+                _view.Gia = product.Gia1;// ispview & spmodel
+                _view.MoTa = product.MoTa1;// ispview & spmodel
+                _view.isEdit = true;// ispview & spmodel
             }
-            _view.TenSanPham = product.TenSanPham1;// ispview & spmodel
-            _view.CbDanhMuc = product.cbDanhMuc;// ispview & spmodel
-            _view.Gia = product.Gia1;// ispview & spmodel
-            _view.MoTa = product.MoTa1;// ispview & spmodel
-            _view.isEdit = true;// ispview & spmodel
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
         private void luuSanPham(object sender, EventArgs e)
         {
             var model = new SPModel();
-            model.MaSanPham1 = _view.SPID;
+            model.MaSanPham1 = _view.MaSanPham;
             model.TenSanPham1 = _view.TenSanPham;
-            model.CbDanhMuc = _view.CbDanhMuc; // Ensure that CbDanhMuc is correctly typed as string
-
+            model.CbDanhMuc = _view.CbDanhMuc;
             model.Gia1 = _view.Gia;
             model.MoTa1 = _view.MoTa;
             try
             {
-                // Kiểm tra trường CbDanhMuc trước khi lưu
-                if (string.IsNullOrWhiteSpace(model.CbDanhMuc))
-                {
-                    throw new Exception("Tên danh mục không được để trống!");
-                }
+
 
                 new Common.ModelDataValidation().Validate(model);
 
@@ -128,7 +122,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
 
         private void CleanViewFields()
         {
-            _view.SPID = 0;
+            _view.MaSanPham = 0;
             _view.TenSanPham = "";
             _view.CbDanhMuc = "";
             _view.Gia = 0;
@@ -151,8 +145,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
                 _view.Message = "Đã xoá sản phẩm thành công!";
                 LoadAllProductList();
             }
-            catch 
-            {   
+            catch
+            {
                 _view.isSuccessful = false;
                 _view.Message = "Đã xảy ra lỗi, không thể xoá sản phẩm";
             }
