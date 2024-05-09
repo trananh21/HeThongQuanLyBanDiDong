@@ -36,40 +36,40 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelLogout = new System.Windows.Forms.Panel();
             this.guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.lblHelloAdmin = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_ddQuanLy = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Bt_QuanLy = new System.Windows.Forms.Button();
             this.paneldropdown = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnKH = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
+            this.btu_danhmuc = new System.Windows.Forms.Button();
+            this.icbtu_Trangchu = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.panel_Body = new System.Windows.Forms.Panel();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.Bt_QuanLy = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btu_danhmuc = new System.Windows.Forms.Button();
-            this.icbtu_Trangchu = new FontAwesome.Sharp.IconButton();
-            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelLogout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel_ddQuanLy.SuspendLayout();
-            this.paneldropdown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.paneldropdown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,6 +139,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button18.Text = "Đăng xuất";
             this.guna2Button18.Click += new System.EventHandler(this.guna2Button18_Click);
             // 
+            // pictureBoxIcon
+            // 
+            this.pictureBoxIcon.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxIcon.Name = "pictureBoxIcon";
+            this.pictureBoxIcon.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxIcon.TabIndex = 4;
+            this.pictureBoxIcon.TabStop = false;
+            // 
             // lblHelloAdmin
             // 
             this.lblHelloAdmin.AutoSize = true;
@@ -158,6 +167,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 112);
             this.panel3.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.logo_uneti_smartphone_2;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -185,6 +204,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_ddQuanLy.Name = "panel_ddQuanLy";
             this.panel_ddQuanLy.Size = new System.Drawing.Size(220, 60);
             this.panel_ddQuanLy.TabIndex = 5;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_admin;
+            this.pictureBox18.Location = new System.Drawing.Point(8, 12);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 4;
+            this.pictureBox18.TabStop = false;
             // 
             // button9
             // 
@@ -234,6 +263,26 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button2.Text = "Báo Cáo và thông kê";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // Bt_QuanLy
+            // 
+            this.Bt_QuanLy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Bt_QuanLy.FlatAppearance.BorderSize = 0;
+            this.Bt_QuanLy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.Bt_QuanLy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.Bt_QuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bt_QuanLy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_QuanLy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Bt_QuanLy.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
+            this.Bt_QuanLy.Location = new System.Drawing.Point(0, 0);
+            this.Bt_QuanLy.Name = "Bt_QuanLy";
+            this.Bt_QuanLy.Size = new System.Drawing.Size(220, 60);
+            this.Bt_QuanLy.TabIndex = 0;
+            this.Bt_QuanLy.Text = "Quản Lý";
+            this.Bt_QuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bt_QuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.Bt_QuanLy.UseVisualStyleBackColor = true;
+            this.Bt_QuanLy.Click += new System.EventHandler(this.Bt_QuanLy_Click_1);
+            // 
             // paneldropdown
             // 
             this.paneldropdown.Controls.Add(this.pictureBox2);
@@ -250,6 +299,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.paneldropdown.Name = "paneldropdown";
             this.paneldropdown.Size = new System.Drawing.Size(220, 60);
             this.paneldropdown.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_menu3;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // button7
             // 
@@ -326,70 +385,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btnSP.Text = "Sản Phẩm";
             this.btnSP.UseVisualStyleBackColor = true;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 15;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 15;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 15;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
-            // 
-            // panel_Body
-            // 
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Body.Location = new System.Drawing.Point(197, 112);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(903, 668);
-            this.panel_Body.TabIndex = 15;
-            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_admin;
-            this.pictureBox18.Location = new System.Drawing.Point(8, 12);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 4;
-            this.pictureBox18.TabStop = false;
-            // 
-            // Bt_QuanLy
-            // 
-            this.Bt_QuanLy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Bt_QuanLy.FlatAppearance.BorderSize = 0;
-            this.Bt_QuanLy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.Bt_QuanLy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.Bt_QuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bt_QuanLy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_QuanLy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Bt_QuanLy.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
-            this.Bt_QuanLy.Location = new System.Drawing.Point(0, 0);
-            this.Bt_QuanLy.Name = "Bt_QuanLy";
-            this.Bt_QuanLy.Size = new System.Drawing.Size(220, 60);
-            this.Bt_QuanLy.TabIndex = 0;
-            this.Bt_QuanLy.Text = "Quản Lý";
-            this.Bt_QuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Bt_QuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Bt_QuanLy.UseVisualStyleBackColor = true;
-            this.Bt_QuanLy.Click += new System.EventHandler(this.Bt_QuanLy_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_menu3;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // btu_danhmuc
             // 
             this.btu_danhmuc.Dock = System.Windows.Forms.DockStyle.Top;
@@ -433,24 +428,29 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.icbtu_Trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtu_Trangchu.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxIcon
+            // timer1
             // 
-            this.pictureBoxIcon.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(20, 20);
-            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxIcon.TabIndex = 4;
-            this.pictureBoxIcon.TabStop = false;
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
+            // timer2
             // 
-            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.logo_uneti_smartphone_2;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.timer2.Interval = 15;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 15;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
+            // 
+            // panel_Body
+            // 
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_Body.Location = new System.Drawing.Point(197, 112);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(903, 668);
+            this.panel_Body.TabIndex = 15;
+            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
             // Dashboard
             // 
@@ -469,14 +469,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel1.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
             this.panelLogout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel_ddQuanLy.ResumeLayout(false);
-            this.paneldropdown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.paneldropdown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

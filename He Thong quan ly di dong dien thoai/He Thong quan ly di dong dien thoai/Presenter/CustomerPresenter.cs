@@ -15,9 +15,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
         private iCustomerView _view;
         private iCustomerReponsitory _repository;
         private BindingSource cusBindingSource; // quản lí việc ràng buộc 
-        private IEnumerable<CustomerModel> cusList; // giữ danh sách 
-        private customerView customerView;
-        private iCustomerReponsitory cusRepo;
+        private IEnumerable<CustomerModel> cusList; // giữ danh sách
 
 
         // constructor có tham số truyền vào 
@@ -43,12 +41,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             // Show view 
 
             this._view.Show();
-        }
-
-        public CustomerPresenter(customerView customerView, iCustomerReponsitory cusRepo)
-        {
-            this.customerView = customerView;
-            this.cusRepo = cusRepo;
         }
 
         private void LoadAllCustomerList()
@@ -152,12 +144,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
         public Form GetCustomerViewForm()
         {
             return (Form)_view;
-        }
-
-        private void LoadAllProductList()
-        {
-            cusList = _repository.GetAllCustomer();
-            cusBindingSource.DataSource = cusList; // set data source
         }
         
         private void CleanViewFields()

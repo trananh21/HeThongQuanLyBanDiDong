@@ -40,16 +40,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             try
             {
-                MessageBox.Show("customerForm: " + customerForm);
                 if (customerForm == null || customerForm.IsDisposed)
                 {
                     customerForm = (customerView)customerPresenter.GetCustomerViewForm();
                 }
 
-                // Hiển thị form productView
                 customerForm.Visible = true;
 
-                // Hiển thị form productView
+                // Hiển thị form customerView
                 OpenFormCon(customerForm);
             }
             catch(Exception ex)
