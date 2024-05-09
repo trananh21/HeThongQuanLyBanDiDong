@@ -25,7 +25,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT sp.MaSanPham, sp.TenSanPham, dm.TenDanhMuc, sp.Gia, sp.MoTa FROM SanPham sp INNER JOIN DanhMucSanPham dm ON sp.MaDanhMuc = dm.MaDanhMuc;";
+                cmd.CommandText = "SELECT sp.MaSanPham, sp.TenSanPham, dm.TenDanhMuc, sp.Gia, sp.MoTa FROM SanPham sp INNER JOIN DanhMucSanPham dm ON sp.MaDanhMuc = dm.MaDanhMuc ORDER BY Gia ASC;";
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())

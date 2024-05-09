@@ -51,15 +51,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
         {
             get => cbDanhMuc; set => cbDanhMuc = value;
         }
-        // có thể có hoặc không tại vì Mã Danh Mục theo SQL thì sẽ luôn tăng tự động nếu sửa mã danh mục => nguy cơ trùng mã
-        // nên không cần Validate ô nhập txtMaDanhMuc => bỏ phần nhập liệu mã danh mục
 
-        //[DisplayName("Mã Danh Mục")]
-        //public int MaDanhMuc
-        //{
-        //    get => _maDanhMuc;
-        //    set => _maDanhMuc = value;
-        //}
+
 
 
         // Giá tiền 
