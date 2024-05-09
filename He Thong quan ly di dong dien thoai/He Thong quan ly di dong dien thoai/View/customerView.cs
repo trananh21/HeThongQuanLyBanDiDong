@@ -18,7 +18,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             InitializeComponent();
             LienKetVaNangCaoLuotXem();
             tabControlCustomer.TabPages.Remove(tabCustomerDetail);
+            
         }
+
         private void LienKetVaNangCaoLuotXem()
         {
 

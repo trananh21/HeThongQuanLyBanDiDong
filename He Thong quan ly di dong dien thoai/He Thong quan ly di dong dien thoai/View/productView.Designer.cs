@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(productView));
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -38,6 +39,10 @@
             this.tabPageProductList = new System.Windows.Forms.TabPage();
             this.searchProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoaSanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThemSanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSuaSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvSanPham = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabPageProductDetail = new System.Windows.Forms.TabPage();
@@ -54,10 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaSanPham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoaSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThemSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSuaSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageProductList.SuspendLayout();
@@ -148,6 +149,78 @@
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.BorderRadius = 16;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
+            this.btnSearch.Location = new System.Drawing.Point(647, 7);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 35);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnXoaSanPham
+            // 
+            this.btnXoaSanPham.AutoRoundedCorners = true;
+            this.btnXoaSanPham.BorderRadius = 16;
+            this.btnXoaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoaSanPham.FillColor = System.Drawing.Color.Red;
+            this.btnXoaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnXoaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_remove;
+            this.btnXoaSanPham.Location = new System.Drawing.Point(764, 7);
+            this.btnXoaSanPham.Name = "btnXoaSanPham";
+            this.btnXoaSanPham.Size = new System.Drawing.Size(35, 35);
+            this.btnXoaSanPham.TabIndex = 3;
+            // 
+            // btnThemSanPham
+            // 
+            this.btnThemSanPham.AutoRoundedCorners = true;
+            this.btnThemSanPham.BackgroundImage = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang;
+            this.btnThemSanPham.BorderRadius = 16;
+            this.btnThemSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemSanPham.FillColor = System.Drawing.Color.Green;
+            this.btnThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnThemSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang1;
+            this.btnThemSanPham.Location = new System.Drawing.Point(688, 8);
+            this.btnThemSanPham.Name = "btnThemSanPham";
+            this.btnThemSanPham.Size = new System.Drawing.Size(35, 35);
+            this.btnThemSanPham.TabIndex = 3;
+            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
+            // 
+            // btnSuaSanPham
+            // 
+            this.btnSuaSanPham.AutoRoundedCorners = true;
+            this.btnSuaSanPham.BorderRadius = 16;
+            this.btnSuaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuaSanPham.FillColor = System.Drawing.Color.Blue;
+            this.btnSuaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnSuaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_edit1;
+            this.btnSuaSanPham.Location = new System.Drawing.Point(726, 8);
+            this.btnSuaSanPham.Name = "btnSuaSanPham";
+            this.btnSuaSanPham.Size = new System.Drawing.Size(35, 35);
+            this.btnSuaSanPham.TabIndex = 3;
+            this.btnSuaSanPham.Click += new System.EventHandler(this.btnSuaSanPham_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dgvSanPham);
@@ -159,55 +232,68 @@
             // 
             // dgvSanPham
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.dgvSanPham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(56)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSanPham.ColumnHeadersHeight = 60;
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSanPham.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
             this.dgvSanPham.Location = new System.Drawing.Point(0, 46);
             this.dgvSanPham.Name = "dgvSanPham";
+            this.dgvSanPham.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSanPham.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSanPham.RowHeadersVisible = false;
-            this.dgvSanPham.RowTemplate.Height = 60;
+            this.dgvSanPham.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
+            this.dgvSanPham.RowTemplate.Height = 41;
+            this.dgvSanPham.RowTemplate.ReadOnly = true;
             this.dgvSanPham.Size = new System.Drawing.Size(873, 481);
             this.dgvSanPham.TabIndex = 1;
-            this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSanPham.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
+            this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgvSanPham.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSanPham.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSanPham.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvSanPham.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
+            this.dgvSanPham.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.dgvSanPham.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvSanPham.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvSanPham.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvSanPham.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvSanPham.ThemeStyle.HeaderStyle.Height = 60;
-            this.dgvSanPham.ThemeStyle.ReadOnly = false;
-            this.dgvSanPham.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSanPham.ThemeStyle.ReadOnly = true;
+            this.dgvSanPham.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
             this.dgvSanPham.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSanPham.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSanPham.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvSanPham.ThemeStyle.RowsStyle.Height = 60;
-            this.dgvSanPham.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSanPham.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvSanPham.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvSanPham.ThemeStyle.RowsStyle.Height = 41;
+            this.dgvSanPham.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
+            this.dgvSanPham.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
             // 
@@ -435,78 +521,6 @@
             this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Sản Phẩm:";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.BorderRadius = 16;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
-            this.btnSearch.Location = new System.Drawing.Point(647, 7);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(35, 35);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnXoaSanPham
-            // 
-            this.btnXoaSanPham.AutoRoundedCorners = true;
-            this.btnXoaSanPham.BorderRadius = 16;
-            this.btnXoaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoaSanPham.FillColor = System.Drawing.Color.Red;
-            this.btnXoaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnXoaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_remove;
-            this.btnXoaSanPham.Location = new System.Drawing.Point(764, 7);
-            this.btnXoaSanPham.Name = "btnXoaSanPham";
-            this.btnXoaSanPham.Size = new System.Drawing.Size(35, 35);
-            this.btnXoaSanPham.TabIndex = 3;
-            // 
-            // btnThemSanPham
-            // 
-            this.btnThemSanPham.AutoRoundedCorners = true;
-            this.btnThemSanPham.BackgroundImage = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang;
-            this.btnThemSanPham.BorderRadius = 16;
-            this.btnThemSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemSanPham.FillColor = System.Drawing.Color.Green;
-            this.btnThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnThemSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang1;
-            this.btnThemSanPham.Location = new System.Drawing.Point(688, 8);
-            this.btnThemSanPham.Name = "btnThemSanPham";
-            this.btnThemSanPham.Size = new System.Drawing.Size(35, 35);
-            this.btnThemSanPham.TabIndex = 3;
-            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
-            // 
-            // btnSuaSanPham
-            // 
-            this.btnSuaSanPham.AutoRoundedCorners = true;
-            this.btnSuaSanPham.BorderRadius = 16;
-            this.btnSuaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSuaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSuaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSuaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSuaSanPham.FillColor = System.Drawing.Color.Blue;
-            this.btnSuaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSuaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_edit1;
-            this.btnSuaSanPham.Location = new System.Drawing.Point(726, 8);
-            this.btnSuaSanPham.Name = "btnSuaSanPham";
-            this.btnSuaSanPham.Size = new System.Drawing.Size(35, 35);
-            this.btnSuaSanPham.TabIndex = 3;
-            this.btnSuaSanPham.Click += new System.EventHandler(this.btnSuaSanPham_Click);
             // 
             // productView
             // 
