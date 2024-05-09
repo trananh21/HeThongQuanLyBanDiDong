@@ -20,6 +20,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             this.mainView = mainView;
             this.sqlConnectionString = sqlConnectionString;
             this.mainView.ShowSPView += ShowSPsView;
+            this.mainView.ShowCustomersView += ShowCussView;
+        }
+
+        private void ShowCussView(object sender, EventArgs e)
+        {
+            iCustomerView view = (iCustomerView)customerView.GetInstance((Dashboard)mainView);
+            iCustomerReponsitory repository = new customerRepository(sqlConnectionString);
+            new CustomerPresenter(view, repository);
         }
 
         private void ShowSPsView(object sender, EventArgs e)
@@ -28,5 +36,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
             iSPRepository repository = new SpRepository(sqlConnectionString);
             new ProductPresenter(view, repository);
         }
+
+
+
     }
 }

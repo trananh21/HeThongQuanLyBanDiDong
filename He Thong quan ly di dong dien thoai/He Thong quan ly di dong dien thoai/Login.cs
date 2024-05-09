@@ -42,16 +42,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             iSPRepository repository = new SpRepository(connectionString); // truy 
+            iCustomerReponsitory cusRepo = new customerRepository(connectionString);
             if (AuthenticateUser(username, password))
             {
                 // Hiển thị form Dashboard nếu chưa hiển thị
                 if (Application.OpenForms.OfType<Dashboard>().Count() == 0)
                 {
-                    Dashboard dboard = new Dashboard(username, repository);
+                    Dashboard dboard = new Dashboard(username, repository, cusRepo);
                     dboard.Show();
-                    productView prdV = new productView();
-                    prdV.Visible = false;
-                    prdV.SendToBack();
                 }
 
                 // Ẩn form LoginForm
@@ -69,19 +67,32 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private bool AuthenticateUser(string username, string password)
         {
             int result = 0;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string queryString = "SELECT COUNT(*) FROM login WHERE username = @Username AND password = @Password";
-                SqlCommand command = new SqlCommand(queryString, connection);
-                command.Parameters.AddWithValue("@Username", username);
-                command.Parameters.AddWithValue("@Password", password);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        string queryString = "SELECT COUNT(*) FROM login WHERE username = @Username AND password = @Password";
+                        SqlCommand command = new SqlCommand(queryString, connection);
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Password", password);
 
-                connection.Open();
+                        connection.Open();
 
-                result = (int)command.ExecuteScalar();
+                        result = (int)command.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Fix: " + ex.Message);
+                    }
+
+                }
             }
-
+            catch(Exception ex)
+            {
+                MessageBox.Show("connection: " + ex.Message);
+            }
             return result > 0; // Trả về true nếu result > 0, ngược lại trả về false
         }
 

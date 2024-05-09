@@ -38,10 +38,6 @@
             this.tabPageProductList = new System.Windows.Forms.TabPage();
             this.searchProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoaSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThemSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSuaSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvSanPham = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabPageProductDetail = new System.Windows.Forms.TabPage();
@@ -58,6 +54,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaSanPham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoaSanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThemSanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSuaSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageProductList.SuspendLayout();
@@ -147,78 +147,6 @@
             this.panel2.Size = new System.Drawing.Size(873, 49);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.BorderRadius = 16;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
-            this.btnSearch.Location = new System.Drawing.Point(647, 7);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(35, 35);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnXoaSanPham
-            // 
-            this.btnXoaSanPham.AutoRoundedCorners = true;
-            this.btnXoaSanPham.BorderRadius = 16;
-            this.btnXoaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoaSanPham.FillColor = System.Drawing.Color.Red;
-            this.btnXoaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnXoaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_remove;
-            this.btnXoaSanPham.Location = new System.Drawing.Point(764, 7);
-            this.btnXoaSanPham.Name = "btnXoaSanPham";
-            this.btnXoaSanPham.Size = new System.Drawing.Size(35, 35);
-            this.btnXoaSanPham.TabIndex = 3;
-            // 
-            // btnThemSanPham
-            // 
-            this.btnThemSanPham.AutoRoundedCorners = true;
-            this.btnThemSanPham.BackgroundImage = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang;
-            this.btnThemSanPham.BorderRadius = 16;
-            this.btnThemSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemSanPham.FillColor = System.Drawing.Color.Green;
-            this.btnThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnThemSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang1;
-            this.btnThemSanPham.Location = new System.Drawing.Point(688, 8);
-            this.btnThemSanPham.Name = "btnThemSanPham";
-            this.btnThemSanPham.Size = new System.Drawing.Size(35, 35);
-            this.btnThemSanPham.TabIndex = 3;
-            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
-            // 
-            // btnSuaSanPham
-            // 
-            this.btnSuaSanPham.AutoRoundedCorners = true;
-            this.btnSuaSanPham.BorderRadius = 16;
-            this.btnSuaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSuaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSuaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSuaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSuaSanPham.FillColor = System.Drawing.Color.Blue;
-            this.btnSuaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSuaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_edit1;
-            this.btnSuaSanPham.Location = new System.Drawing.Point(726, 8);
-            this.btnSuaSanPham.Name = "btnSuaSanPham";
-            this.btnSuaSanPham.Size = new System.Drawing.Size(35, 35);
-            this.btnSuaSanPham.TabIndex = 3;
-            this.btnSuaSanPham.Click += new System.EventHandler(this.btnSuaSanPham_Click);
             // 
             // panel3
             // 
@@ -507,6 +435,78 @@
             this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Sản Phẩm:";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.BorderRadius = 16;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
+            this.btnSearch.Location = new System.Drawing.Point(647, 7);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 35);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnXoaSanPham
+            // 
+            this.btnXoaSanPham.AutoRoundedCorners = true;
+            this.btnXoaSanPham.BorderRadius = 16;
+            this.btnXoaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoaSanPham.FillColor = System.Drawing.Color.Red;
+            this.btnXoaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnXoaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_remove;
+            this.btnXoaSanPham.Location = new System.Drawing.Point(764, 7);
+            this.btnXoaSanPham.Name = "btnXoaSanPham";
+            this.btnXoaSanPham.Size = new System.Drawing.Size(35, 35);
+            this.btnXoaSanPham.TabIndex = 3;
+            // 
+            // btnThemSanPham
+            // 
+            this.btnThemSanPham.AutoRoundedCorners = true;
+            this.btnThemSanPham.BackgroundImage = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang;
+            this.btnThemSanPham.BorderRadius = 16;
+            this.btnThemSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemSanPham.FillColor = System.Drawing.Color.Green;
+            this.btnThemSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnThemSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_gio_hang1;
+            this.btnThemSanPham.Location = new System.Drawing.Point(688, 8);
+            this.btnThemSanPham.Name = "btnThemSanPham";
+            this.btnThemSanPham.Size = new System.Drawing.Size(35, 35);
+            this.btnThemSanPham.TabIndex = 3;
+            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
+            // 
+            // btnSuaSanPham
+            // 
+            this.btnSuaSanPham.AutoRoundedCorners = true;
+            this.btnSuaSanPham.BorderRadius = 16;
+            this.btnSuaSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuaSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuaSanPham.FillColor = System.Drawing.Color.Blue;
+            this.btnSuaSanPham.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnSuaSanPham.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_edit1;
+            this.btnSuaSanPham.Location = new System.Drawing.Point(726, 8);
+            this.btnSuaSanPham.Name = "btnSuaSanPham";
+            this.btnSuaSanPham.Size = new System.Drawing.Size(35, 35);
+            this.btnSuaSanPham.TabIndex = 3;
+            this.btnSuaSanPham.Click += new System.EventHandler(this.btnSuaSanPham_Click);
             // 
             // productView
             // 

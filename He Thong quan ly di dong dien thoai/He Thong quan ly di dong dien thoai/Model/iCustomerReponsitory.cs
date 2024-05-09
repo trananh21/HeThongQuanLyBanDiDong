@@ -9,7 +9,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
     public interface iCustomerReponsitory
     {
         void AddCustomer(CustomerModel model);
-        void EditCustomer(CustomerModel spModel);
+        void EditCustomer(CustomerModel cusModel);
         void RemoveCustomer(int id);
         IEnumerable<CustomerModel> GetAllCustomer();
         IEnumerable<CustomerModel> GetByValueCustomer(string value); // Searchs

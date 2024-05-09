@@ -18,22 +18,46 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
     public partial class Dashboard : Form, iMainView
     {
         private ProductPresenter productPresenter;
+        private CustomerPresenter customerPresenter;
         private bool isCollapsed;
         private productView productForm;
-        public Dashboard(string username, iSPRepository repository)
+        private customerView customerForm;
+        public Dashboard(string username, iSPRepository repository, iCustomerReponsitory cusRepo)
         {
             InitializeComponent();
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
             productPresenter = new ProductPresenter(new productView(), repository);
-            btnSP.Click += delegate {
-                ShowProductForm(); 
-            };                                   
-            if (productForm == null || productForm.IsDisposed)
+            customerPresenter = new CustomerPresenter(new customerView(), cusRepo);
+            btnSP.Click += ShowProductForm;
+
+            btnKH.Click += ShowCustomerForm;
+
+            ShowDashboard();
+        }
+
+        private void ShowCustomerForm(object sender, EventArgs e)
+        {
+            try
             {
-                ShowDashboard();
+                MessageBox.Show("customerForm: " + customerForm);
+                if (customerForm == null || customerForm.IsDisposed)
+                {
+                    customerForm = (customerView)customerPresenter.GetCustomerViewForm();
+                }
+
+                // Hiển thị form productView
+                customerForm.Visible = true;
+
+                // Hiển thị form productView
+                OpenFormCon(customerForm);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("test: " + ex.Message);
             }
         }
+
         private void ShowDashboard()
         {
             // Ẩn form productView (nếu đã khởi tạo)
@@ -41,10 +65,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             {
                 productForm.Visible = false;
             }
+            // Ẩn form customerView (nếu đã khởi tạo)
+            if (customerForm != null)
+            {
+                customerForm.Visible = false;
+            }
             // Hiển thị form Dashboard
             this.Show();
         }
-        private void ShowProductForm()
+        private void ShowProductForm(object sender, EventArgs e)
         {
             if (productForm == null || productForm.IsDisposed)
             {
@@ -61,10 +90,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private Dashboard formCon;
 
-
+        //product
         public event EventHandler ShowSPView;
         public event EventHandler ShowOnwerView;
         public event EventHandler ShowVetsView;
+        // customer
+        public event EventHandler ShowCustomerView;
+        public event EventHandler ShowAdminView;
+        public event EventHandler ShowCustomersView;
 
         private void OpenFormCon(Form childForm)
         {

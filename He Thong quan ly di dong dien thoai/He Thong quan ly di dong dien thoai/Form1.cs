@@ -19,9 +19,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         
         private bool isCollapsed;
 
+        // product
         public event EventHandler ShowSPView;
         public event EventHandler ShowOnwerView;
         public event EventHandler ShowVetsView;
+        // customer
+        public event EventHandler ShowCustomerView;
+        public event EventHandler ShowAdminView;
+        public event EventHandler ShowCustomersView;
 
         public form1()
         {

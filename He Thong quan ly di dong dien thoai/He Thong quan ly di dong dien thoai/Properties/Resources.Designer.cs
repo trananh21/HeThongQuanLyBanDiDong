@@ -83,6 +83,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_customer {
+            get {
+                object obj = ResourceManager.GetObject("add-customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_login {
             get {
                 object obj = ResourceManager.GetObject("background-login", resourceCulture);
@@ -96,6 +106,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap double_right_outlined_ {
             get {
                 object obj = ResourceManager.GetObject("double-right-outlined_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_customer {
+            get {
+                object obj = ResourceManager.GetObject("edit-customer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -396,6 +416,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap OPPO_Find_N3_16GB_512GB {
             get {
                 object obj = ResourceManager.GetObject("OPPO-Find-N3-16GB-512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_customer {
+            get {
+                object obj = ResourceManager.GetObject("remove-customer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

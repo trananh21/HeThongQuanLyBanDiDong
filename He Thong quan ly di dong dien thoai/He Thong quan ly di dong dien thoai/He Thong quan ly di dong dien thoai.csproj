@@ -76,7 +76,14 @@
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\iCustomerReponsitory.cs" />
     <Compile Include="Presenter\Common\ModelDataValidation.cs" />
+    <Compile Include="Presenter\CustomerPresenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
+    <Compile Include="View\customerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\customerView.Designer.cs">
+      <DependentUpon>customerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +108,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\EditProductEventArgs.cs" />
+    <Compile Include="View\iCustomerView.cs" />
     <Compile Include="View\iMainView.cs" />
     <Compile Include="View\iSPView.cs" />
     <Compile Include="View\productView.cs">
@@ -112,6 +120,9 @@
     <Compile Include="_Repositories\BaseRepository.cs" />
     <Compile Include="_Repositories\customerRepository.cs" />
     <Compile Include="_Repositories\spRepository.cs" />
+    <EmbeddedResource Include="View\customerView.resx">
+      <DependentUpon>customerView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +275,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-customer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

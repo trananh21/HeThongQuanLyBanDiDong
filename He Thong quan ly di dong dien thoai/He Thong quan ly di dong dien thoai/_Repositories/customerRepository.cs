@@ -96,7 +96,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             }
         }
 
-        public void EditCustomer(CustomerModel spModel)
+        public void EditCustomer(CustomerModel cusModel)
         {
             using (var conn = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand())
@@ -114,11 +114,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                                             DiaChi = @address
                                         WHERE MaKhachHang = @idCustomer
                                       ";
-                    cmd.Parameters.AddWithValue("@idCustomer", spModel.customerID);
-                    cmd.Parameters.AddWithValue("@name", spModel.customerName);
-                    cmd.Parameters.AddWithValue("@email", spModel.CustomerEmail);
-                    cmd.Parameters.AddWithValue("@phonenumber", spModel.customerPhoneNumber);
-                    cmd.Parameters.AddWithValue("@address", spModel.customerAddress);
+                    cmd.Parameters.AddWithValue("@idCustomer", cusModel.customerID);
+                    cmd.Parameters.AddWithValue("@name", cusModel.customerName);
+                    cmd.Parameters.AddWithValue("@email", cusModel.CustomerEmail);
+                    cmd.Parameters.AddWithValue("@phonenumber", cusModel.customerPhoneNumber);
+                    cmd.Parameters.AddWithValue("@address", cusModel.customerAddress);
 
                     cmd.ExecuteNonQuery();
                     //cmd.ExecuteReader(); 

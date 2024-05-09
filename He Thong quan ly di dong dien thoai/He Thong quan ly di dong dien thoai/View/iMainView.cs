@@ -11,5 +11,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         event EventHandler ShowSPView;
         event EventHandler ShowOnwerView;
         event EventHandler ShowVetsView;
+
+        event EventHandler ShowCustomerView;
+        event EventHandler ShowAdminView;
+        event EventHandler ShowCustomersView;
     }
 }
