@@ -111,6 +111,12 @@
     <Compile Include="View\iCustomerView.cs" />
     <Compile Include="View\iMainView.cs" />
     <Compile Include="View\iSPView.cs" />
+    <Compile Include="View\orderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\orderView.Designer.cs">
+      <DependentUpon>orderView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\productView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\orderView.resx">
+      <DependentUpon>orderView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\productView.resx">
       <DependentUpon>productView.cs</DependentUpon>
     </EmbeddedResource>

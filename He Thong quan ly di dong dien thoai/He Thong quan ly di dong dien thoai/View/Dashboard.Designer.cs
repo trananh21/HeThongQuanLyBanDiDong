@@ -51,7 +51,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.btnKH = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
             this.btu_danhmuc = new System.Windows.Forms.Button();
@@ -288,7 +288,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.paneldropdown.Controls.Add(this.pictureBox2);
             this.paneldropdown.Controls.Add(this.button7);
             this.paneldropdown.Controls.Add(this.button6);
-            this.paneldropdown.Controls.Add(this.button5);
+            this.paneldropdown.Controls.Add(this.btnOrder);
             this.paneldropdown.Controls.Add(this.btnKH);
             this.paneldropdown.Controls.Add(this.btnSP);
             this.paneldropdown.Controls.Add(this.btu_danhmuc);
@@ -340,20 +340,21 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button6.Text = "Kho";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnOrder
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(0, 165);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(220, 50);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Đơn Hàng";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnOrder.Location = new System.Drawing.Point(0, 165);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(220, 50);
+            this.btnOrder.TabIndex = 3;
+            this.btnOrder.Text = "Đơn Hàng";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnKH
             // 
@@ -508,7 +509,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnKH;
         private System.Windows.Forms.Button btnSP;
         private System.Windows.Forms.Button btu_danhmuc;

@@ -13,6 +13,7 @@ using He_Thong_quan_ly_di_dong_dien_thoai.View;
 using He_Thong_quan_ly_di_dong_dien_thoai._Repositories;
 using He_Thong_quan_ly_di_dong_dien_thoai.Presenter;
 using He_Thong_quan_ly_di_dong_dien_thoai.Model;
+using System.Windows.Controls;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Dashboard : Form, iMainView
@@ -32,8 +33,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             btnSP.Click += ShowProductForm;
 
             btnKH.Click += ShowCustomerForm;
-
+            btnOrder.Click += ShowOrderView;
             ShowDashboard();
+        }
+
+        private void ShowOrderView(object sender, EventArgs e)
+        {
+            orderView orderView = new orderView();
+            orderView.ShowDialog();
+            orderView.Location = new System.Drawing.Point(197, 112);
         }
 
         private void ShowCustomerForm(object sender, EventArgs e)
@@ -262,6 +270,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             login.Show();
             productView prdV = new productView();
             prdV.Visible = false;
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
