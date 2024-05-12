@@ -43,12 +43,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             string password = txtPassword.Text;
             iSPRepository repository = new SpRepository(connectionString); // truy 
             iCustomerReponsitory cusRepo = new customerRepository(connectionString);
+            iOrderRepository ordRepo =  new orderRepository(connectionString);
             if (AuthenticateUser(username, password))
             {
                 // Hiển thị form Dashboard nếu chưa hiển thị
                 if (Application.OpenForms.OfType<Dashboard>().Count() == 0)
                 {
-                    Dashboard dboard = new Dashboard(username, repository, cusRepo);
+                    Dashboard dboard = new Dashboard(username, repository, cusRepo, ordRepo);
                     dboard.Show();
                 }
 

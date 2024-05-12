@@ -41,6 +41,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Presenter
 
             this._view.Show();
         }
+
         public Form GetProductViewForm()
         {
             return (Form)_view;

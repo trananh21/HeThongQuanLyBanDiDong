@@ -20,28 +20,47 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
     {
         private ProductPresenter productPresenter;
         private CustomerPresenter customerPresenter;
+        private OrderPresenter orderPresenter;
         private bool isCollapsed;
         private productView productForm;
         private customerView customerForm;
-        public Dashboard(string username, iSPRepository repository, iCustomerReponsitory cusRepo)
+        private orderView orderForm;
+        public Dashboard(string username, iSPRepository repository, iCustomerReponsitory cusRepo, iOrderRepository ordRepo)
         {
             InitializeComponent();
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
             productPresenter = new ProductPresenter(new productView(), repository);
             customerPresenter = new CustomerPresenter(new customerView(), cusRepo);
+            orderPresenter = new OrderPresenter(new orderView(), ordRepo);
+            //product
             btnSP.Click += ShowProductForm;
-
+            //customer
             btnKH.Click += ShowCustomerForm;
-            btnOrder.Click += ShowOrderView;
+            //order
+            btnOrder.Click += ShowOrderViewForm;
+            //showDashBoard
             ShowDashboard();
         }
 
-        private void ShowOrderView(object sender, EventArgs e)
+        private void ShowOrderViewForm(object sender, EventArgs e)
         {
-            orderView orderView = new orderView();
-            orderView.ShowDialog();
-            orderView.Location = new System.Drawing.Point(197, 112);
+            try
+            {
+                if (orderForm == null || orderForm.IsDisposed)
+                {
+                    orderForm = (orderView)orderPresenter.GetOrderViewForm();
+                }
+
+                orderForm.Visible = true;
+
+                // Hiển thị form customerView
+                OpenFormCon(orderForm);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Test: " + ex.Message);
+            }
         }
 
         private void ShowCustomerForm(object sender, EventArgs e)
@@ -58,9 +77,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 // Hiển thị form customerView
                 OpenFormCon(customerForm);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("test: " + ex.Message);
+                MessageBox.Show("Test: " + ex.Message);
             }
         }
 
@@ -72,10 +91,18 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 productForm.Visible = false;
             }
             // Ẩn form customerView (nếu đã khởi tạo)
-            if (customerForm != null)
+            try
             {
-                customerForm.Visible = false;
+                if (customerForm != null)
+                {
+                    customerForm.Visible = false;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ex: " + ex.Message);
+            }
+
             // Hiển thị form Dashboard
             this.Show();
         }
@@ -86,9 +113,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 productForm = (productView)productPresenter.GetProductViewForm();
             }
 
-            // Hiển thị form productView
             productForm.Visible = true;
-
             // Hiển thị form productView
             OpenFormCon(productForm);
         }
@@ -104,6 +129,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         public event EventHandler ShowCustomerView;
         public event EventHandler ShowAdminView;
         public event EventHandler ShowCustomersView;
+        //order
+        public event EventHandler ShowOrderView;
+        public event EventHandler ShowAdminOrderView;
+        public event EventHandler ShowOrdersView;
+
+        //order
+        //public event EventHandler ShowOrderView;
+        //public event EventHandler ShowAdminOrderView;
+        //public event EventHandler ShowOrdersView;
 
         private void OpenFormCon(Form childForm)
         {
@@ -263,6 +297,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         }
 
+        // đăng xuất
         private void guna2Button18_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -273,6 +308,26 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
         {
 
         }

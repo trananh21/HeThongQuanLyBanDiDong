@@ -324,6 +324,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button7.TabIndex = 5;
             this.button7.Text = "Thanh Toán";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -339,6 +340,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.button6.TabIndex = 4;
             this.button6.Text = "Kho";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnOrder
             // 
@@ -370,6 +372,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btnKH.TabIndex = 2;
             this.btnKH.Text = "Khách Hàng";
             this.btnKH.UseVisualStyleBackColor = true;
+            this.btnKH.Click += new System.EventHandler(this.btnKH_Click);
             // 
             // btnSP
             // 
@@ -385,6 +388,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btnSP.TabIndex = 1;
             this.btnSP.Text = "Sản Phẩm";
             this.btnSP.UseVisualStyleBackColor = true;
+            this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
             // 
             // btu_danhmuc
             // 

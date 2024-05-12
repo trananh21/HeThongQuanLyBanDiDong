@@ -103,7 +103,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                     else
                     {
                         // Handle parsing error, maybe show an error message to the user
-                        MessageBox.Show("ID không hợp lệ. Vui lòng nhập lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("ID Customer không hợp lệ. Vui lòng nhập lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return 0; // Return a default value or throw an exception
                     }
                 }

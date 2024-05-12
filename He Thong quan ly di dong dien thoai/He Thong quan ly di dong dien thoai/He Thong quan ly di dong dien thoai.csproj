@@ -75,9 +75,12 @@
   <ItemGroup>
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\iCustomerReponsitory.cs" />
+    <Compile Include="Model\iOrderRepository.cs" />
+    <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Presenter\Common\ModelDataValidation.cs" />
     <Compile Include="Presenter\CustomerPresenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
+    <Compile Include="Presenter\OrderPresenter.cs" />
     <Compile Include="View\customerView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +113,7 @@
     <Compile Include="View\EditProductEventArgs.cs" />
     <Compile Include="View\iCustomerView.cs" />
     <Compile Include="View\iMainView.cs" />
+    <Compile Include="View\iOrderView.cs" />
     <Compile Include="View\iSPView.cs" />
     <Compile Include="View\orderView.cs">
       <SubType>Form</SubType>
@@ -125,6 +129,7 @@
     </Compile>
     <Compile Include="_Repositories\BaseRepository.cs" />
     <Compile Include="_Repositories\customerRepository.cs" />
+    <Compile Include="_Repositories\orderRepository.cs" />
     <Compile Include="_Repositories\spRepository.cs" />
     <EmbeddedResource Include="View\customerView.resx">
       <DependentUpon>customerView.cs</DependentUpon>
@@ -293,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\remove-customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
