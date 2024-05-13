@@ -39,7 +39,14 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             btnKH.Click += ShowCustomerForm;
             //order
             btnOrder.Click += ShowOrderViewForm;
+
+            icbtu_Trangchu.Click += ShowDashboardV;
             //showDashBoard
+            ShowDashboard();
+        }
+
+        private void ShowDashboardV(object sender, EventArgs e)
+        {
             ShowDashboard();
         }
 
@@ -102,7 +109,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             {
                 MessageBox.Show("Ex: " + ex.Message);
             }
-
+            if (orderForm != null)
+            {
+                orderForm.Visible = false;
+            }
             // Hiển thị form Dashboard
             this.Show();
         }
@@ -328,6 +338,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         }
 
         private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void icbtu_Trangchu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }

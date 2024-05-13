@@ -189,21 +189,29 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                     conn.Open();
                     cmd.Connection = conn;
 
-                    cmd.CommandText = @"
+                    cmd.CommandText = @"BEGIN TRANSACTION; 
                                         UPDATE SanPham
                                         SET TenSanPham = @nameProduct,
-                                            Gia = @price, 
-                                            SoLuong = @amount,  
-                                            TongTien = @sumPrice, 
-                                            NgayDat = @dateset, 
-                                            HoTen = @nameCustomer,
-                                            DienThoai = @phoneCustomer
-                                            DiaChi = @addressCustomer
+                                            Gia = @price
+                                        WHERE MaSanPham = (SELECT MaSanPham FROM ChiTietDonHang WHERE MaDonHang = @idOrder);
+                                        UPDATE DonHang 
+                                        SET NgayDat = @dateset, 
                                             TrangThai = @status
-                                        WHERE MaDonHang = @idOrder
+                                        WHERE MaDonHang = @idOrder;
+                                        UPDATE KhachHang
+                                        SET HoTen = @nameCustomer,
+                                            DienThoai = @phoneCustomer,
+                                            DiaChi = @addressCustomer
+                                        WHERE MaKhachHang = (SELECT MaKhachHang FROM DonHang WHERE MaDonHang = @idOrder);
+                                        UPDATE ChiTietDonHang 
+                                        SET SoLuong = @amount,
+                                            Gia = @price,
+                                            TongTien = @amount * @price
+                                        WHERE MaDonHang = @idOrder;
+                                        COMMIT TRANSACTION;
                                       ";
-                    cmd.Parameters.AddWithValue("@nameProduct", orderModel.NameOrder);
-                    cmd.Parameters.AddWithValue("@price", orderModel.PriceOrder); // Sửa thành mã danh mục
+                    cmd.Parameters.AddWithValue("@nameProduct", orderModel.NameOrder); 
+                    cmd.Parameters.AddWithValue("@price", orderModel.PriceOrder); 
                     cmd.Parameters.AddWithValue("@amount", orderModel.AmountOrder);
                     cmd.Parameters.AddWithValue("@sumPrice", orderModel.TongTien);
                     cmd.Parameters.AddWithValue("@dateset", orderModel.OrderDate);

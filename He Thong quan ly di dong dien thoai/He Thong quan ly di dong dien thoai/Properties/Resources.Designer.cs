@@ -133,6 +133,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_add_order {
+            get {
+                object obj = ResourceManager.GetObject("icon-add-order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_admin {
             get {
                 object obj = ResourceManager.GetObject("icon-admin", resourceCulture);
@@ -213,6 +223,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_edit_order {
+            get {
+                object obj = ResourceManager.GetObject("icon-edit-order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_edit1 {
             get {
                 object obj = ResourceManager.GetObject("icon-edit1", resourceCulture);
@@ -286,6 +306,66 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap icon_remove {
             get {
                 object obj = ResourceManager.GetObject("icon-remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_order {
+            get {
+                object obj = ResourceManager.GetObject("icon-remove-order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_order_ver2 {
+            get {
+                object obj = ResourceManager.GetObject("icon-remove-order-ver2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_order_ver3 {
+            get {
+                object obj = ResourceManager.GetObject("icon-remove-order-ver3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_order_ver4 {
+            get {
+                object obj = ResourceManager.GetObject("icon-remove-order-ver4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_order_ver5 {
+            get {
+                object obj = ResourceManager.GetObject("icon-remove-order-ver5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_order1 {
+            get {
+                object obj = ResourceManager.GetObject("icon-remove-order1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

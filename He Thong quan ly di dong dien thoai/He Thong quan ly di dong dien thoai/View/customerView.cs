@@ -146,12 +146,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
 
         // duy nhat 1 form san pham khi nhan vao nut san pham | truyền Dashboard vào
-        private static productView instance; //               V
-        public static productView GetInstance(Form parentContainer)
+        private static customerView instance; //               V
+        public static customerView GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             {
-                instance = new productView();
+                instance = new customerView();
                 instance.MdiParent = parentContainer;
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;

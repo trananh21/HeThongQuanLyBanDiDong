@@ -302,5 +302,29 @@
   <ItemGroup>
     <Folder Include="View\images\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-add-order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-edit-order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-remove-order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-remove-order1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-remove-order-ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-remove-order-ver3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-remove-order-ver4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-remove-order-ver5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

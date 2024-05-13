@@ -260,7 +260,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnEditOrder_Click(object sender, EventArgs e)
@@ -305,7 +305,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             // Xác định hình ảnh tương ứng với tên sản phẩm được chọn từ ComboBox
             string selectedImageProduct = cbNameProduct.SelectedItem.ToString(); // giả sử tên sản phẩm là iPhone 15 Pro
             // => selectedImageProduct = iPhone 15 Pro
-            string imagePath = GetImagePathForProduct(selectedImageProduct); // Hàm này cần phải được triển khai để trả về đường dẫn hình ảnh từ tên sản phẩm
+            string imagePath = GetImagePathForProduct(selectedImageProduct); // trả về đường dẫn hình ảnh từ tên sản phẩm
             // truyền vào hàm GetImagePathForProduct(iPhone 15 Pro)
             // Cập nhật hình ảnh trong PictureBox
             if (!string.IsNullOrEmpty(imagePath))
@@ -460,6 +460,17 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 txtOrderID.Text = row.Cells[0].Value.ToString();
                 selectedOrderID = int.Parse(row.Cells[0].Value.ToString());
             }
+        }
+        
+
+        private void dgvDonHang_Scroll(object sender, ScrollEventArgs e)
+        {
+            
+        }
+
+        private void dgvDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

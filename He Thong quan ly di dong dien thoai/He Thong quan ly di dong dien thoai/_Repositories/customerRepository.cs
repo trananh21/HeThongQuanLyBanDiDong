@@ -138,7 +138,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "DELETE FROM KhachHang WHERE MaKhachHang = @idCustomer";
+                cmd.CommandText = @"BEGIN TRANSACTION;
+                                    DELETE FROM ChiTietDonHang WHERE MaDonHang IN (SELECT MaDonHang FROM DonHang WHERE MaKhachHang = @idCustomer);
+                                    DELETE FROM DonHang WHERE MaKhachHang = @idCustomer;
+                                    DELETE FROM KhachHang WHERE MaKhachHang = @idCustomer;
+                                    COMMIT TRANSACTION;";
                 cmd.Parameters.Add("@idCustomer", SqlDbType.Int).Value = id;
                 cmd.ExecuteNonQuery();
             }
