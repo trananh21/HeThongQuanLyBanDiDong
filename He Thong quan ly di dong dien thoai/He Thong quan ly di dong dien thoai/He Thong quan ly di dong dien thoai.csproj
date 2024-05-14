@@ -121,11 +121,23 @@
     <Compile Include="View\orderView.Designer.cs">
       <DependentUpon>orderView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\paymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\paymentView.Designer.cs">
+      <DependentUpon>paymentView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\productView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\productView.Designer.cs">
       <DependentUpon>productView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\showDetailOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\showDetailOrder.Designer.cs">
+      <DependentUpon>showDetailOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="_Repositories\BaseRepository.cs" />
     <Compile Include="_Repositories\customerRepository.cs" />
@@ -156,8 +168,14 @@
     <EmbeddedResource Include="View\orderView.resx">
       <DependentUpon>orderView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\paymentView.resx">
+      <DependentUpon>paymentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\productView.resx">
       <DependentUpon>productView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\showDetailOrder.resx">
+      <DependentUpon>showDetailOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -325,6 +343,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-remove-order-ver5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -60,45 +60,45 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.panel_Body = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.guna2ProgressBar2 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.guna2ProgressBar3 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.guna2ProgressBar4 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.guna2ProgressBar5 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.guna2ProgressBar5 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.guna2ProgressBar4 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.guna2ProgressBar3 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.guna2ProgressBar2 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelLogout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
@@ -110,17 +110,17 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.paneldropdown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_Body.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.guna2GradientPanel1.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
+            this.guna2GradientPanel3.SuspendLayout();
+            this.guna2GradientPanel2.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -516,27 +516,85 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_Body.TabIndex = 15;
             this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
-            // panel4
+            // panel10
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Controls.Add(this.guna2GradientPanel4);
-            this.panel4.Controls.Add(this.guna2GradientPanel3);
-            this.panel4.Controls.Add(this.guna2GradientPanel2);
-            this.panel4.Controls.Add(this.guna2GradientPanel1);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(11, 29);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(882, 100);
-            this.panel4.TabIndex = 0;
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.label23);
+            this.panel10.Location = new System.Drawing.Point(615, 415);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(278, 225);
+            this.panel10.TabIndex = 2;
             // 
-            // panel5
+            // label23
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Location = new System.Drawing.Point(12, 158);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(278, 225);
-            this.panel5.TabIndex = 1;
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(48, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(116, 20);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Hàng bán chạy";
+            this.label23.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.label20);
+            this.panel7.Location = new System.Drawing.Point(615, 158);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(278, 225);
+            this.panel7.TabIndex = 2;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(48, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(185, 20);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Doanh số theo bán hàng";
+            this.label20.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.label22);
+            this.panel9.Location = new System.Drawing.Point(314, 415);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(278, 225);
+            this.panel9.TabIndex = 2;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(26, 17);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(163, 20);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Doanh số theo đơn  vị";
+            this.label22.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.label21);
+            this.panel8.Location = new System.Drawing.Point(12, 415);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(278, 225);
+            this.panel8.TabIndex = 1;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(17, 17);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(178, 20);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Doanh số theo thời gian";
+            this.label21.Click += new System.EventHandler(this.label13_Click);
             // 
             // panel6
             // 
@@ -557,86 +615,159 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel6.Size = new System.Drawing.Size(278, 225);
             this.panel6.TabIndex = 2;
             // 
-            // panel7
+            // guna2ProgressBar5
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.label20);
-            this.panel7.Location = new System.Drawing.Point(615, 158);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(278, 225);
-            this.panel7.TabIndex = 2;
+            this.guna2ProgressBar5.FillColor = System.Drawing.Color.White;
+            this.guna2ProgressBar5.Location = new System.Drawing.Point(111, 193);
+            this.guna2ProgressBar5.Name = "guna2ProgressBar5";
+            this.guna2ProgressBar5.Size = new System.Drawing.Size(135, 15);
+            this.guna2ProgressBar5.TabIndex = 1;
+            this.guna2ProgressBar5.Text = "guna2ProgressBar1";
+            this.guna2ProgressBar5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ProgressBar5.Value = 10;
             // 
-            // panel8
+            // guna2ProgressBar4
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.label21);
-            this.panel8.Location = new System.Drawing.Point(12, 415);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(278, 225);
-            this.panel8.TabIndex = 1;
+            this.guna2ProgressBar4.FillColor = System.Drawing.Color.White;
+            this.guna2ProgressBar4.Location = new System.Drawing.Point(111, 160);
+            this.guna2ProgressBar4.Name = "guna2ProgressBar4";
+            this.guna2ProgressBar4.Size = new System.Drawing.Size(135, 15);
+            this.guna2ProgressBar4.TabIndex = 1;
+            this.guna2ProgressBar4.Text = "guna2ProgressBar1";
+            this.guna2ProgressBar4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ProgressBar4.Value = 70;
             // 
-            // panel9
+            // guna2ProgressBar3
             // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Controls.Add(this.label22);
-            this.panel9.Location = new System.Drawing.Point(314, 415);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(278, 225);
-            this.panel9.TabIndex = 2;
+            this.guna2ProgressBar3.FillColor = System.Drawing.Color.White;
+            this.guna2ProgressBar3.Location = new System.Drawing.Point(111, 125);
+            this.guna2ProgressBar3.Name = "guna2ProgressBar3";
+            this.guna2ProgressBar3.Size = new System.Drawing.Size(135, 15);
+            this.guna2ProgressBar3.TabIndex = 1;
+            this.guna2ProgressBar3.Text = "guna2ProgressBar1";
+            this.guna2ProgressBar3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ProgressBar3.Value = 30;
             // 
-            // panel10
+            // guna2ProgressBar2
             // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Controls.Add(this.label23);
-            this.panel10.Location = new System.Drawing.Point(615, 415);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(278, 225);
-            this.panel10.TabIndex = 2;
+            this.guna2ProgressBar2.FillColor = System.Drawing.Color.White;
+            this.guna2ProgressBar2.Location = new System.Drawing.Point(111, 88);
+            this.guna2ProgressBar2.Name = "guna2ProgressBar2";
+            this.guna2ProgressBar2.Size = new System.Drawing.Size(135, 15);
+            this.guna2ProgressBar2.TabIndex = 1;
+            this.guna2ProgressBar2.Text = "guna2ProgressBar1";
+            this.guna2ProgressBar2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ProgressBar2.Value = 80;
             // 
-            // label1
+            // guna2ProgressBar1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tổng quan";
+            this.guna2ProgressBar1.FillColor = System.Drawing.Color.White;
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(111, 54);
+            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(135, 15);
+            this.guna2ProgressBar1.TabIndex = 1;
+            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
+            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ProgressBar1.Value = 50;
             // 
-            // guna2GradientPanel1
+            // label19
             // 
-            this.guna2GradientPanel1.Controls.Add(this.label7);
-            this.guna2GradientPanel1.Controls.Add(this.label2);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(88)))), ((int)(((byte)(241)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(48)))), ((int)(((byte)(239)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(10, 25);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(200, 66);
-            this.guna2GradientPanel1.TabIndex = 1;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(26, 192);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(64, 16);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Hà Giang";
+            this.label19.Click += new System.EventHandler(this.label13_Click);
             // 
-            // guna2GradientPanel2
+            // label18
             // 
-            this.guna2GradientPanel2.Controls.Add(this.label6);
-            this.guna2GradientPanel2.Controls.Add(this.label8);
-            this.guna2GradientPanel2.Controls.Add(this.label3);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(116)))), ((int)(((byte)(241)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(81)))), ((int)(((byte)(237)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(229, 25);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(200, 66);
-            this.guna2GradientPanel2.TabIndex = 1;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(27, 159);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 16);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Hải Phòng";
+            this.label18.Click += new System.EventHandler(this.label13_Click);
             // 
-            // guna2GradientPanel3
+            // label17
             // 
-            this.guna2GradientPanel3.Controls.Add(this.label10);
-            this.guna2GradientPanel3.Controls.Add(this.label9);
-            this.guna2GradientPanel3.Controls.Add(this.label4);
-            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(180)))), ((int)(((byte)(254)))));
-            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(159)))), ((int)(((byte)(233)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(450, 25);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(200, 66);
-            this.guna2GradientPanel3.TabIndex = 1;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(27, 124);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(60, 16);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Đà Nẵng";
+            this.label17.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(26, 88);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 16);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Hà Nội";
+            this.label16.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(26, 54);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Hồ Chí Minh";
+            this.label15.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(26, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(220, 20);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Mục tiêu doanh số theo đơn vị";
+            this.label14.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Location = new System.Drawing.Point(12, 158);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(278, 225);
+            this.panel5.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(17, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(239, 20);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Mục tiêu doanh số theo thời gian";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.Controls.Add(this.guna2GradientPanel4);
+            this.panel4.Controls.Add(this.guna2GradientPanel3);
+            this.panel4.Controls.Add(this.guna2GradientPanel2);
+            this.panel4.Controls.Add(this.guna2GradientPanel1);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(11, 29);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(882, 100);
+            this.panel4.TabIndex = 0;
             // 
             // guna2GradientPanel4
             // 
@@ -650,41 +781,17 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2GradientPanel4.Size = new System.Drawing.Size(200, 66);
             this.guna2GradientPanel4.TabIndex = 1;
             // 
-            // label2
+            // label12
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 31);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "300";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 31);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "625";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(22, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 31);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "485";
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(64, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 20);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "triệu";
             // 
             // label5
             // 
@@ -698,53 +805,29 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.label5.TabIndex = 0;
             this.label5.Text = "345";
             // 
-            // label6
+            // label11
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(69, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "triệu";
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(12, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 20);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Số còn phải thu";
             // 
-            // label7
+            // guna2GradientPanel3
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(10, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Số lượng đơn hàng";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(17, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 20);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Giá trị đơn hàng";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(24, 8);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 20);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Thực thu";
+            this.guna2GradientPanel3.Controls.Add(this.label10);
+            this.guna2GradientPanel3.Controls.Add(this.label9);
+            this.guna2GradientPanel3.Controls.Add(this.label4);
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(180)))), ((int)(((byte)(254)))));
+            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(159)))), ((int)(((byte)(233)))));
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(450, 25);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(200, 66);
+            this.guna2GradientPanel3.TabIndex = 1;
             // 
             // label10
             // 
@@ -758,205 +841,122 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.label10.TabIndex = 1;
             this.label10.Text = "triệu";
             // 
-            // label11
+            // label9
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(12, 8);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(120, 20);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Số còn phải thu";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(24, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 20);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Thực thu";
             // 
-            // label12
+            // label4
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(64, 40);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 20);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "triệu";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(22, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 31);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "485";
             // 
-            // label13
+            // guna2GradientPanel2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(17, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(239, 20);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Mục tiêu doanh số theo thời gian";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.guna2GradientPanel2.Controls.Add(this.label6);
+            this.guna2GradientPanel2.Controls.Add(this.label8);
+            this.guna2GradientPanel2.Controls.Add(this.label3);
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(116)))), ((int)(((byte)(241)))));
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(81)))), ((int)(((byte)(237)))));
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(229, 25);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(200, 66);
+            this.guna2GradientPanel2.TabIndex = 1;
             // 
-            // label14
+            // label6
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(26, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(220, 20);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Mục tiêu doanh số theo đơn vị";
-            this.label14.Click += new System.EventHandler(this.label13_Click);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(69, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "triệu";
             // 
-            // label15
+            // label8
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(26, 54);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Hồ Chí Minh";
-            this.label15.Click += new System.EventHandler(this.label13_Click);
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(17, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 20);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Giá trị đơn hàng";
             // 
-            // label16
+            // label3
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(26, 88);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 16);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Hà Nội";
-            this.label16.Click += new System.EventHandler(this.label13_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(15, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 31);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "625";
             // 
-            // label17
+            // guna2GradientPanel1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(27, 124);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 16);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Đà Nẵng";
-            this.label17.Click += new System.EventHandler(this.label13_Click);
+            this.guna2GradientPanel1.Controls.Add(this.label7);
+            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(88)))), ((int)(((byte)(241)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(48)))), ((int)(((byte)(239)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(10, 25);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(200, 66);
+            this.guna2GradientPanel1.TabIndex = 1;
             // 
-            // label18
+            // label7
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(27, 159);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(70, 16);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Hải Phòng";
-            this.label18.Click += new System.EventHandler(this.label13_Click);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(10, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Số lượng đơn hàng";
             // 
-            // label19
+            // label2
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(26, 192);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(64, 16);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Hà Giang";
-            this.label19.Click += new System.EventHandler(this.label13_Click);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "300";
             // 
-            // guna2ProgressBar1
+            // label1
             // 
-            this.guna2ProgressBar1.FillColor = System.Drawing.Color.White;
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(111, 54);
-            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(135, 15);
-            this.guna2ProgressBar1.TabIndex = 1;
-            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ProgressBar1.Value = 50;
-            // 
-            // guna2ProgressBar2
-            // 
-            this.guna2ProgressBar2.FillColor = System.Drawing.Color.White;
-            this.guna2ProgressBar2.Location = new System.Drawing.Point(111, 88);
-            this.guna2ProgressBar2.Name = "guna2ProgressBar2";
-            this.guna2ProgressBar2.Size = new System.Drawing.Size(135, 15);
-            this.guna2ProgressBar2.TabIndex = 1;
-            this.guna2ProgressBar2.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ProgressBar2.Value = 80;
-            // 
-            // guna2ProgressBar3
-            // 
-            this.guna2ProgressBar3.FillColor = System.Drawing.Color.White;
-            this.guna2ProgressBar3.Location = new System.Drawing.Point(111, 125);
-            this.guna2ProgressBar3.Name = "guna2ProgressBar3";
-            this.guna2ProgressBar3.Size = new System.Drawing.Size(135, 15);
-            this.guna2ProgressBar3.TabIndex = 1;
-            this.guna2ProgressBar3.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ProgressBar3.Value = 30;
-            // 
-            // guna2ProgressBar4
-            // 
-            this.guna2ProgressBar4.FillColor = System.Drawing.Color.White;
-            this.guna2ProgressBar4.Location = new System.Drawing.Point(111, 160);
-            this.guna2ProgressBar4.Name = "guna2ProgressBar4";
-            this.guna2ProgressBar4.Size = new System.Drawing.Size(135, 15);
-            this.guna2ProgressBar4.TabIndex = 1;
-            this.guna2ProgressBar4.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ProgressBar4.Value = 70;
-            // 
-            // guna2ProgressBar5
-            // 
-            this.guna2ProgressBar5.FillColor = System.Drawing.Color.White;
-            this.guna2ProgressBar5.Location = new System.Drawing.Point(111, 193);
-            this.guna2ProgressBar5.Name = "guna2ProgressBar5";
-            this.guna2ProgressBar5.Size = new System.Drawing.Size(135, 15);
-            this.guna2ProgressBar5.TabIndex = 1;
-            this.guna2ProgressBar5.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ProgressBar5.Value = 10;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(48, 17);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(185, 20);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Doanh số theo bán hàng";
-            this.label20.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(17, 17);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(178, 20);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Doanh số theo thời gian";
-            this.label21.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(26, 17);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(163, 20);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Doanh số theo đơn  vị";
-            this.label22.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(48, 17);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(116, 20);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Hàng bán chạy";
-            this.label23.Click += new System.EventHandler(this.label13_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tổng quan";
             // 
             // Dashboard
             // 
@@ -984,28 +984,28 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.paneldropdown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_Body.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
-            this.guna2GradientPanel3.ResumeLayout(false);
-            this.guna2GradientPanel3.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
+            this.guna2GradientPanel3.ResumeLayout(false);
+            this.guna2GradientPanel3.PerformLayout();
+            this.guna2GradientPanel2.ResumeLayout(false);
+            this.guna2GradientPanel2.PerformLayout();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

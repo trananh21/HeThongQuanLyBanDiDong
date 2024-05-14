@@ -36,19 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlOrder = new MetroFramework.Controls.MetroTabControl();
             this.tabOrderList = new MetroFramework.Controls.MetroTabPage();
-            this.guna2GradientCircleButton2 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.btnSearchOrder = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearchOrder = new Guna.UI2.WinForms.Guna2TextBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.btnRemoveOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.btnCreateOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.btnEditOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.dgvDonHang = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabCreateOrder = new MetroFramework.Controls.MetroTabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.sumPrice = new System.Windows.Forms.Label();
             this.btnCanceOrder = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,14 +62,21 @@
             this.ttt = new System.Windows.Forms.Label();
             this.txtOrderID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.showDetailOrder = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearchOrder = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRemoveOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btnCreateOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btnEditOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.tabControlOrder.SuspendLayout();
             this.tabOrderList.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
             this.tabCreateOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -113,11 +114,13 @@
             // 
             // tabOrderList
             // 
-            this.tabOrderList.Controls.Add(this.guna2GradientCircleButton2);
+            this.tabOrderList.Controls.Add(this.showDetailOrder);
+            this.tabOrderList.Controls.Add(this.cbStatus);
             this.tabOrderList.Controls.Add(this.btnSearchOrder);
             this.tabOrderList.Controls.Add(this.txtSearchOrder);
             this.tabOrderList.Controls.Add(this.metroPanel1);
             this.tabOrderList.Controls.Add(this.dgvDonHang);
+            this.tabOrderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabOrderList.ForeColor = System.Drawing.Color.White;
             this.tabOrderList.HorizontalScrollbarBarColor = true;
             this.tabOrderList.HorizontalScrollbarHighlightOnWheel = false;
@@ -131,40 +134,6 @@
             this.tabOrderList.VerticalScrollbarHighlightOnWheel = false;
             this.tabOrderList.VerticalScrollbarSize = 10;
             this.tabOrderList.Click += new System.EventHandler(this.tabOrderList_Click);
-            // 
-            // guna2GradientCircleButton2
-            // 
-            this.guna2GradientCircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientCircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientCircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton2.Location = new System.Drawing.Point(-27, -147);
-            this.guna2GradientCircleButton2.Name = "guna2GradientCircleButton2";
-            this.guna2GradientCircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2GradientCircleButton2.Size = new System.Drawing.Size(148, 148);
-            this.guna2GradientCircleButton2.TabIndex = 8;
-            this.guna2GradientCircleButton2.Text = "guna2GradientCircleButton2";
-            // 
-            // btnSearchOrder
-            // 
-            this.btnSearchOrder.AutoRoundedCorners = true;
-            this.btnSearchOrder.BackColor = System.Drawing.Color.White;
-            this.btnSearchOrder.BorderRadius = 16;
-            this.btnSearchOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearchOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearchOrder.FillColor = System.Drawing.Color.White;
-            this.btnSearchOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearchOrder.ForeColor = System.Drawing.Color.White;
-            this.btnSearchOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
-            this.btnSearchOrder.Location = new System.Drawing.Point(650, 8);
-            this.btnSearchOrder.Name = "btnSearchOrder";
-            this.btnSearchOrder.Size = new System.Drawing.Size(35, 35);
-            this.btnSearchOrder.TabIndex = 3;
             // 
             // txtSearchOrder
             // 
@@ -205,70 +174,13 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // btnRemoveOrder
-            // 
-            this.btnRemoveOrder.BackColor = System.Drawing.Color.White;
-            this.btnRemoveOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRemoveOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRemoveOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRemoveOrder.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRemoveOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRemoveOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(85)))), ((int)(((byte)(59)))));
-            this.btnRemoveOrder.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(85)))), ((int)(((byte)(59)))));
-            this.btnRemoveOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRemoveOrder.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_remove_order_ver5;
-            this.btnRemoveOrder.Location = new System.Drawing.Point(773, 8);
-            this.btnRemoveOrder.Name = "btnRemoveOrder";
-            this.btnRemoveOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnRemoveOrder.Size = new System.Drawing.Size(35, 35);
-            this.btnRemoveOrder.TabIndex = 10;
-            // 
-            // btnCreateOrder
-            // 
-            this.btnCreateOrder.BackColor = System.Drawing.Color.White;
-            this.btnCreateOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateOrder.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreateOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(174)))), ((int)(((byte)(163)))));
-            this.btnCreateOrder.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(174)))), ((int)(((byte)(163)))));
-            this.btnCreateOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCreateOrder.ForeColor = System.Drawing.Color.White;
-            this.btnCreateOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_add_order;
-            this.btnCreateOrder.Location = new System.Drawing.Point(691, 8);
-            this.btnCreateOrder.Name = "btnCreateOrder";
-            this.btnCreateOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnCreateOrder.Size = new System.Drawing.Size(35, 35);
-            this.btnCreateOrder.TabIndex = 9;
-            // 
-            // btnEditOrder
-            // 
-            this.btnEditOrder.BackColor = System.Drawing.Color.White;
-            this.btnEditOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditOrder.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(99)))), ((int)(((byte)(155)))));
-            this.btnEditOrder.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(99)))), ((int)(((byte)(155)))));
-            this.btnEditOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditOrder.ForeColor = System.Drawing.Color.White;
-            this.btnEditOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_edit_order;
-            this.btnEditOrder.Location = new System.Drawing.Point(732, 8);
-            this.btnEditOrder.Name = "btnEditOrder";
-            this.btnEditOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnEditOrder.Size = new System.Drawing.Size(35, 35);
-            this.btnEditOrder.TabIndex = 7;
-            // 
             // dgvDonHang
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
             this.dgvDonHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(61)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -278,14 +190,14 @@
             this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDonHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDonHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
-            this.dgvDonHang.Location = new System.Drawing.Point(0, 49);
+            this.dgvDonHang.Location = new System.Drawing.Point(0, 97);
             this.dgvDonHang.Name = "dgvDonHang";
             this.dgvDonHang.ReadOnly = true;
             this.dgvDonHang.RowHeadersVisible = false;
@@ -294,7 +206,7 @@
             this.dgvDonHang.RowTemplate.Height = 41;
             this.dgvDonHang.RowTemplate.ReadOnly = true;
             this.dgvDonHang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDonHang.Size = new System.Drawing.Size(879, 479);
+            this.dgvDonHang.Size = new System.Drawing.Size(879, 431);
             this.dgvDonHang.TabIndex = 6;
             this.dgvDonHang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
@@ -306,14 +218,14 @@
             this.dgvDonHang.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
             this.dgvDonHang.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.dgvDonHang.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvDonHang.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonHang.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDonHang.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDonHang.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDonHang.ThemeStyle.HeaderStyle.Height = 60;
             this.dgvDonHang.ThemeStyle.ReadOnly = true;
             this.dgvDonHang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
             this.dgvDonHang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDonHang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonHang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDonHang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDonHang.ThemeStyle.RowsStyle.Height = 41;
             this.dgvDonHang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
@@ -328,7 +240,6 @@
             this.tabCreateOrder.Controls.Add(this.label10);
             this.tabCreateOrder.Controls.Add(this.sumPrice);
             this.tabCreateOrder.Controls.Add(this.btnCanceOrder);
-            this.tabCreateOrder.Controls.Add(this.pbImage);
             this.tabCreateOrder.Controls.Add(this.label9);
             this.tabCreateOrder.Controls.Add(this.txtStatus);
             this.tabCreateOrder.Controls.Add(this.label5);
@@ -348,6 +259,7 @@
             this.tabCreateOrder.Controls.Add(this.ttt);
             this.tabCreateOrder.Controls.Add(this.txtOrderID);
             this.tabCreateOrder.Controls.Add(this.label2);
+            this.tabCreateOrder.Controls.Add(this.pbImage);
             this.tabCreateOrder.HorizontalScrollbarBarColor = true;
             this.tabCreateOrder.HorizontalScrollbarHighlightOnWheel = false;
             this.tabCreateOrder.HorizontalScrollbarSize = 10;
@@ -397,16 +309,6 @@
             this.btnCanceOrder.TabIndex = 10;
             this.btnCanceOrder.Text = "Cancel";
             // 
-            // pbImage
-            // 
-            this.pbImage.ImageRotate = 0F;
-            this.pbImage.Location = new System.Drawing.Point(38, 57);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(300, 349);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImage.TabIndex = 23;
-            this.pbImage.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -422,7 +324,7 @@
             this.txtStatus.AutoRoundedCorners = true;
             this.txtStatus.BorderRadius = 17;
             this.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStatus.DefaultText = "Chưa Thanh Toán";
+            this.txtStatus.DefaultText = "Chờ xác nhận";
             this.txtStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -698,6 +600,132 @@
             this.label2.Text = "Mã Đơn Hàng";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // cbStatus
+            // 
+            this.cbStatus.AutoRoundedCorners = true;
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderRadius = 17;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Chờ xác nhận",
+            "Đã thanh toán",
+            "Chưa thanh toán"});
+            this.cbStatus.Location = new System.Drawing.Point(14, 55);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(195, 36);
+            this.cbStatus.TabIndex = 7;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            // 
+            // showDetailOrder
+            // 
+            this.showDetailOrder.AutoRoundedCorners = true;
+            this.showDetailOrder.BackColor = System.Drawing.Color.White;
+            this.showDetailOrder.BorderRadius = 17;
+            this.showDetailOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.showDetailOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.showDetailOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.showDetailOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showDetailOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.showDetailOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showDetailOrder.ForeColor = System.Drawing.Color.White;
+            this.showDetailOrder.Location = new System.Drawing.Point(215, 55);
+            this.showDetailOrder.Name = "showDetailOrder";
+            this.showDetailOrder.Size = new System.Drawing.Size(140, 36);
+            this.showDetailOrder.TabIndex = 8;
+            this.showDetailOrder.Text = "Xem Chi Tiết";
+            this.showDetailOrder.Click += new System.EventHandler(this.showDetailOrder_Click);
+            // 
+            // btnSearchOrder
+            // 
+            this.btnSearchOrder.AutoRoundedCorners = true;
+            this.btnSearchOrder.BackColor = System.Drawing.Color.White;
+            this.btnSearchOrder.BorderRadius = 16;
+            this.btnSearchOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearchOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearchOrder.FillColor = System.Drawing.Color.White;
+            this.btnSearchOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearchOrder.ForeColor = System.Drawing.Color.White;
+            this.btnSearchOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.search;
+            this.btnSearchOrder.Location = new System.Drawing.Point(650, 8);
+            this.btnSearchOrder.Name = "btnSearchOrder";
+            this.btnSearchOrder.Size = new System.Drawing.Size(35, 35);
+            this.btnSearchOrder.TabIndex = 3;
+            // 
+            // btnRemoveOrder
+            // 
+            this.btnRemoveOrder.BackColor = System.Drawing.Color.White;
+            this.btnRemoveOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemoveOrder.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemoveOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRemoveOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(85)))), ((int)(((byte)(59)))));
+            this.btnRemoveOrder.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(85)))), ((int)(((byte)(59)))));
+            this.btnRemoveOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRemoveOrder.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_remove_order_ver5;
+            this.btnRemoveOrder.Location = new System.Drawing.Point(773, 8);
+            this.btnRemoveOrder.Name = "btnRemoveOrder";
+            this.btnRemoveOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnRemoveOrder.Size = new System.Drawing.Size(35, 35);
+            this.btnRemoveOrder.TabIndex = 10;
+            // 
+            // btnCreateOrder
+            // 
+            this.btnCreateOrder.BackColor = System.Drawing.Color.White;
+            this.btnCreateOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreateOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateOrder.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreateOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreateOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(174)))), ((int)(((byte)(163)))));
+            this.btnCreateOrder.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(174)))), ((int)(((byte)(163)))));
+            this.btnCreateOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCreateOrder.ForeColor = System.Drawing.Color.White;
+            this.btnCreateOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_add_order;
+            this.btnCreateOrder.Location = new System.Drawing.Point(691, 8);
+            this.btnCreateOrder.Name = "btnCreateOrder";
+            this.btnCreateOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnCreateOrder.Size = new System.Drawing.Size(35, 35);
+            this.btnCreateOrder.TabIndex = 9;
+            // 
+            // btnEditOrder
+            // 
+            this.btnEditOrder.BackColor = System.Drawing.Color.White;
+            this.btnEditOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditOrder.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(99)))), ((int)(((byte)(155)))));
+            this.btnEditOrder.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(99)))), ((int)(((byte)(155)))));
+            this.btnEditOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditOrder.ForeColor = System.Drawing.Color.White;
+            this.btnEditOrder.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_edit_order;
+            this.btnEditOrder.Location = new System.Drawing.Point(732, 8);
+            this.btnEditOrder.Name = "btnEditOrder";
+            this.btnEditOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnEditOrder.Size = new System.Drawing.Size(35, 35);
+            this.btnEditOrder.TabIndex = 7;
+            // 
+            // pbImage
+            // 
+            this.pbImage.ImageRotate = 0F;
+            this.pbImage.Location = new System.Drawing.Point(38, 57);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(300, 349);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 23;
+            this.pbImage.TabStop = false;
+            // 
             // orderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -717,8 +745,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).EndInit();
             this.tabCreateOrder.ResumeLayout(false);
             this.tabCreateOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -759,7 +787,8 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2GradientCircleButton btnRemoveOrder;
         private Guna.UI2.WinForms.Guna2GradientCircleButton btnCreateOrder;
-        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton2;
         private Guna.UI2.WinForms.Guna2GradientCircleButton btnEditOrder;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
+        private Guna.UI2.WinForms.Guna2Button showDetailOrder;
     }
 }

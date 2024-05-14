@@ -1,4 +1,5 @@
-﻿using System;
+﻿using He_Thong_quan_ly_di_dong_dien_thoai.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -11,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 {
@@ -128,6 +130,118 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             LoadDanhMuc();
             tabControlOrder.TabPages.Remove(tabCreateOrder);
             _view = this;
+            this.Load += new System.EventHandler(this.orderView_Load);
+            if (!cbStatus.Items.Contains("Trạng Thái"))
+            {
+                cbStatus.Items.Add("Trạng Thái");
+            }
+            cbStatus.SelectedItem = "Trạng Thái";
+
+        }
+
+        private void orderView_Load(object sender, EventArgs e)
+        {
+            // Thêm các giá trị vào combobox cbStatus
+            if (!cbStatus.Items.Contains("Trạng Thái"))
+            {
+                cbStatus.Items.Add("Trạng Thái");
+            }
+            if (!cbStatus.Items.Contains("Chưa thanh toán"))
+            {
+                cbStatus.Items.Add("Chưa thanh toán");
+            }
+            if (!cbStatus.Items.Contains("Đã thanh toán"))
+            {
+                cbStatus.Items.Add("Đã thanh toán");
+            }
+            if (!cbStatus.Items.Contains("Chờ xác nhận"))
+            {
+                cbStatus.Items.Add("Chờ xác nhận");
+            }
+            // Đặt giá trị mặc định là "Trạng Thái"
+            cbStatus.SelectedItem = "Trạng Thái";
+
+            // Gắn sự kiện SelectedIndexChanged
+            cbStatus.SelectedIndexChanged += new EventHandler(guna2ComboBox1_SelectedIndexChanged);
+        }
+
+        //private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string selectedStatus = cbStatus.SelectedItem.ToString();
+        //    LoadOrdersByStatus(selectedStatus);
+        //}
+
+        private void LoadOrdersByStatus(string selectedStatus)
+        {
+            List<OrderModel> orders = new List<OrderModel>();
+
+            // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open(); // Mở kết nối
+
+                // Câu lệnh SQL để lấy các bản ghi với trạng thái tương ứng
+                string query = @"SELECT 
+                                DH.MaDonHang,
+                                SP.TenSanPham,
+                                CTDH.Gia,
+                                CTDH.SoLuong,
+                                CTDH.TongTien,
+                                DH.NgayDat,
+                                KH.HoTen AS TenKhachHang,
+                                KH.DienThoai AS SoDienThoai,
+                                KH.DiaChi,
+                                DH.TrangThai
+                            FROM 
+                                DonHang DH
+                            JOIN 
+                                ChiTietDonHang CTDH ON DH.MaDonHang = CTDH.MaDonHang
+                            JOIN 
+                                SanPham SP ON CTDH.MaSanPham = SP.MaSanPham
+                            JOIN 
+                                KhachHang KH ON DH.MaKhachHang = KH.MaKhachHang
+                            WHERE TrangThai = @Status
+                            ORDER BY 
+                                DH.MaDonHang";
+
+                // Tạo đối tượng SqlCommand
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Thêm tham số cho câu lệnh SQL
+                    cmd.Parameters.AddWithValue("@Status", selectedStatus);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            OrderModel order = new OrderModel();
+
+                            order.IdOrder = reader.GetInt32(reader.GetOrdinal("MaDonHang"));
+                            order.NameOrder = reader.GetString(reader.GetOrdinal("TenSanPham"));
+                            order.PriceOrder = reader.GetDecimal(reader.GetOrdinal("Gia"));
+                            order.AmountOrder = reader.GetInt32(reader.GetOrdinal("SoLuong"));
+                            order.TongTien = reader.GetDecimal(reader.GetOrdinal("TongTien"));
+                            order.OrderDate = reader.GetDateTime(reader.GetOrdinal("NgayDat"));
+                            order.NameCustomer = reader.GetString(reader.GetOrdinal("TenKhachHang"));
+                            try
+                            {
+                                order.PhonenumberOrder = reader.GetString(reader.GetOrdinal("SoDienThoai"));
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("dienthoai: " + ex.Message);
+                            }
+                            //order.PhonenumberOrder = reader.GetString(reader.GetOrdinal("DienThoai"));
+                            order.AddressOrder = reader.GetString(reader.GetOrdinal("DiaChi"));
+                            order.Status = reader.GetString(reader.GetOrdinal("TrangThai"));
+
+                            orders.Add(order);
+                        }
+                    }
+                }
+            }
+
+            // Cập nhật DataGridView với các bản ghi tương ứng
+            dgvDonHang.DataSource = orders;
         }
 
         private void LoadDanhMuc()
@@ -260,7 +374,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnEditOrder_Click(object sender, EventArgs e)
@@ -301,7 +415,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             txtPrice.Text = price.ToString();
             // Tính tổng giá tiền khi số lượng thay đổi
             CalculateTotalPrice();
-                
+
             // Xác định hình ảnh tương ứng với tên sản phẩm được chọn từ ComboBox
             string selectedImageProduct = cbNameProduct.SelectedItem.ToString(); // giả sử tên sản phẩm là iPhone 15 Pro
             // => selectedImageProduct = iPhone 15 Pro
@@ -459,18 +573,30 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 // Lấy giá trị của trường mã sản phẩm từ hàng được chọn và gán vào txtMaSanPham
                 txtOrderID.Text = row.Cells[0].Value.ToString();
                 selectedOrderID = int.Parse(row.Cells[0].Value.ToString());
+                MessageBox.Show("Bạn vừa chọn mã: " + selectedOrderID);
             }
         }
-        
+
 
         private void dgvDonHang_Scroll(object sender, ScrollEventArgs e)
         {
-            
+
         }
 
         private void dgvDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedStatus = cbStatus.SelectedItem.ToString();
+            LoadOrdersByStatus(selectedStatus);
+        }
+
+        private void showDetailOrder_Click(object sender, EventArgs e)
+        {
+            showDetailOrder sdo = new showDetailOrder();
+            sdo.Show();
         }
     }
 }
