@@ -121,26 +121,23 @@
   <data name="logoUS-ver2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoUS-ver2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-edit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iphone-15-pro-max" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iphone-15-pro-max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="430862985_371150232405676_9062037825342231506_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\430862985_371150232405676_9062037825342231506_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-edit-order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-edit-order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add-customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add-customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-dropdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-dropdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icondropDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icondropDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-remove-order-ver4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-remove-order-ver4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon-remove-order-ver5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-remove-order-ver5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-menu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-menu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-remove-order-ver3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-remove-order-ver3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,17 +145,26 @@
   <data name="icon-back-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-back-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconExpand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconExpand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-menu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-menu3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-remove-order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-remove-order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-gio-hang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-gio-hang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="double-right-outlined_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\double-right-outlined_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,9 +174,6 @@
   </data>
   <data name="IconExpand2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconExpand2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-remove-order1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-remove-order1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-gio-hang1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-gio-hang1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,14 +187,14 @@
   <data name="remove-customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove-customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-edit-order" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-edit-order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-edit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo_uneti-smartphone-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_uneti-smartphone-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iPhone-14-128GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iPhone-14-128GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Samsung-Galax-S24-Ultra-12GB-256GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Samsung-Galax-S24-Ultra-12GB-256GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="samsung-galaxy-a54-price-8190vnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\samsung-galaxy-a54-price-8190vnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,20 +202,26 @@
   <data name="icon-delete-white-color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-delete-white-color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icondropDown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icondropDown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-dropdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-dropdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-gio-hang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-gio-hang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit-customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5sao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5sao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="430862985_371150232405676_9062037825342231506_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\430862985_371150232405676_9062037825342231506_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="feedback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\feedback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,41 +229,35 @@
   <data name="iPhone-11-64GB-Chính-hãng-VN-A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iPhone-11-64GB-Chính-hãng-VN-A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OPPO-Find-N3-16GB-512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OPPO-Find-N3-16GB-512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon-remove-order-ver2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-remove-order-ver2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-remove-order" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-remove-order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add-customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icondropDown2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icondropDown2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-remove-order1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-remove-order1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-add-order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-add-order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-menu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-menu3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-menu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-menu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iPhone-14-128GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iPhone-14-128GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo_uneti-smartphone-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_uneti-smartphone-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Samsung-Galax-S24-Ultra-12GB-256GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Samsung-Galax-S24-Ultra-12GB-256GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icondropDown2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icondropDown2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-remove-order-ver4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-remove-order-ver4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5sao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5sao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,10 +268,10 @@
   <data name="icon-dropdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-dropdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icondropDown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icondropDown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OPPO-Find-N3-16GB-512GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OPPO-Find-N3-16GB-512GB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="400375207_1127218218241055_5104573296620581637_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\400375207_1127218218241055_5104573296620581637_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

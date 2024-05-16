@@ -13,6 +13,7 @@ using System.Configuration;
 using He_Thong_quan_ly_di_dong_dien_thoai._Repositories;
 using He_Thong_quan_ly_di_dong_dien_thoai.Model;
 using He_Thong_quan_ly_di_dong_dien_thoai.View;
+using Guna.UI2.WinForms;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Login : Form
@@ -98,6 +99,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         }
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

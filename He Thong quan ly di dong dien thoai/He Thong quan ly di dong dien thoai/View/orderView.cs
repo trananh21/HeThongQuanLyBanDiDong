@@ -182,27 +182,34 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
                 // Câu lệnh SQL để lấy các bản ghi với trạng thái tương ứng
                 string query = @"SELECT 
-                                DH.MaDonHang,
-                                SP.TenSanPham,
-                                CTDH.Gia,
-                                CTDH.SoLuong,
-                                CTDH.TongTien,
-                                DH.NgayDat,
-                                KH.HoTen AS TenKhachHang,
-                                KH.DienThoai AS SoDienThoai,
-                                KH.DiaChi,
-                                DH.TrangThai
-                            FROM 
-                                DonHang DH
-                            JOIN 
-                                ChiTietDonHang CTDH ON DH.MaDonHang = CTDH.MaDonHang
-                            JOIN 
-                                SanPham SP ON CTDH.MaSanPham = SP.MaSanPham
-                            JOIN 
-                                KhachHang KH ON DH.MaKhachHang = KH.MaKhachHang
-                            WHERE TrangThai = @Status
-                            ORDER BY 
-                                DH.MaDonHang";
+                                    DH.MaDonHang,
+                                    SP.TenSanPham,
+                                    CTDH.Gia,
+                                    CTDH.SoLuong,
+                                    CTDH.TongTien,
+                                    DH.NgayDat,
+                                    KH.HoTen AS TenKhachHang,
+                                    KH.DienThoai AS SoDienThoai,
+                                    KH.DiaChi,
+                                    DH.TrangThai,
+                                    KH.MaKhachHang,
+                                    SP.MaSanPham,
+                                    DM.MaDanhMuc,
+                                    DM.TenDanhMuc,
+                                    SP.MoTa
+                                FROM 
+                                    DonHang DH
+                                JOIN 
+                                    ChiTietDonHang CTDH ON DH.MaDonHang = CTDH.MaDonHang
+                                JOIN 
+                                    SanPham SP ON CTDH.MaSanPham = SP.MaSanPham
+                                JOIN 
+                                    KhachHang KH ON DH.MaKhachHang = KH.MaKhachHang
+                                JOIN 
+                                    DanhMucSanPham DM ON SP.MaDanhMuc = DM.MaDanhMuc
+                                WHERE TrangThai = @Status
+                                ORDER BY 
+                                    DH.MaDonHang";
 
                 // Tạo đối tượng SqlCommand
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -220,20 +227,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                             order.PriceOrder = reader.GetDecimal(reader.GetOrdinal("Gia"));
                             order.AmountOrder = reader.GetInt32(reader.GetOrdinal("SoLuong"));
                             order.TongTien = reader.GetDecimal(reader.GetOrdinal("TongTien"));
+                            // Kiểm tra kiểu dữ liệu của cột NgayDat
                             order.OrderDate = reader.GetDateTime(reader.GetOrdinal("NgayDat"));
                             order.NameCustomer = reader.GetString(reader.GetOrdinal("TenKhachHang"));
-                            try
-                            {
-                                order.PhonenumberOrder = reader.GetString(reader.GetOrdinal("SoDienThoai"));
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("dienthoai: " + ex.Message);
-                            }
-                            //order.PhonenumberOrder = reader.GetString(reader.GetOrdinal("DienThoai"));
+                            order.PhonenumberOrder = reader.GetString(reader.GetOrdinal("SoDienThoai"));
                             order.AddressOrder = reader.GetString(reader.GetOrdinal("DiaChi"));
                             order.Status = reader.GetString(reader.GetOrdinal("TrangThai"));
-
                             orders.Add(order);
                         }
                     }
@@ -573,7 +572,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 // Lấy giá trị của trường mã sản phẩm từ hàng được chọn và gán vào txtMaSanPham
                 txtOrderID.Text = row.Cells[0].Value.ToString();
                 selectedOrderID = int.Parse(row.Cells[0].Value.ToString());
-                MessageBox.Show("Bạn vừa chọn mã: " + selectedOrderID);
             }
         }
 
@@ -595,8 +593,55 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void showDetailOrder_Click(object sender, EventArgs e)
         {
-            showDetailOrder sdo = new showDetailOrder();
-            sdo.Show();
+            if (dgvDonHang.SelectedRows.Count > 0)
+            {
+                // Lấy các thông tin cơ bản từ DataGridView
+                DataGridViewRow selectedRow = dgvDonHang.SelectedRows[0];
+                int orderId = Convert.ToInt32(selectedRow.Cells[0].Value);
+                string productName = selectedRow.Cells[1].Value.ToString();
+                decimal price = Convert.ToDecimal(selectedRow.Cells[2].Value);
+                int amount = Convert.ToInt32(selectedRow.Cells[3].Value);
+                decimal totalPrice = Convert.ToDecimal(selectedRow.Cells[4].Value);
+                DateTime orderDate = Convert.ToDateTime(selectedRow.Cells[5].Value);
+                string customerName = selectedRow.Cells[6].Value.ToString();
+                string phoneNumber = selectedRow.Cells[7].Value.ToString();
+                string address = selectedRow.Cells[8].Value.ToString();
+                string status = selectedRow.Cells[9].Value.ToString();
+
+                // Thực hiện câu lệnh truy vấn để lấy các thông tin bổ sung từ cơ sở dữ liệu
+                // Ví dụ:
+                string query = "SELECT MaKhachHang, SP.MaSanPham, DM.MaDanhMuc, DM.TenDanhMuc, SP.MoTa FROM DonHang DH JOIN ChiTietDonHang CTDH ON DH.MaDonHang = CTDH.MaDonHang JOIN SanPham SP ON CTDH.MaSanPham = SP.MaSanPham JOIN DanhMucSanPham DM ON SP.MaDanhMuc = DM.MaDanhMuc WHERE DH.MaDonHang = @OrderID";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderID", orderId);
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            int customerID = Convert.ToInt32(reader["MaKhachHang"]);
+                            int productID = Convert.ToInt32(reader["MaSanPham"]);
+                            int categoryID = Convert.ToInt32(reader["MaDanhMuc"]);
+                            string categoryName = reader["TenDanhMuc"].ToString();
+                            string description = reader["MoTa"].ToString();
+
+                            // Hiển thị form showDetailOrder và gán các thông tin cơ bản cùng với thông tin bổ sung từ cơ sở dữ liệu
+                            showDetailOrder sdo = new showDetailOrder(orderId, productName, price, amount, totalPrice, orderDate, customerName, phoneNumber, address, status, customerID, productID, categoryID, categoryName, description);
+                            sdo.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy thông tin chi tiết cho đơn hàng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một đơn hàng để xem chi tiết.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

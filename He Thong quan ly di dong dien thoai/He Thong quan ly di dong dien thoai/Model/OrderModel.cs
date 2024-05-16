@@ -20,7 +20,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
         private string phonenumberOrder;
         private string addressOrder;
         private string status;
-
         // mã đơn hàng
         [DisplayName("ID Order")]
         [Required(ErrorMessage = "Mã đơn hàng không được để trống!")]

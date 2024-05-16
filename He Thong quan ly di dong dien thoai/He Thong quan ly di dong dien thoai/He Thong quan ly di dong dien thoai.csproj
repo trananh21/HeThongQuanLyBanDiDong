@@ -347,5 +347,8 @@
   <ItemGroup>
     <None Include="Resources\close-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\400375207_1127218218241055_5104573296620581637_n.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

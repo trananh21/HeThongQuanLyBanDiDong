@@ -32,7 +32,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.tabAllPayment = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.guna2Panel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
@@ -61,29 +61,29 @@
             // 
             // metroTabControl1
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.tabAllPayment);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(887, 566);
             this.metroTabControl1.TabIndex = 4;
             this.metroTabControl1.UseSelectable = true;
             // 
-            // metroTabPage1
+            // tabAllPayment
             // 
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(879, 524);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Phương Thức Thanh Toán";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.tabAllPayment.HorizontalScrollbarBarColor = true;
+            this.tabAllPayment.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabAllPayment.HorizontalScrollbarSize = 10;
+            this.tabAllPayment.Location = new System.Drawing.Point(4, 38);
+            this.tabAllPayment.Name = "tabAllPayment";
+            this.tabAllPayment.Size = new System.Drawing.Size(879, 524);
+            this.tabAllPayment.TabIndex = 0;
+            this.tabAllPayment.Text = "Tất Cả";
+            this.tabAllPayment.VerticalScrollbarBarColor = true;
+            this.tabAllPayment.VerticalScrollbarHighlightOnWheel = false;
+            this.tabAllPayment.VerticalScrollbarSize = 10;
             // 
             // metroTabPage2
             // 
@@ -121,7 +121,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage tabAllPayment;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
     }
 }

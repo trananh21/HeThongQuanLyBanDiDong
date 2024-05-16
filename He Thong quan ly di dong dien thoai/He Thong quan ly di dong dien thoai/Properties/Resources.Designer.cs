@@ -63,6 +63,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _400375207_1127218218241055_5104573296620581637_n {
+            get {
+                object obj = ResourceManager.GetObject("400375207_1127218218241055_5104573296620581637_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _430862985_371150232405676_9062037825342231506_n {
             get {
                 object obj = ResourceManager.GetObject("430862985_371150232405676_9062037825342231506_n", resourceCulture);
