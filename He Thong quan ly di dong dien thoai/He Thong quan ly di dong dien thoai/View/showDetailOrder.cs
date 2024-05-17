@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             RoundPanel(detailCustomer, 20);
             RoundPanel(detailPayment, 20);
         }
-        public showDetailOrder(int id, string productName, decimal price, int amount, decimal totalPrice, DateTime orderDate, string customerName, string phoneNumber, string address, string status, int customerID, int productID, int categoryID, string categoryName, string description)
+        public showDetailOrder(int id, string productName, decimal price, int amount, decimal totalPrice, DateTime orderDate, string customerName, string phoneNumber, string address, string status, int customerID, int productID, int categoryID, string categoryName, string description, string imagePath)
         {
             InitializeComponent();
             lblOrderID.Text = id.ToString();
@@ -59,6 +60,24 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             fadeInTimer = new Timer();
             fadeInTimer.Interval = 10; 
             fadeInTimer.Tick += new EventHandler(FadeInTimer_Tick);
+
+            // Load and display the image
+            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+            {
+                try
+                {
+                    pbImageProduct.Image = Image.FromFile(imagePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể tải hình ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                // Handle the case where the image does not exist
+                pbImageProduct.Image = Properties.Resources.iphone_15_pro_max; // Set a default image if available
+            }
         }
 
         protected override void OnShown(EventArgs e)

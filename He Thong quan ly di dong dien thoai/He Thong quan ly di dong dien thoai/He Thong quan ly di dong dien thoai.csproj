@@ -81,6 +81,7 @@
     <Compile Include="Presenter\CustomerPresenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Presenter\OrderPresenter.cs" />
+    <Compile Include="Presenter\PaymentPresenter.cs" />
     <Compile Include="View\customerView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +350,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\400375207_1127218218241055_5104573296620581637_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-search-ver1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QR-Payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QR-payment-ver2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

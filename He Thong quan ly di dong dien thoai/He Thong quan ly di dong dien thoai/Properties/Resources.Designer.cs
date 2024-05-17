@@ -393,6 +393,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_search_ver1 {
+            get {
+                object obj = ResourceManager.GetObject("icon-search-ver1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icondropDown {
             get {
                 object obj = ResourceManager.GetObject("icondropDown", resourceCulture);
@@ -516,6 +526,26 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap OPPO_Find_N3_16GB_512GB {
             get {
                 object obj = ResourceManager.GetObject("OPPO-Find-N3-16GB-512GB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QR_Payment {
+            get {
+                object obj = ResourceManager.GetObject("QR-Payment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QR_payment_ver2 {
+            get {
+                object obj = ResourceManager.GetObject("QR-payment-ver2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

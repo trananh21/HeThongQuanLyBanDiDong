@@ -43,13 +43,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_ddQuanLy = new System.Windows.Forms.Panel();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnVoucher = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.Bt_QuanLy = new System.Windows.Forms.Button();
             this.paneldropdown = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnKH = new System.Windows.Forms.Button();
@@ -99,6 +99,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel_body_ver2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelLogout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
@@ -244,9 +245,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             // panel_ddQuanLy
             // 
             this.panel_ddQuanLy.Controls.Add(this.pictureBox18);
-            this.panel_ddQuanLy.Controls.Add(this.button9);
-            this.panel_ddQuanLy.Controls.Add(this.button8);
-            this.panel_ddQuanLy.Controls.Add(this.button2);
+            this.panel_ddQuanLy.Controls.Add(this.btnVoucher);
+            this.panel_ddQuanLy.Controls.Add(this.btnStaff);
+            this.panel_ddQuanLy.Controls.Add(this.btnReport);
             this.panel_ddQuanLy.Controls.Add(this.Bt_QuanLy);
             this.panel_ddQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_ddQuanLy.Location = new System.Drawing.Point(0, 120);
@@ -266,53 +267,53 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.pictureBox18.TabIndex = 4;
             this.pictureBox18.TabStop = false;
             // 
-            // button9
+            // btnVoucher
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(0, 160);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(220, 50);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Khuyến Mãi";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnVoucher.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVoucher.FlatAppearance.BorderSize = 0;
+            this.btnVoucher.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnVoucher.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoucher.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnVoucher.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVoucher.Location = new System.Drawing.Point(0, 160);
+            this.btnVoucher.Name = "btnVoucher";
+            this.btnVoucher.Size = new System.Drawing.Size(220, 50);
+            this.btnVoucher.TabIndex = 3;
+            this.btnVoucher.Text = "Khuyến Mãi";
+            this.btnVoucher.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnStaff
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(0, 110);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(220, 50);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Nhân viên";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaff.FlatAppearance.BorderSize = 0;
+            this.btnStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaff.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnStaff.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnStaff.Location = new System.Drawing.Point(0, 110);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Size = new System.Drawing.Size(220, 50);
+            this.btnStaff.TabIndex = 2;
+            this.btnStaff.Text = "Nhân viên";
+            this.btnStaff.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnReport
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(0, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Báo Cáo và thông kê";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReport.Location = new System.Drawing.Point(0, 60);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(220, 50);
+            this.btnReport.TabIndex = 1;
+            this.btnReport.Text = "Báo Cáo và thông kê";
+            this.btnReport.UseVisualStyleBackColor = true;
             // 
             // Bt_QuanLy
             // 
@@ -337,7 +338,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             // paneldropdown
             // 
             this.paneldropdown.Controls.Add(this.pictureBox2);
-            this.paneldropdown.Controls.Add(this.button7);
+            this.paneldropdown.Controls.Add(this.btnThanhToan);
             this.paneldropdown.Controls.Add(this.button6);
             this.paneldropdown.Controls.Add(this.btnOrder);
             this.paneldropdown.Controls.Add(this.btnKH);
@@ -361,21 +362,21 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // button7
+            // btnThanhToan
             // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(0, 265);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(220, 50);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Thanh Toán";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnThanhToan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnThanhToan.Location = new System.Drawing.Point(0, 265);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(220, 50);
+            this.btnThanhToan.TabIndex = 5;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -509,6 +510,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_Body.Controls.Add(this.panel6);
             this.panel_Body.Controls.Add(this.panel5);
             this.panel_Body.Controls.Add(this.panel4);
+            this.panel_Body.Controls.Add(this.panel_body_ver2);
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel_Body.Location = new System.Drawing.Point(197, 112);
             this.panel_Body.Name = "panel_Body";
@@ -958,6 +960,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng quan";
             // 
+            // panel_body_ver2
+            // 
+            this.panel_body_ver2.BackColor = System.Drawing.Color.White;
+            this.panel_body_ver2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_body_ver2.Location = new System.Drawing.Point(0, 0);
+            this.panel_body_ver2.Name = "panel_body_ver2";
+            this.panel_body_ver2.Size = new System.Drawing.Size(903, 668);
+            this.panel_body_ver2.TabIndex = 7;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1029,13 +1040,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private System.Windows.Forms.Panel panel_ddQuanLy;
         private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnVoucher;
+        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button Bt_QuanLy;
         private System.Windows.Forms.Panel paneldropdown;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnKH;
@@ -1080,5 +1091,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel_body_ver2;
     }
 }

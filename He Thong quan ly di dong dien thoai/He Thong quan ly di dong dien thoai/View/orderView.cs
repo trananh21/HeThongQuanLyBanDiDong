@@ -138,7 +138,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             cbStatus.SelectedItem = "Trạng Thái";
 
         }
-
         private void orderView_Load(object sender, EventArgs e)
         {
             // Thêm các giá trị vào combobox cbStatus
@@ -626,9 +625,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                             int categoryID = Convert.ToInt32(reader["MaDanhMuc"]);
                             string categoryName = reader["TenDanhMuc"].ToString();
                             string description = reader["MoTa"].ToString();
-
+                            string imagePath = productImageMap.ContainsKey(productName) ? productImageMap[productName] : null;
                             // Hiển thị form showDetailOrder và gán các thông tin cơ bản cùng với thông tin bổ sung từ cơ sở dữ liệu
-                            showDetailOrder sdo = new showDetailOrder(orderId, productName, price, amount, totalPrice, orderDate, customerName, phoneNumber, address, status, customerID, productID, categoryID, categoryName, description);
+                            showDetailOrder sdo = new showDetailOrder(orderId, productName, price, amount, totalPrice, orderDate, customerName, phoneNumber, address, status, customerID, productID, categoryID, categoryName, description, imagePath);
                             sdo.Show();
                         }
                         else
@@ -641,6 +640,21 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             else
             {
                 MessageBox.Show("Vui lòng chọn một đơn hàng để xem chi tiết.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void pbImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public event EventHandler GoToPaymentRequested;
+        private void goToPayment_Click(object sender, EventArgs e)
+        {
+            // Phát ra sự kiện GoToPaymentRequested để thông báo form cha
+            if (ParentForm is Dashboard dashboard)
+            {
+                dashboard.OrderViewForm_GoToPaymentRequested(sender, e);
             }
         }
     }

@@ -161,7 +161,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                                     DECLARE @orderId INT;
                                     SET @orderId = SCOPE_IDENTITY();
                                     INSERT INTO ChiTietDonHang(MaDonHang, MaSanPham, SoLuong, Gia, TongTien)
-                                    VALUES(@orderId, (SELECT DISTINCT MaSanPham FROM SanPham WHERE TenSanPham = @nameProduct), @amount, (SELECT Gia FROM SanPham WHERE TenSanPham = @nameProduct), @amount * (SELECT Gia FROM SanPham WHERE TenSanPham = @nameProduct));
+                                    VALUES(@orderId, (SELECT TOP 1 MaSanPham FROM SanPham WHERE TenSanPham = @nameProduct), @amount, (SELECT TOP 1 Gia FROM SanPham WHERE TenSanPham = @nameProduct), @amount * (SELECT TOP 1 Gia FROM SanPham WHERE TenSanPham = @nameProduct));
                                     COMMIT TRANSACTION;";
 
                 // Sử dụng parameters để tránh các vấn đề liên quan đến SQL injection

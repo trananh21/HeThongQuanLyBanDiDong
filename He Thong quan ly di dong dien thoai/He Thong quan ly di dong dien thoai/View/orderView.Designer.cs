@@ -69,6 +69,7 @@
             this.txtOrderID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.goToPayment = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.tabControlOrder.SuspendLayout();
             this.tabOrderList.SuspendLayout();
@@ -107,13 +108,14 @@
             this.tabControlOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlOrder.Location = new System.Drawing.Point(0, 63);
             this.tabControlOrder.Name = "tabControlOrder";
-            this.tabControlOrder.SelectedIndex = 1;
+            this.tabControlOrder.SelectedIndex = 0;
             this.tabControlOrder.Size = new System.Drawing.Size(887, 566);
             this.tabControlOrder.TabIndex = 4;
             this.tabControlOrder.UseSelectable = true;
             // 
             // tabOrderList
             // 
+            this.tabOrderList.Controls.Add(this.goToPayment);
             this.tabOrderList.Controls.Add(this.showDetailOrder);
             this.tabOrderList.Controls.Add(this.cbStatus);
             this.tabOrderList.Controls.Add(this.btnSearchOrder);
@@ -725,6 +727,26 @@
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImage.TabIndex = 23;
             this.pbImage.TabStop = false;
+            this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
+            // 
+            // goToPayment
+            // 
+            this.goToPayment.AutoRoundedCorners = true;
+            this.goToPayment.BackColor = System.Drawing.Color.White;
+            this.goToPayment.BorderRadius = 17;
+            this.goToPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.goToPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.goToPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.goToPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.goToPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(121)))));
+            this.goToPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToPayment.ForeColor = System.Drawing.Color.White;
+            this.goToPayment.Location = new System.Drawing.Point(361, 55);
+            this.goToPayment.Name = "goToPayment";
+            this.goToPayment.Size = new System.Drawing.Size(180, 36);
+            this.goToPayment.TabIndex = 9;
+            this.goToPayment.Text = "Đi đến thanh toán";
+            this.goToPayment.Click += new System.EventHandler(this.goToPayment_Click);
             // 
             // orderView
             // 
@@ -790,5 +812,6 @@
         private Guna.UI2.WinForms.Guna2GradientCircleButton btnEditOrder;
         private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
         private Guna.UI2.WinForms.Guna2Button showDetailOrder;
+        private Guna.UI2.WinForms.Guna2Button goToPayment;
     }
 }
