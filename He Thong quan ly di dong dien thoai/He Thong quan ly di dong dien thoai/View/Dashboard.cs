@@ -50,27 +50,41 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             btnThanhToan.Click += ShowPaymentViewForm;
             //showDashBoard
             ShowDashboard();
-            // Tạo thể hiện của form orderView
             _orderForm = new orderView();
-            // Gán sự kiện GoToPaymentRequested từ form orderView sang form Dashboard
             _orderForm.GoToPaymentRequested += OrderViewForm_GoToPaymentRequested;
         }
 
+        public void OpenChildForm(Form childForm)
+        {
+            if (panel_Body.Controls.Count > 0)
+                panel_Body.Controls.RemoveAt(0);
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel_Body.Controls.Add(childForm);
+            panel_Body.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        // sự kiện yêu cầu nút "Đi đến thanh toán" ở orderView.cs để mở form paymentView.cs
         public void OrderViewForm_GoToPaymentRequested(object sender, EventArgs e)
         {
-            // Khi nhận được tín hiệu từ form con, tạo và hiển thị form thanh toán
             paymentView paymentForm = new paymentView();
+            (int madonhang, string tenKhachHang, decimal tongTien, int soLuong, string ngayMua) = orderForm.GetDataFromDataGridView();
+            paymentForm.maDonHang = madonhang;
+            paymentForm.tenkhachhang = tenKhachHang;
+            paymentForm.tongtien = tongTien;
+            paymentForm.soluong = soLuong;
+            paymentForm.ngaymua = ngayMua;
+            paymentForm.SelectTabXacThucHoaDon();
             paymentForm.TopLevel = false;
             paymentForm.FormBorderStyle = FormBorderStyle.None;
             paymentForm.Dock = DockStyle.Fill;
-
-            // Xóa các control cũ trong panel_body (nếu có)
             panel_Body.Controls.Clear();
 
-            // Thêm form thanh toán vào panel_body
             panel_Body.Controls.Add(paymentForm);
-
-            // Hiển thị form thanh toán
             paymentForm.Show();
         }
         // Khai báo sự kiện

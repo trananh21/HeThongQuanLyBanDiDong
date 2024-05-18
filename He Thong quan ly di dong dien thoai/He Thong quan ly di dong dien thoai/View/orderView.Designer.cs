@@ -1,4 +1,6 @@
-﻿namespace He_Thong_quan_ly_di_dong_dien_thoai.View
+﻿using Guna.UI2.WinForms;
+
+namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 {
     partial class orderView
     {
@@ -36,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlOrder = new MetroFramework.Controls.MetroTabControl();
             this.tabOrderList = new MetroFramework.Controls.MetroTabPage();
+            this.goToPayment = new Guna.UI2.WinForms.Guna2Button();
             this.showDetailOrder = new Guna.UI2.WinForms.Guna2Button();
             this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearchOrder = new Guna.UI2.WinForms.Guna2Button();
@@ -69,7 +72,6 @@
             this.txtOrderID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.goToPayment = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.tabControlOrder.SuspendLayout();
             this.tabOrderList.SuspendLayout();
@@ -136,6 +138,25 @@
             this.tabOrderList.VerticalScrollbarHighlightOnWheel = false;
             this.tabOrderList.VerticalScrollbarSize = 10;
             this.tabOrderList.Click += new System.EventHandler(this.tabOrderList_Click);
+            // 
+            // goToPayment
+            // 
+            this.goToPayment.AutoRoundedCorners = true;
+            this.goToPayment.BackColor = System.Drawing.Color.White;
+            this.goToPayment.BorderRadius = 17;
+            this.goToPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.goToPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.goToPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.goToPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.goToPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(121)))));
+            this.goToPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToPayment.ForeColor = System.Drawing.Color.White;
+            this.goToPayment.Location = new System.Drawing.Point(361, 55);
+            this.goToPayment.Name = "goToPayment";
+            this.goToPayment.Size = new System.Drawing.Size(180, 36);
+            this.goToPayment.TabIndex = 9;
+            this.goToPayment.Text = "Đi đến thanh toán";
+            this.goToPayment.Click += new System.EventHandler(this.goToPayment_Click);
             // 
             // showDetailOrder
             // 
@@ -319,7 +340,7 @@
             this.dgvDonHang.Name = "dgvDonHang";
             this.dgvDonHang.ReadOnly = true;
             this.dgvDonHang.RowHeadersVisible = false;
-            this.dgvDonHang.RowHeadersWidth = 22;
+            this.dgvDonHang.RowHeadersWidth = 40;
             this.dgvDonHang.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDonHang.RowTemplate.Height = 41;
             this.dgvDonHang.RowTemplate.ReadOnly = true;
@@ -728,25 +749,6 @@
             this.pbImage.TabIndex = 23;
             this.pbImage.TabStop = false;
             this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
-            // 
-            // goToPayment
-            // 
-            this.goToPayment.AutoRoundedCorners = true;
-            this.goToPayment.BackColor = System.Drawing.Color.White;
-            this.goToPayment.BorderRadius = 17;
-            this.goToPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.goToPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.goToPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.goToPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.goToPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(121)))));
-            this.goToPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goToPayment.ForeColor = System.Drawing.Color.White;
-            this.goToPayment.Location = new System.Drawing.Point(361, 55);
-            this.goToPayment.Name = "goToPayment";
-            this.goToPayment.Size = new System.Drawing.Size(180, 36);
-            this.goToPayment.TabIndex = 9;
-            this.goToPayment.Text = "Đi đến thanh toán";
-            this.goToPayment.Click += new System.EventHandler(this.goToPayment_Click);
             // 
             // orderView
             // 

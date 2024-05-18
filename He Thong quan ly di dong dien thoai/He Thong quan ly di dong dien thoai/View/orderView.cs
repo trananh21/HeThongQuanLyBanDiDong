@@ -136,8 +136,46 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 cbStatus.Items.Add("Trạng Thái");
             }
             cbStatus.SelectedItem = "Trạng Thái";
+            paymentView = new paymentView();
 
+            // Đăng ký sự kiện GoToPaymentClicked
+            this.GoToPaymentClicked += PaymentViewForm_GoToPaymentClicked;
+
+            // Đăng ký sự kiện Click cho nút goToPayment
+            goToPayment.Click += new EventHandler(goToPayment_Click);
         }
+        public orderView(Dashboard dashboard)
+        {
+            InitializeComponent();
+            LienKetVaNangCaoLuotXem();
+            LoadDanhMuc();
+            tabControlOrder.TabPages.Remove(tabCreateOrder);
+            _view = this;
+            this.Load += new System.EventHandler(this.orderView_Load);
+            if (!cbStatus.Items.Contains("Trạng Thái"))
+            {
+                cbStatus.Items.Add("Trạng Thái");
+            }
+            cbStatus.SelectedItem = "Trạng Thái";
+            paymentView = new paymentView();
+
+            // Đăng ký sự kiện GoToPaymentClicked
+            this.GoToPaymentClicked += PaymentViewForm_GoToPaymentClicked;
+
+            // Đăng ký sự kiện Click cho nút goToPayment
+            goToPayment.Click += new EventHandler(goToPayment_Click);
+            this.dashboard = dashboard;
+        }
+
+        private paymentView paymentView;
+
+
+        private bool show = true;
+        private void PaymentViewForm_GoToPaymentClicked(object sender, EventArgs e)
+        {
+            paymentView.UpdateTabNotification(show);
+        }
+
         private void orderView_Load(object sender, EventArgs e)
         {
             // Thêm các giá trị vào combobox cbStatus
@@ -169,7 +207,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         //    string selectedStatus = cbStatus.SelectedItem.ToString();
         //    LoadOrdersByStatus(selectedStatus);
         //}
-
+        
         private void LoadOrdersByStatus(string selectedStatus)
         {
             List<OrderModel> orders = new List<OrderModel>();
@@ -564,14 +602,46 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void dgvDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == 0) // Chắc chắn rằng người dùng đã chọn một hàng hợp lệ
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0) 
             {
                 DataGridViewRow row = dgvDonHang.Rows[e.RowIndex];
+                txtOrderID.Text = row.Cells[0].Value?.ToString();
+                cbNameProduct.Text = row.Cells[1].Value?.ToString();
+                txtPrice.Text = row.Cells[2].Value?.ToString();
+                if (decimal.TryParse(row.Cells[3].Value?.ToString(), out decimal amount))
+                {
+                    nudAmount.Value = amount;
+                }
+                else
+                {
+                    nudAmount.Value = 0; 
+                }
+                sumPrice.Text = row.Cells[4].Value?.ToString();
 
-                // Lấy giá trị của trường mã sản phẩm từ hàng được chọn và gán vào txtMaSanPham
-                txtOrderID.Text = row.Cells[0].Value.ToString();
-                selectedOrderID = int.Parse(row.Cells[0].Value.ToString());
+                if (DateTime.TryParse(row.Cells[5].Value?.ToString(), out DateTime ngayMua))
+                {
+                    dtpNgayMua.Value = ngayMua;
+                }
+                else
+                {
+                    dtpNgayMua.Value = DateTime.Now; // Giá trị mặc định nếu không thể chuyển đổi
+                }
+
+                txtNameCustomer.Text = row.Cells[6].Value?.ToString();
+                txtPhoneNumber.Text = row.Cells[7].Value?.ToString();
+                txtAddress.Text = row.Cells[8].Value?.ToString();
+                txtStatus.Text = row.Cells[9].Value?.ToString();
+
+                if (int.TryParse(row.Cells[0].Value?.ToString(), out int orderID))
+                {
+                    selectedOrderID = orderID;
+                }
+                else
+                {
+                    selectedOrderID = 0;
+                }
             }
+
         }
 
 
@@ -648,14 +718,30 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         }
 
+
         public event EventHandler GoToPaymentRequested;
+        public event EventHandler GoToPaymentClicked;
+        private Dashboard dashboard;
+
+        // Một phương thức để lấy dữ liệu từ dgvDonHang
+        public (int maDonHang, string tenKhachHang, decimal tongTien, int soLuong, string ngayMua) GetDataFromDataGridView()
+        {
+            DataGridViewRow selectedRow = dgvDonHang.SelectedRows[0];
+            int maDonHang = Convert.ToInt32(selectedRow.Cells[0].Value);
+            string tenKhachHang = selectedRow.Cells[6].Value?.ToString();
+            decimal tongTien = Convert.ToDecimal(selectedRow.Cells[4].Value);
+            int soLuong = Convert.ToInt32(selectedRow.Cells[3].Value);
+            string ngayMua = selectedRow.Cells[5].Value?.ToString();
+            return (maDonHang, tenKhachHang, tongTien, soLuong, ngayMua);
+        }
+
         private void goToPayment_Click(object sender, EventArgs e)
         {
-            // Phát ra sự kiện GoToPaymentRequested để thông báo form cha
-            if (ParentForm is Dashboard dashboard)
+            if (ParentForm is Dashboard dashboard_t)
             {
-                dashboard.OrderViewForm_GoToPaymentRequested(sender, e);
+                dashboard_t.OrderViewForm_GoToPaymentRequested(sender, e);
             }
+            GoToPaymentClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

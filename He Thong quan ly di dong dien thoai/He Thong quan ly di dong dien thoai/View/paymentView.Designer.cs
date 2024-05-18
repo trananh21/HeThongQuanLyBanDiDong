@@ -31,42 +31,41 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paymentView));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlPayment = new MetroFramework.Controls.MetroTabControl();
             this.tatcaPayment = new MetroFramework.Controls.MetroTabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NgayBatDau = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.NgayKetThuc = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.dgvPayment = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearchPayment = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.NgayKetThuc = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.NgayBatDau = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.xacthuchoadon = new MetroFramework.Controls.MetroTabPage();
             this.btnSearchKhuyenMai = new Guna.UI2.WinForms.Guna2Button();
             this.lblKhuyenMai = new System.Windows.Forms.Label();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnConfirmPayment = new Guna.UI2.WinForms.Guna2Button();
-            this.txtKhuyenMai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMaKhuyenMai = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelThongtinThanhToan = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNgayMua = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblVoucher = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblAmountPayment = new System.Windows.Forms.Label();
+            this.lblSoLuong = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblSumPricePayment = new System.Windows.Forms.Label();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblCustomerNamePayment = new System.Windows.Forms.Label();
+            this.lblTenKhachHang = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblOrderIDPayment = new System.Windows.Forms.Label();
+            this.lblMaHoaDon = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -75,12 +74,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblMaDonHang = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.tabControlPayment.SuspendLayout();
             this.tatcaPayment.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.xacthuchoadon.SuspendLayout();
             this.panelThongtinThanhToan.SuspendLayout();
             this.panelDetailOrder.SuspendLayout();
@@ -115,10 +116,12 @@
             this.tabControlPayment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPayment.Location = new System.Drawing.Point(0, 63);
             this.tabControlPayment.Name = "tabControlPayment";
-            this.tabControlPayment.SelectedIndex = 0;
+            this.tabControlPayment.SelectedIndex = 1;
             this.tabControlPayment.Size = new System.Drawing.Size(887, 566);
-            this.tabControlPayment.TabIndex = 4;
+            this.tabControlPayment.TabIndex = 1;
             this.tabControlPayment.UseSelectable = true;
+            this.tabControlPayment.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControlPayment_DrawItem);
+            this.tabControlPayment.SelectedIndexChanged += new System.EventHandler(this.tabControlPayment_SelectedIndexChanged);
             // 
             // tatcaPayment
             // 
@@ -137,15 +140,78 @@
             this.tatcaPayment.VerticalScrollbarHighlightOnWheel = false;
             this.tatcaPayment.VerticalScrollbarSize = 10;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.NgayBatDau);
+            this.panel1.Controls.Add(this.NgayKetThuc);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.ForeColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(879, 47);
+            this.panel1.TabIndex = 2;
+            // 
+            // NgayBatDau
+            // 
+            this.NgayBatDau.AutoRoundedCorners = true;
+            this.NgayBatDau.BorderRadius = 17;
+            this.NgayBatDau.Checked = true;
+            this.NgayBatDau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.NgayBatDau.Location = new System.Drawing.Point(43, 5);
+            this.NgayBatDau.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.NgayBatDau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.NgayBatDau.Name = "NgayBatDau";
+            this.NgayBatDau.Size = new System.Drawing.Size(175, 36);
+            this.NgayBatDau.TabIndex = 0;
+            this.NgayBatDau.Value = new System.DateTime(2024, 5, 17, 21, 3, 34, 381);
+            // 
+            // NgayKetThuc
+            // 
+            this.NgayKetThuc.AutoRoundedCorners = true;
+            this.NgayKetThuc.BorderRadius = 17;
+            this.NgayKetThuc.Checked = true;
+            this.NgayKetThuc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.NgayKetThuc.Location = new System.Drawing.Point(270, 5);
+            this.NgayKetThuc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.NgayKetThuc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.NgayKetThuc.Name = "NgayKetThuc";
+            this.NgayKetThuc.Size = new System.Drawing.Size(175, 36);
+            this.NgayKetThuc.TabIndex = 2;
+            this.NgayKetThuc.Value = new System.DateTime(2024, 5, 17, 21, 4, 41, 105);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(225, 14);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(39, 20);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Đến";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(10, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 20);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Từ";
+            // 
             // dgvPayment
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
             this.dgvPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(61)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -153,27 +219,19 @@
             this.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPayment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
-            this.dgvPayment.Location = new System.Drawing.Point(0, 90);
+            this.dgvPayment.Location = new System.Drawing.Point(-4, 90);
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPayment.RowHeadersVisible = false;
             this.dgvPayment.RowTemplate.Height = 41;
-            this.dgvPayment.Size = new System.Drawing.Size(879, 434);
+            this.dgvPayment.Size = new System.Drawing.Size(883, 434);
             this.dgvPayment.TabIndex = 4;
             this.dgvPayment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             this.dgvPayment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
@@ -185,19 +243,20 @@
             this.dgvPayment.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
             this.dgvPayment.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.dgvPayment.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvPayment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPayment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPayment.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvPayment.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvPayment.ThemeStyle.HeaderStyle.Height = 60;
             this.dgvPayment.ThemeStyle.ReadOnly = true;
             this.dgvPayment.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
             this.dgvPayment.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvPayment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPayment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPayment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvPayment.ThemeStyle.RowsStyle.Height = 41;
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvPayment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayment_CellContentClick);
+            this.dgvPayment.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPayment_DataBindingComplete);
             // 
             // panel2
             // 
@@ -283,76 +342,13 @@
             this.txtSearchPayment.Size = new System.Drawing.Size(433, 36);
             this.txtSearchPayment.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.NgayBatDau);
-            this.panel1.Controls.Add(this.NgayKetThuc);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 47);
-            this.panel1.TabIndex = 2;
-            // 
-            // NgayKetThuc
-            // 
-            this.NgayKetThuc.AutoRoundedCorners = true;
-            this.NgayKetThuc.BorderRadius = 17;
-            this.NgayKetThuc.Checked = true;
-            this.NgayKetThuc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.NgayKetThuc.Location = new System.Drawing.Point(270, 5);
-            this.NgayKetThuc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.NgayKetThuc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.NgayKetThuc.Name = "NgayKetThuc";
-            this.NgayKetThuc.Size = new System.Drawing.Size(175, 36);
-            this.NgayKetThuc.TabIndex = 2;
-            this.NgayKetThuc.Value = new System.DateTime(2024, 5, 17, 21, 4, 41, 105);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(225, 14);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(39, 20);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Đến";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(10, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 20);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Từ";
-            // 
-            // NgayBatDau
-            // 
-            this.NgayBatDau.AutoRoundedCorners = true;
-            this.NgayBatDau.BorderRadius = 17;
-            this.NgayBatDau.Checked = true;
-            this.NgayBatDau.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.NgayBatDau.Location = new System.Drawing.Point(43, 5);
-            this.NgayBatDau.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.NgayBatDau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.NgayBatDau.Name = "NgayBatDau";
-            this.NgayBatDau.Size = new System.Drawing.Size(175, 36);
-            this.NgayBatDau.TabIndex = 0;
-            this.NgayBatDau.Value = new System.DateTime(2024, 5, 17, 21, 3, 34, 381);
-            // 
             // xacthuchoadon
             // 
             this.xacthuchoadon.Controls.Add(this.btnSearchKhuyenMai);
             this.xacthuchoadon.Controls.Add(this.lblKhuyenMai);
             this.xacthuchoadon.Controls.Add(this.btnHuy);
             this.xacthuchoadon.Controls.Add(this.btnConfirmPayment);
-            this.xacthuchoadon.Controls.Add(this.txtKhuyenMai);
+            this.xacthuchoadon.Controls.Add(this.txtMaKhuyenMai);
             this.xacthuchoadon.Controls.Add(this.panelThongtinThanhToan);
             this.xacthuchoadon.Controls.Add(this.panelDetailOrder);
             this.xacthuchoadon.HorizontalScrollbarBarColor = true;
@@ -433,29 +429,30 @@
             this.btnConfirmPayment.Size = new System.Drawing.Size(242, 45);
             this.btnConfirmPayment.TabIndex = 4;
             this.btnConfirmPayment.Text = "Xác nhận thanh toán";
+            this.btnConfirmPayment.Click += new System.EventHandler(this.btnConfirmPayment_Click);
             // 
-            // txtKhuyenMai
+            // txtMaKhuyenMai
             // 
-            this.txtKhuyenMai.Animated = true;
-            this.txtKhuyenMai.AutoRoundedCorners = true;
-            this.txtKhuyenMai.BackColor = System.Drawing.Color.White;
-            this.txtKhuyenMai.BorderRadius = 17;
-            this.txtKhuyenMai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtKhuyenMai.DefaultText = "";
-            this.txtKhuyenMai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtKhuyenMai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtKhuyenMai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtKhuyenMai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtKhuyenMai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtKhuyenMai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKhuyenMai.Location = new System.Drawing.Point(470, 378);
-            this.txtKhuyenMai.Name = "txtKhuyenMai";
-            this.txtKhuyenMai.PasswordChar = '\0';
-            this.txtKhuyenMai.PlaceholderText = "Nhập mã khuyến mãi...";
-            this.txtKhuyenMai.SelectedText = "";
-            this.txtKhuyenMai.Size = new System.Drawing.Size(334, 36);
-            this.txtKhuyenMai.TabIndex = 3;
+            this.txtMaKhuyenMai.Animated = true;
+            this.txtMaKhuyenMai.AutoRoundedCorners = true;
+            this.txtMaKhuyenMai.BackColor = System.Drawing.Color.White;
+            this.txtMaKhuyenMai.BorderRadius = 17;
+            this.txtMaKhuyenMai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaKhuyenMai.DefaultText = "";
+            this.txtMaKhuyenMai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaKhuyenMai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaKhuyenMai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaKhuyenMai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaKhuyenMai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaKhuyenMai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaKhuyenMai.Location = new System.Drawing.Point(470, 378);
+            this.txtMaKhuyenMai.Name = "txtMaKhuyenMai";
+            this.txtMaKhuyenMai.PasswordChar = '\0';
+            this.txtMaKhuyenMai.PlaceholderText = "Nhập mã khuyến mãi...";
+            this.txtMaKhuyenMai.SelectedText = "";
+            this.txtMaKhuyenMai.Size = new System.Drawing.Size(334, 36);
+            this.txtMaKhuyenMai.TabIndex = 3;
             // 
             // panelThongtinThanhToan
             // 
@@ -464,14 +461,16 @@
             this.panelThongtinThanhToan.Controls.Add(this.lblNgayMua);
             this.panelThongtinThanhToan.Controls.Add(this.label4);
             this.panelThongtinThanhToan.Controls.Add(this.lblVoucher);
+            this.panelThongtinThanhToan.Controls.Add(this.label16);
             this.panelThongtinThanhToan.Controls.Add(this.label5);
-            this.panelThongtinThanhToan.Controls.Add(this.lblAmountPayment);
+            this.panelThongtinThanhToan.Controls.Add(this.lblSoLuong);
             this.panelThongtinThanhToan.Controls.Add(this.label6);
-            this.panelThongtinThanhToan.Controls.Add(this.lblSumPricePayment);
+            this.panelThongtinThanhToan.Controls.Add(this.lblTongTien);
             this.panelThongtinThanhToan.Controls.Add(this.label7);
-            this.panelThongtinThanhToan.Controls.Add(this.lblCustomerNamePayment);
+            this.panelThongtinThanhToan.Controls.Add(this.lblMaDonHang);
+            this.panelThongtinThanhToan.Controls.Add(this.lblTenKhachHang);
             this.panelThongtinThanhToan.Controls.Add(this.label8);
-            this.panelThongtinThanhToan.Controls.Add(this.lblOrderIDPayment);
+            this.panelThongtinThanhToan.Controls.Add(this.lblMaHoaDon);
             this.panelThongtinThanhToan.Controls.Add(this.label9);
             this.panelThongtinThanhToan.Location = new System.Drawing.Point(470, 21);
             this.panelThongtinThanhToan.Name = "panelThongtinThanhToan";
@@ -491,10 +490,11 @@
             // 
             // lblNgayMua
             // 
+            this.lblNgayMua.AccessibleDescription = "";
             this.lblNgayMua.AutoSize = true;
             this.lblNgayMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayMua.ForeColor = System.Drawing.Color.White;
-            this.lblNgayMua.Location = new System.Drawing.Point(172, 262);
+            this.lblNgayMua.Location = new System.Drawing.Point(172, 290);
             this.lblNgayMua.Name = "lblNgayMua";
             this.lblNgayMua.Size = new System.Drawing.Size(0, 20);
             this.lblNgayMua.TabIndex = 2;
@@ -512,10 +512,11 @@
             // 
             // lblVoucher
             // 
+            this.lblVoucher.AccessibleDescription = "";
             this.lblVoucher.AutoSize = true;
             this.lblVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVoucher.ForeColor = System.Drawing.Color.White;
-            this.lblVoucher.Location = new System.Drawing.Point(172, 225);
+            this.lblVoucher.Location = new System.Drawing.Point(172, 253);
             this.lblVoucher.Name = "lblVoucher";
             this.lblVoucher.Size = new System.Drawing.Size(0, 20);
             this.lblVoucher.TabIndex = 2;
@@ -525,91 +526,95 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(14, 111);
+            this.label5.Location = new System.Drawing.Point(14, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tên khách hàng:";
             // 
-            // lblAmountPayment
+            // lblSoLuong
             // 
-            this.lblAmountPayment.AutoSize = true;
-            this.lblAmountPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountPayment.ForeColor = System.Drawing.Color.White;
-            this.lblAmountPayment.Location = new System.Drawing.Point(172, 189);
-            this.lblAmountPayment.Name = "lblAmountPayment";
-            this.lblAmountPayment.Size = new System.Drawing.Size(0, 20);
-            this.lblAmountPayment.TabIndex = 2;
+            this.lblSoLuong.AccessibleDescription = "";
+            this.lblSoLuong.AutoSize = true;
+            this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoLuong.ForeColor = System.Drawing.Color.White;
+            this.lblSoLuong.Location = new System.Drawing.Point(172, 214);
+            this.lblSoLuong.Name = "lblSoLuong";
+            this.lblSoLuong.Size = new System.Drawing.Size(0, 20);
+            this.lblSoLuong.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(14, 149);
+            this.label6.Location = new System.Drawing.Point(14, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 20);
             this.label6.TabIndex = 1;
             this.label6.Text = "Tổng tiền:";
             // 
-            // lblSumPricePayment
+            // lblTongTien
             // 
-            this.lblSumPricePayment.AutoSize = true;
-            this.lblSumPricePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSumPricePayment.ForeColor = System.Drawing.Color.White;
-            this.lblSumPricePayment.Location = new System.Drawing.Point(172, 154);
-            this.lblSumPricePayment.Name = "lblSumPricePayment";
-            this.lblSumPricePayment.Size = new System.Drawing.Size(0, 20);
-            this.lblSumPricePayment.TabIndex = 2;
+            this.lblTongTien.AccessibleDescription = "";
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.ForeColor = System.Drawing.Color.White;
+            this.lblTongTien.Location = new System.Drawing.Point(172, 177);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(0, 20);
+            this.lblTongTien.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 186);
+            this.label7.Location = new System.Drawing.Point(14, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 1;
             this.label7.Text = "Số lượng:";
             // 
-            // lblCustomerNamePayment
+            // lblTenKhachHang
             // 
-            this.lblCustomerNamePayment.AutoSize = true;
-            this.lblCustomerNamePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerNamePayment.ForeColor = System.Drawing.Color.White;
-            this.lblCustomerNamePayment.Location = new System.Drawing.Point(172, 118);
-            this.lblCustomerNamePayment.Name = "lblCustomerNamePayment";
-            this.lblCustomerNamePayment.Size = new System.Drawing.Size(0, 20);
-            this.lblCustomerNamePayment.TabIndex = 2;
+            this.lblTenKhachHang.AccessibleDescription = "";
+            this.lblTenKhachHang.AutoSize = true;
+            this.lblTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenKhachHang.ForeColor = System.Drawing.Color.White;
+            this.lblTenKhachHang.Location = new System.Drawing.Point(172, 139);
+            this.lblTenKhachHang.Name = "lblTenKhachHang";
+            this.lblTenKhachHang.Size = new System.Drawing.Size(0, 20);
+            this.lblTenKhachHang.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(14, 225);
+            this.label8.Location = new System.Drawing.Point(14, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 20);
             this.label8.TabIndex = 1;
             this.label8.Text = "Mã khuyến mãi:";
             // 
-            // lblOrderIDPayment
+            // lblMaHoaDon
             // 
-            this.lblOrderIDPayment.AutoSize = true;
-            this.lblOrderIDPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderIDPayment.ForeColor = System.Drawing.Color.White;
-            this.lblOrderIDPayment.Location = new System.Drawing.Point(172, 77);
-            this.lblOrderIDPayment.Name = "lblOrderIDPayment";
-            this.lblOrderIDPayment.Size = new System.Drawing.Size(0, 20);
-            this.lblOrderIDPayment.TabIndex = 2;
+            this.lblMaHoaDon.AccessibleDescription = "";
+            this.lblMaHoaDon.AutoSize = true;
+            this.lblMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaHoaDon.ForeColor = System.Drawing.Color.White;
+            this.lblMaHoaDon.Location = new System.Drawing.Point(172, 73);
+            this.lblMaHoaDon.Name = "lblMaHoaDon";
+            this.lblMaHoaDon.Size = new System.Drawing.Size(0, 20);
+            this.lblMaHoaDon.TabIndex = 2;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(14, 262);
+            this.label9.Location = new System.Drawing.Point(14, 290);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 20);
             this.label9.TabIndex = 1;
@@ -695,6 +700,28 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "THÔNG TIN THANH TOÁN";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(14, 105);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 20);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Mã đơn hàng:";
+            // 
+            // lblMaDonHang
+            // 
+            this.lblMaDonHang.AccessibleDescription = "";
+            this.lblMaDonHang.AutoSize = true;
+            this.lblMaDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaDonHang.ForeColor = System.Drawing.Color.White;
+            this.lblMaDonHang.Location = new System.Drawing.Point(172, 105);
+            this.lblMaDonHang.Name = "lblMaDonHang";
+            this.lblMaDonHang.Size = new System.Drawing.Size(0, 20);
+            this.lblMaDonHang.TabIndex = 2;
+            // 
             // paymentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,10 +737,10 @@
             this.guna2Panel1.PerformLayout();
             this.tabControlPayment.ResumeLayout(false);
             this.tatcaPayment.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.xacthuchoadon.ResumeLayout(false);
             this.xacthuchoadon.PerformLayout();
             this.panelThongtinThanhToan.ResumeLayout(false);
@@ -732,7 +759,7 @@
         private MetroFramework.Controls.MetroTabControl tabControlPayment;
         private MetroFramework.Controls.MetroTabPage tatcaPayment;
         private MetroFramework.Controls.MetroTabPage xacthuchoadon;
-        private Guna.UI2.WinForms.Guna2TextBox txtKhuyenMai;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaKhuyenMai;
         private System.Windows.Forms.Panel panelDetailOrder;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
         private Guna.UI2.WinForms.Guna2Button btnConfirmPayment;
@@ -749,10 +776,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblNgayMua;
         private System.Windows.Forms.Label lblVoucher;
-        private System.Windows.Forms.Label lblAmountPayment;
-        private System.Windows.Forms.Label lblSumPricePayment;
-        private System.Windows.Forms.Label lblCustomerNamePayment;
-        private System.Windows.Forms.Label lblOrderIDPayment;
+        private System.Windows.Forms.Label lblSoLuong;
+        private System.Windows.Forms.Label lblTongTien;
+        private System.Windows.Forms.Label lblTenKhachHang;
+        private System.Windows.Forms.Label lblMaHoaDon;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -769,5 +796,7 @@
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2DataGridView dgvPayment;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblMaDonHang;
     }
 }
