@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paymentView));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,13 +43,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dgvPayment = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.inhoadon = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearchPayment = new Guna.UI2.WinForms.Guna2TextBox();
             this.xacthuchoadon = new MetroFramework.Controls.MetroTabPage();
             this.btnSearchKhuyenMai = new Guna.UI2.WinForms.Guna2Button();
-            this.lblKhuyenMai = new System.Windows.Forms.Label();
+            this.lblCheckMaKhuyenMai = new System.Windows.Forms.Label();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnConfirmPayment = new Guna.UI2.WinForms.Guna2Button();
             this.txtMaKhuyenMai = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,7 +57,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblNgayMua = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblVoucher = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblSoLuong = new System.Windows.Forms.Label();
@@ -67,7 +65,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblMaDonHang = new System.Windows.Forms.Label();
             this.lblTenKhachHang = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.lblMaHoaDon = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
@@ -77,6 +74,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblVoucher = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.tabControlPayment.SuspendLayout();
             this.tatcaPayment.SuspendLayout();
@@ -211,7 +210,7 @@
             this.dgvPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(61)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -221,7 +220,7 @@
             this.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -231,14 +230,6 @@
             this.dgvPayment.Location = new System.Drawing.Point(0, 90);
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPayment.RowHeadersVisible = false;
             this.dgvPayment.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPayment.RowTemplate.Height = 41;
@@ -254,14 +245,14 @@
             this.dgvPayment.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
             this.dgvPayment.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.dgvPayment.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvPayment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPayment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPayment.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvPayment.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvPayment.ThemeStyle.HeaderStyle.Height = 60;
             this.dgvPayment.ThemeStyle.ReadOnly = true;
             this.dgvPayment.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
             this.dgvPayment.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvPayment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPayment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPayment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvPayment.ThemeStyle.RowsStyle.Height = 41;
             this.dgvPayment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
@@ -272,7 +263,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Controls.Add(this.inhoadon);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtSearchPayment);
@@ -281,22 +272,23 @@
             this.panel2.Size = new System.Drawing.Size(879, 43);
             this.panel2.TabIndex = 3;
             // 
-            // guna2Button1
+            // inhoadon
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 17;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(90)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(537, 3);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 36);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "IN HOÁ ĐƠN";
+            this.inhoadon.AutoRoundedCorners = true;
+            this.inhoadon.BorderRadius = 17;
+            this.inhoadon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.inhoadon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.inhoadon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.inhoadon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.inhoadon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(90)))));
+            this.inhoadon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.inhoadon.ForeColor = System.Drawing.Color.White;
+            this.inhoadon.Location = new System.Drawing.Point(537, 3);
+            this.inhoadon.Name = "inhoadon";
+            this.inhoadon.Size = new System.Drawing.Size(180, 36);
+            this.inhoadon.TabIndex = 3;
+            this.inhoadon.Text = "IN HOÁ ĐƠN";
+            this.inhoadon.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnXoa
             // 
@@ -314,6 +306,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(36, 36);
             this.btnXoa.TabIndex = 2;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSearch
             // 
@@ -352,11 +345,12 @@
             this.txtSearchPayment.SelectedText = "";
             this.txtSearchPayment.Size = new System.Drawing.Size(433, 36);
             this.txtSearchPayment.TabIndex = 0;
+            this.txtSearchPayment.TextChanged += new System.EventHandler(this.txtSearchPayment_TextChanged);
             // 
             // xacthuchoadon
             // 
             this.xacthuchoadon.Controls.Add(this.btnSearchKhuyenMai);
-            this.xacthuchoadon.Controls.Add(this.lblKhuyenMai);
+            this.xacthuchoadon.Controls.Add(this.lblCheckMaKhuyenMai);
             this.xacthuchoadon.Controls.Add(this.btnHuy);
             this.xacthuchoadon.Controls.Add(this.btnConfirmPayment);
             this.xacthuchoadon.Controls.Add(this.txtMaKhuyenMai);
@@ -391,19 +385,19 @@
             this.btnSearchKhuyenMai.Name = "btnSearchKhuyenMai";
             this.btnSearchKhuyenMai.Size = new System.Drawing.Size(36, 36);
             this.btnSearchKhuyenMai.TabIndex = 6;
+            this.btnSearchKhuyenMai.Click += new System.EventHandler(this.btnSearchKhuyenMai_Click);
             // 
-            // lblKhuyenMai
+            // lblCheckMaKhuyenMai
             // 
-            this.lblKhuyenMai.AutoSize = true;
-            this.lblKhuyenMai.BackColor = System.Drawing.Color.White;
-            this.lblKhuyenMai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKhuyenMai.ForeColor = System.Drawing.Color.Red;
-            this.lblKhuyenMai.Location = new System.Drawing.Point(467, 427);
-            this.lblKhuyenMai.MaximumSize = new System.Drawing.Size(335, 0);
-            this.lblKhuyenMai.Name = "lblKhuyenMai";
-            this.lblKhuyenMai.Size = new System.Drawing.Size(268, 16);
-            this.lblKhuyenMai.TabIndex = 5;
-            this.lblKhuyenMai.Text = "hiển thị ra mã khuyến mãi tồn tại hay không ?";
+            this.lblCheckMaKhuyenMai.AutoSize = true;
+            this.lblCheckMaKhuyenMai.BackColor = System.Drawing.Color.White;
+            this.lblCheckMaKhuyenMai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckMaKhuyenMai.ForeColor = System.Drawing.Color.Red;
+            this.lblCheckMaKhuyenMai.Location = new System.Drawing.Point(467, 432);
+            this.lblCheckMaKhuyenMai.MaximumSize = new System.Drawing.Size(335, 0);
+            this.lblCheckMaKhuyenMai.Name = "lblCheckMaKhuyenMai";
+            this.lblCheckMaKhuyenMai.Size = new System.Drawing.Size(0, 16);
+            this.lblCheckMaKhuyenMai.TabIndex = 5;
             // 
             // btnHuy
             // 
@@ -422,6 +416,7 @@
             this.btnHuy.Size = new System.Drawing.Size(128, 45);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Cancel";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnConfirmPayment
             // 
@@ -464,6 +459,7 @@
             this.txtMaKhuyenMai.SelectedText = "";
             this.txtMaKhuyenMai.Size = new System.Drawing.Size(334, 36);
             this.txtMaKhuyenMai.TabIndex = 3;
+            this.txtMaKhuyenMai.TextChanged += new System.EventHandler(this.txtMaKhuyenMai_TextChanged);
             // 
             // panelThongtinThanhToan
             // 
@@ -471,7 +467,6 @@
             this.panelThongtinThanhToan.Controls.Add(this.label2);
             this.panelThongtinThanhToan.Controls.Add(this.lblNgayMua);
             this.panelThongtinThanhToan.Controls.Add(this.label4);
-            this.panelThongtinThanhToan.Controls.Add(this.lblVoucher);
             this.panelThongtinThanhToan.Controls.Add(this.label16);
             this.panelThongtinThanhToan.Controls.Add(this.label5);
             this.panelThongtinThanhToan.Controls.Add(this.lblSoLuong);
@@ -480,8 +475,9 @@
             this.panelThongtinThanhToan.Controls.Add(this.label7);
             this.panelThongtinThanhToan.Controls.Add(this.lblMaDonHang);
             this.panelThongtinThanhToan.Controls.Add(this.lblTenKhachHang);
-            this.panelThongtinThanhToan.Controls.Add(this.label8);
             this.panelThongtinThanhToan.Controls.Add(this.lblMaHoaDon);
+            this.panelThongtinThanhToan.Controls.Add(this.lblVoucher);
+            this.panelThongtinThanhToan.Controls.Add(this.label8);
             this.panelThongtinThanhToan.Controls.Add(this.label9);
             this.panelThongtinThanhToan.Location = new System.Drawing.Point(470, 21);
             this.panelThongtinThanhToan.Name = "panelThongtinThanhToan";
@@ -505,7 +501,7 @@
             this.lblNgayMua.AutoSize = true;
             this.lblNgayMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayMua.ForeColor = System.Drawing.Color.White;
-            this.lblNgayMua.Location = new System.Drawing.Point(172, 290);
+            this.lblNgayMua.Location = new System.Drawing.Point(172, 279);
             this.lblNgayMua.Name = "lblNgayMua";
             this.lblNgayMua.Size = new System.Drawing.Size(0, 20);
             this.lblNgayMua.TabIndex = 2;
@@ -515,29 +511,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 73);
+            this.label4.Location = new System.Drawing.Point(14, 69);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Mã hoá đơn: ";
-            // 
-            // lblVoucher
-            // 
-            this.lblVoucher.AccessibleDescription = "";
-            this.lblVoucher.AutoSize = true;
-            this.lblVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVoucher.ForeColor = System.Drawing.Color.White;
-            this.lblVoucher.Location = new System.Drawing.Point(172, 253);
-            this.lblVoucher.Name = "lblVoucher";
-            this.lblVoucher.Size = new System.Drawing.Size(0, 20);
-            this.lblVoucher.TabIndex = 2;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(14, 105);
+            this.label16.Location = new System.Drawing.Point(14, 101);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(106, 20);
             this.label16.TabIndex = 1;
@@ -548,7 +533,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(14, 139);
+            this.label5.Location = new System.Drawing.Point(14, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 20);
             this.label5.TabIndex = 1;
@@ -560,7 +545,7 @@
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoLuong.ForeColor = System.Drawing.Color.White;
-            this.lblSoLuong.Location = new System.Drawing.Point(172, 214);
+            this.lblSoLuong.Location = new System.Drawing.Point(172, 210);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(0, 20);
             this.lblSoLuong.TabIndex = 2;
@@ -570,11 +555,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(14, 177);
+            this.label6.Location = new System.Drawing.Point(14, 173);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.Size = new System.Drawing.Size(63, 20);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Tổng tiền:";
+            this.label6.Text = "Số tiền:";
             // 
             // lblTongTien
             // 
@@ -582,7 +567,7 @@
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.White;
-            this.lblTongTien.Location = new System.Drawing.Point(172, 177);
+            this.lblTongTien.Location = new System.Drawing.Point(172, 173);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(0, 20);
             this.lblTongTien.TabIndex = 2;
@@ -592,7 +577,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 214);
+            this.label7.Location = new System.Drawing.Point(14, 210);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 1;
@@ -604,7 +589,7 @@
             this.lblMaDonHang.AutoSize = true;
             this.lblMaDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaDonHang.ForeColor = System.Drawing.Color.White;
-            this.lblMaDonHang.Location = new System.Drawing.Point(172, 105);
+            this.lblMaDonHang.Location = new System.Drawing.Point(172, 101);
             this.lblMaDonHang.Name = "lblMaDonHang";
             this.lblMaDonHang.Size = new System.Drawing.Size(0, 20);
             this.lblMaDonHang.TabIndex = 2;
@@ -615,21 +600,10 @@
             this.lblTenKhachHang.AutoSize = true;
             this.lblTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenKhachHang.ForeColor = System.Drawing.Color.White;
-            this.lblTenKhachHang.Location = new System.Drawing.Point(172, 139);
+            this.lblTenKhachHang.Location = new System.Drawing.Point(172, 135);
             this.lblTenKhachHang.Name = "lblTenKhachHang";
             this.lblTenKhachHang.Size = new System.Drawing.Size(0, 20);
             this.lblTenKhachHang.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(14, 253);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 20);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Mã khuyến mãi:";
             // 
             // lblMaHoaDon
             // 
@@ -637,7 +611,7 @@
             this.lblMaHoaDon.AutoSize = true;
             this.lblMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaHoaDon.ForeColor = System.Drawing.Color.White;
-            this.lblMaHoaDon.Location = new System.Drawing.Point(172, 73);
+            this.lblMaHoaDon.Location = new System.Drawing.Point(172, 69);
             this.lblMaHoaDon.Name = "lblMaHoaDon";
             this.lblMaHoaDon.Size = new System.Drawing.Size(0, 20);
             this.lblMaHoaDon.TabIndex = 2;
@@ -647,7 +621,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(14, 290);
+            this.label9.Location = new System.Drawing.Point(14, 279);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 20);
             this.label9.TabIndex = 1;
@@ -733,6 +707,27 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "THÔNG TIN THANH TOÁN";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(14, 243);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 20);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Mã khuyến mãi:";
+            // 
+            // lblVoucher
+            // 
+            this.lblVoucher.AutoSize = true;
+            this.lblVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoucher.ForeColor = System.Drawing.Color.White;
+            this.lblVoucher.Location = new System.Drawing.Point(172, 243);
+            this.lblVoucher.Name = "lblVoucher";
+            this.lblVoucher.Size = new System.Drawing.Size(0, 20);
+            this.lblVoucher.TabIndex = 1;
+            // 
             // paymentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -774,19 +769,17 @@
         private System.Windows.Forms.Panel panelDetailOrder;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
         private Guna.UI2.WinForms.Guna2Button btnConfirmPayment;
-        private System.Windows.Forms.Label lblKhuyenMai;
+        private System.Windows.Forms.Label lblCheckMaKhuyenMai;
         private Guna.UI2.WinForms.Guna2Button btnSearchKhuyenMai;
         private System.Windows.Forms.Panel panelThongtinThanhToan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblNgayMua;
-        private System.Windows.Forms.Label lblVoucher;
         private System.Windows.Forms.Label lblSoLuong;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label lblTenKhachHang;
@@ -806,8 +799,10 @@
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2DataGridView dgvPayment;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button inhoadon;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblMaDonHang;
+        private System.Windows.Forms.Label lblVoucher;
+        private System.Windows.Forms.Label label8;
     }
 }

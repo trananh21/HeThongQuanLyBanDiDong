@@ -137,7 +137,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             }
             cbStatus.SelectedItem = "Trạng Thái";
             paymentView = new paymentView();
-
+            LoadOrderData();
             // Đăng ký sự kiện GoToPaymentClicked
             this.GoToPaymentClicked += PaymentViewForm_GoToPaymentClicked;
 
@@ -191,7 +191,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             }
             cbStatus.SelectedItem = "Trạng Thái";
             paymentView = new paymentView();
-
+            LoadOrderData();
             // Đăng ký sự kiện GoToPaymentClicked
             this.GoToPaymentClicked += PaymentViewForm_GoToPaymentClicked;
 
