@@ -202,7 +202,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                     insertCommand.Parameters.AddWithValue("@MaThanhToan", mahoadon);
                     insertCommand.Parameters.AddWithValue("@MaDonHang", maDonHang);
                     insertCommand.Parameters.AddWithValue("@SoTien", tongtien);
-                    MessageBox.Show("tong tien: " + tongtien);
                     insertCommand.Parameters.AddWithValue("@NgayThanhToan", DateTime.Now);
                     insertCommand.ExecuteNonQuery();
 
@@ -631,7 +630,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
                     // Ngày mua, Mã hoá đơn, và Thu ngân
                     invoiceInfo.Add($"Ngày mua: {DateTime.Now.ToString("dd/MM/yyyy")}\n");
-                    invoiceInfo.Add($"Mã hoá đon: {selectedRow.Cells["MaHoaDon"].Value.ToString()}\n");
+                    invoiceInfo.Add($"Mã hoá don: {selectedRow.Cells["MaHoaDon"].Value.ToString()}\n");
                     string cashier = GetCashierName(); 
                     invoiceInfo.Add($"Thu ngân: {cashier}\n\n");
 
