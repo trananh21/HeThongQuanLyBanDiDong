@@ -144,6 +144,39 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             // Đăng ký sự kiện Click cho nút goToPayment
             goToPayment.Click += new EventHandler(goToPayment_Click);
         }
+        private void LoadOrderData()
+        {
+            string query = @"SELECT 
+                                DH.MaDonHang,
+                                SP.TenSanPham,
+                                CTDH.Gia,
+                                CTDH.SoLuong,
+                                CTDH.TongTien,
+                                DH.NgayDat,
+                                KH.HoTen AS TenKhachHang,
+                                KH.DienThoai AS SoDienThoai,
+                                KH.DiaChi,
+                                DH.TrangThai
+                            FROM 
+                                DonHang DH
+                            JOIN 
+                                ChiTietDonHang CTDH ON DH.MaDonHang = CTDH.MaDonHang
+                            JOIN 
+                                SanPham SP ON CTDH.MaSanPham = SP.MaSanPham
+                            JOIN 
+                                KhachHang KH ON DH.MaKhachHang = KH.MaKhachHang
+                            ORDER BY 
+                                DH.MaDonHang;
+                            ";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                dgvDonHang.DataSource = dataTable;
+            }
+        }
         public orderView(Dashboard dashboard)
         {
             InitializeComponent();
@@ -742,6 +775,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 dashboard_t.OrderViewForm_GoToPaymentRequested(sender, e);
             }
             GoToPaymentClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            LoadOrderData();
         }
     }
 }

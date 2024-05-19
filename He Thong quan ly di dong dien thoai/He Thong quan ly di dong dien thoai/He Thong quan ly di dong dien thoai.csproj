@@ -77,6 +77,7 @@
     <Compile Include="Model\iCustomerReponsitory.cs" />
     <Compile Include="Model\iOrderRepository.cs" />
     <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\PaymentInfo.cs" />
     <Compile Include="Presenter\Common\ModelDataValidation.cs" />
     <Compile Include="Presenter\CustomerPresenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
