@@ -66,6 +66,8 @@
             this.lblMaDonHang = new System.Windows.Forms.Label();
             this.lblTenKhachHang = new System.Windows.Forms.Label();
             this.lblMaHoaDon = new System.Windows.Forms.Label();
+            this.lblVoucher = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panelDetailOrder = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,8 +76,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblVoucher = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.tabControlPayment.SuspendLayout();
             this.tatcaPayment.SuspendLayout();
@@ -116,7 +116,7 @@
             this.tabControlPayment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPayment.Location = new System.Drawing.Point(0, 63);
             this.tabControlPayment.Name = "tabControlPayment";
-            this.tabControlPayment.SelectedIndex = 0;
+            this.tabControlPayment.SelectedIndex = 1;
             this.tabControlPayment.Size = new System.Drawing.Size(887, 566);
             this.tabControlPayment.TabIndex = 1;
             this.tabControlPayment.UseSelectable = true;
@@ -476,8 +476,6 @@
             this.panelThongtinThanhToan.Controls.Add(this.lblMaDonHang);
             this.panelThongtinThanhToan.Controls.Add(this.lblTenKhachHang);
             this.panelThongtinThanhToan.Controls.Add(this.lblMaHoaDon);
-            this.panelThongtinThanhToan.Controls.Add(this.lblVoucher);
-            this.panelThongtinThanhToan.Controls.Add(this.label8);
             this.panelThongtinThanhToan.Controls.Add(this.label9);
             this.panelThongtinThanhToan.Location = new System.Drawing.Point(470, 21);
             this.panelThongtinThanhToan.Name = "panelThongtinThanhToan";
@@ -501,7 +499,7 @@
             this.lblNgayMua.AutoSize = true;
             this.lblNgayMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayMua.ForeColor = System.Drawing.Color.White;
-            this.lblNgayMua.Location = new System.Drawing.Point(172, 279);
+            this.lblNgayMua.Location = new System.Drawing.Point(177, 263);
             this.lblNgayMua.Name = "lblNgayMua";
             this.lblNgayMua.Size = new System.Drawing.Size(0, 20);
             this.lblNgayMua.TabIndex = 2;
@@ -511,7 +509,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 69);
+            this.label4.Location = new System.Drawing.Point(19, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 1;
@@ -522,7 +520,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(14, 101);
+            this.label16.Location = new System.Drawing.Point(19, 119);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(106, 20);
             this.label16.TabIndex = 1;
@@ -533,7 +531,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(14, 135);
+            this.label5.Location = new System.Drawing.Point(19, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 20);
             this.label5.TabIndex = 1;
@@ -545,7 +543,7 @@
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoLuong.ForeColor = System.Drawing.Color.White;
-            this.lblSoLuong.Location = new System.Drawing.Point(172, 210);
+            this.lblSoLuong.Location = new System.Drawing.Point(177, 228);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(0, 20);
             this.lblSoLuong.TabIndex = 2;
@@ -555,7 +553,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(14, 173);
+            this.label6.Location = new System.Drawing.Point(19, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
             this.label6.TabIndex = 1;
@@ -567,7 +565,7 @@
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.White;
-            this.lblTongTien.Location = new System.Drawing.Point(172, 173);
+            this.lblTongTien.Location = new System.Drawing.Point(177, 191);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(0, 20);
             this.lblTongTien.TabIndex = 2;
@@ -577,7 +575,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 210);
+            this.label7.Location = new System.Drawing.Point(19, 228);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 1;
@@ -589,7 +587,7 @@
             this.lblMaDonHang.AutoSize = true;
             this.lblMaDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaDonHang.ForeColor = System.Drawing.Color.White;
-            this.lblMaDonHang.Location = new System.Drawing.Point(172, 101);
+            this.lblMaDonHang.Location = new System.Drawing.Point(177, 119);
             this.lblMaDonHang.Name = "lblMaDonHang";
             this.lblMaDonHang.Size = new System.Drawing.Size(0, 20);
             this.lblMaDonHang.TabIndex = 2;
@@ -600,7 +598,7 @@
             this.lblTenKhachHang.AutoSize = true;
             this.lblTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenKhachHang.ForeColor = System.Drawing.Color.White;
-            this.lblTenKhachHang.Location = new System.Drawing.Point(172, 135);
+            this.lblTenKhachHang.Location = new System.Drawing.Point(177, 153);
             this.lblTenKhachHang.Name = "lblTenKhachHang";
             this.lblTenKhachHang.Size = new System.Drawing.Size(0, 20);
             this.lblTenKhachHang.TabIndex = 2;
@@ -611,17 +609,38 @@
             this.lblMaHoaDon.AutoSize = true;
             this.lblMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaHoaDon.ForeColor = System.Drawing.Color.White;
-            this.lblMaHoaDon.Location = new System.Drawing.Point(172, 69);
+            this.lblMaHoaDon.Location = new System.Drawing.Point(177, 87);
             this.lblMaHoaDon.Name = "lblMaHoaDon";
             this.lblMaHoaDon.Size = new System.Drawing.Size(0, 20);
             this.lblMaHoaDon.TabIndex = 2;
+            // 
+            // lblVoucher
+            // 
+            this.lblVoucher.AutoSize = true;
+            this.lblVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoucher.ForeColor = System.Drawing.Color.White;
+            this.lblVoucher.Location = new System.Drawing.Point(250, 440);
+            this.lblVoucher.Name = "lblVoucher";
+            this.lblVoucher.Size = new System.Drawing.Size(0, 20);
+            this.lblVoucher.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(92, 440);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 20);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Mã khuyến mãi:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(14, 279);
+            this.label9.Location = new System.Drawing.Point(19, 263);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 20);
             this.label9.TabIndex = 1;
@@ -636,6 +655,8 @@
             this.panelDetailOrder.Controls.Add(this.label11);
             this.panelDetailOrder.Controls.Add(this.label10);
             this.panelDetailOrder.Controls.Add(this.label3);
+            this.panelDetailOrder.Controls.Add(this.label8);
+            this.panelDetailOrder.Controls.Add(this.lblVoucher);
             this.panelDetailOrder.Location = new System.Drawing.Point(28, 21);
             this.panelDetailOrder.Name = "panelDetailOrder";
             this.panelDetailOrder.Size = new System.Drawing.Size(422, 485);
@@ -706,27 +727,6 @@
             this.label3.Size = new System.Drawing.Size(288, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "THÔNG TIN THANH TOÁN";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(14, 243);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 20);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Mã khuyến mãi:";
-            // 
-            // lblVoucher
-            // 
-            this.lblVoucher.AutoSize = true;
-            this.lblVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVoucher.ForeColor = System.Drawing.Color.White;
-            this.lblVoucher.Location = new System.Drawing.Point(172, 243);
-            this.lblVoucher.Name = "lblVoucher";
-            this.lblVoucher.Size = new System.Drawing.Size(0, 20);
-            this.lblVoucher.TabIndex = 1;
             // 
             // paymentView
             // 

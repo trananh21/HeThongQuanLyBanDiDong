@@ -67,7 +67,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 sp.Gia, 
                 tt.SoTien,
                 ctdh.SoLuong,
-                km.TenKhuyenMai,
+                km.MaKhuyenMai,
                 tt.NgayThanhToan,
                 dh.TrangThai
             FROM 
@@ -91,6 +91,20 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 dgvPayment.DataSource = dataTable;
+            }
+        }
+
+        private void UpdateKhuyenMaiToNull(string maDonHang)
+        {
+            string query = "UPDATE DonHang SET TenKhuyenMai = NULL WHERE MaDonHang = @MaDonHang";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MaDonHang", maDonHang);
+
+                connection.Open();
+                command.ExecuteNonQuery();
             }
         }
 
@@ -214,26 +228,39 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                     string tenKhuyenMai = lblVoucher.Text; // giả sử USKM300
                     if (!string.IsNullOrEmpty(tenKhuyenMai))
                     {
-                        KhuyenMai khuyenMai = GetKhuyenMaiByTen(tenKhuyenMai);
+                        string maKhuyenMai = LayMaKhuyenMaiTuCSDL(tenKhuyenMai);
 
-                        if (khuyenMai != null && DateTime.Now >= khuyenMai.NgayBatDau && DateTime.Now <= khuyenMai.NgayKetThuc)
+                        if (!string.IsNullOrEmpty(maKhuyenMai))
                         {
-                            foreach (var chiTiet in khuyenMai.ChiTietKhuyenMais)
+                            KhuyenMai khuyenMai = GetKhuyenMaiByTen(maKhuyenMai);
+
+                            if (khuyenMai != null && DateTime.Now >= khuyenMai.NgayBatDau && DateTime.Now <= khuyenMai.NgayKetThuc)
                             {
-                                decimal giamGia = tongtien * (chiTiet.PhanTram / 100.0m);
-                                dgvPayment.Rows[0].Cells["Giảm Giá"].Value = giamGia;
-                                decimal soTienSauGiamGia = tongtien - giamGia;
-                                dgvPayment.Rows[0].Cells["SoTien"].Value = soTienSauGiamGia;
-                                SqlCommand insertChiTietCommand = new SqlCommand(
-                                    "INSERT INTO ChiTietKhuyenMai (MaKhuyenMai, MaSanPham, GiamGia, PhanTram) VALUES (@MaKhuyenMai, @MaSanPham, @GiamGia, @PhanTram)", conn, transaction);
-                                insertChiTietCommand.Parameters.AddWithValue("@MaKhuyenMai", khuyenMai.MaKhuyenMai);
-                                insertChiTietCommand.Parameters.AddWithValue("@MaSanPham", chiTiet.MaSanPham);
-                                insertChiTietCommand.Parameters.AddWithValue("@GiamGia", giamGia);
-                                insertChiTietCommand.Parameters.AddWithValue("@PhanTram", chiTiet.PhanTram);
-                                insertChiTietCommand.ExecuteNonQuery();
+                                // Mã khuyến mãi hợp lệ và chưa hết hạn
+                                foreach (var chiTiet in khuyenMai.ChiTietKhuyenMais)
+                                {
+                                    // Tiến hành tính toán và thêm vào CSDL
+                                    decimal giamGia = tongtien * (chiTiet.PhanTram / 100.0m);
+                                    dgvPayment.Rows[0].Cells["Giảm Giá"].Value = giamGia;
+                                    decimal soTienSauGiamGia = tongtien - giamGia;
+                                    dgvPayment.Rows[0].Cells["SoTien"].Value = soTienSauGiamGia;
+                                    SqlCommand insertChiTietCommand = new SqlCommand(
+                                        "INSERT INTO ChiTietKhuyenMai (MaKhuyenMai, MaSanPham, GiamGia, PhanTram) VALUES (@MaKhuyenMai, @MaSanPham, @GiamGia, @PhanTram)", conn, transaction);
+                                    insertChiTietCommand.Parameters.AddWithValue("@MaKhuyenMai", khuyenMai.MaKhuyenMai);
+                                    insertChiTietCommand.Parameters.AddWithValue("@MaSanPham", chiTiet.MaSanPham);
+                                    insertChiTietCommand.Parameters.AddWithValue("@GiamGia", giamGia);
+                                    insertChiTietCommand.Parameters.AddWithValue("@PhanTram", chiTiet.PhanTram);
+                                    insertChiTietCommand.ExecuteNonQuery();
+                                }
                             }
                         }
+                        else
+                        {
+                            // Mã khuyến mãi không tồn tại hoặc đã hết hạn
+                            MessageBox.Show("Mã khuyến mãi không hợp lệ hoặc đã hết hạn!");
+                        }
                     }
+
 
                     // Commit transaction
                     transaction.Commit();
@@ -259,56 +286,330 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 dgvPayment.Columns[i].DisplayIndex = i;
             }
         }
-
-        private orderView orderForm;
-        private void txtMaKhuyenMai_TextChanged(object sender, EventArgs e)
+        public string LayMaKhuyenMaiTuCSDL(string maKhuyenMai)
         {
-            if (string.IsNullOrEmpty(txtMaKhuyenMai.Text))
+            string tenKhuyenMai = "";
+
+            // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                lblCheckMaKhuyenMai.Text = "Mã khuyến mãi không hợp lệ";
-                lblVoucher.Text = ""; // Cập nhật label mã khuyến mãi khi người dùng xóa mã
-                return;
+                // Mở kết nối
+                connection.Open();
+
+                // Tạo câu truy vấn SQL
+                string query = "SELECT MaKhuyenMai, NgayKetThuc FROM KhuyenMai WHERE MaKhuyenMai = @MaKhuyenMai";
+
+                // Tạo đối tượng SqlCommand
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Thêm tham số cho câu truy vấn
+                    command.Parameters.AddWithValue("@MaKhuyenMai", maKhuyenMai);
+
+                    // Thực thi câu truy vấn và đọc dữ liệu từ SqlDataReader
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Đọc giá trị của cột MaKhuyenMai
+                            tenKhuyenMai = reader["MaKhuyenMai"].ToString();
+
+                            // Kiểm tra ngày kết thúc
+                            DateTime ngayKetThuc = (DateTime)reader["NgayKetThuc"];
+                            if (ngayKetThuc < DateTime.Now)
+                            {
+                                // Mã khuyến mãi đã hết hạn
+                                tenKhuyenMai = "";
+                            }
+                        }
+                    }
+                }
             }
 
-            if (orderForm != null)
+            return tenKhuyenMai;
+        }
+        private bool khuyenMaiDaApDung = false;
+
+        private void txtMaKhuyenMai_TextChanged(object sender, EventArgs e)
+        {
+            string maKhuyenMai = txtMaKhuyenMai.Text;
+
+            if (!string.IsNullOrEmpty(maKhuyenMai))
             {
-                var (madonhang, tenKhachHang, tongTien, soLuong, ngayMua) = orderForm.GetDataFromDataGridView();
-                string tenKhuyenMai = txtMaKhuyenMai.Text;
-                KhuyenMai khuyenMai = GetKhuyenMaiByTen(tenKhuyenMai);
-                MessageBox.Show("tenKhuyenMai: " + tenKhuyenMai);
-                if (khuyenMai != null)
+                if (!khuyenMaiDaApDung)
                 {
-                    if (DateTime.Now >= khuyenMai.NgayBatDau && DateTime.Now <= khuyenMai.NgayKetThuc)
+                    // Kiểm tra xem mã khuyến mãi có tồn tại hay không
+                    string tenKhuyenMai = LayTenKhuyenMaiTuCSDL(maKhuyenMai);
+
+                    if (!string.IsNullOrEmpty(tenKhuyenMai))
                     {
-                        lblCheckMaKhuyenMai.Text = "Mã hợp lệ";
-                        double totalAmount = GetTongTienByMaDonHang(madonhang);
-                        double soTienGiam = 0;
+                        lblCheckMaKhuyenMai.Text = $"Mã khuyến mãi hợp lệ: {tenKhuyenMai}";
+                        DateTime ngayBatDau = LayNgayBatDauKhuyenMaiTuCSDL(maKhuyenMai);
+                        DateTime ngayKetThuc = LayNgayKetThucKhuyenMaiTuCSDL(maKhuyenMai);
 
-                        foreach (var chiTiet in khuyenMai.ChiTietKhuyenMais)
+                        if (DateTime.Now >= ngayBatDau && DateTime.Now <= ngayKetThuc)
                         {
-                            soTienGiam += totalAmount * ((double)chiTiet.PhanTram / 100.0);
+                            // Mã khuyến mãi còn hiệu lực
+                            double phanTram = LayPhanTramKhuyenMaiTuCSDL(maKhuyenMai);
+                            double tongTien = double.Parse(lblTongTien.Text);
+                            double soTienGiam = tongTien * (phanTram / 100);
+                            lblTongTien.Text = (tongTien - soTienGiam).ToString();
+
+                            // Đánh dấu rằng mã khuyến mãi đã được áp dụng cho hóa đơn này
+                            khuyenMaiDaApDung = true;
                         }
-
-                        decimal soTienGiamDecimal = Convert.ToDecimal(soTienGiam);
-                        decimal sumPrice = tongTien - soTienGiamDecimal;
-
-                        lblTongTien.Text = sumPrice.ToString("N0"); // Format as currency
-                        lblCheckMaKhuyenMai.Text += $"\nSố tiền giảm: {soTienGiam:N0} VND"; // Format as currency
-                        lblVoucher.Text = tenKhuyenMai; // Cập nhật label mã khuyến mãi
+                        else
+                        {
+                            // Mã khuyến mãi đã hết hạn
+                            lblCheckMaKhuyenMai.Text = "Mã khuyến mãi đã hết hạn";
+                        }
                     }
                     else
                     {
-                        lblCheckMaKhuyenMai.Text = "Mã khuyến mãi đã hết hạn";
-                        lblVoucher.Text = ""; // Cập nhật label mã khuyến mãi khi hết hạn
+                        lblCheckMaKhuyenMai.Text = "Mã khuyến mãi không tồn tại";
                     }
                 }
                 else
                 {
-                    lblCheckMaKhuyenMai.Text = "Mã khuyến mãi không tồn tại";
-                    lblVoucher.Text = ""; // Cập nhật label mã khuyến mãi nếu không tồn tại
+                    lblCheckMaKhuyenMai.Text = "Chỉ áp dụng một mã khuyến mãi cho mỗi hóa đơn";
                 }
             }
+            else
+            {
+                // Nếu không nhập mã khuyến mãi, không cập nhật gì cả
+                lblCheckMaKhuyenMai.Text = "";
+            }
         }
+
+        private DateTime LayNgayKetThucKhuyenMaiTuCSDL(string maKhuyenMai)
+        {
+            DateTime ngayKetThuc = DateTime.MinValue;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT NgayKetThuc FROM KhuyenMai WHERE MaKhuyenMai = @MaKhuyenMai";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaKhuyenMai", maKhuyenMai);
+
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        ngayKetThuc = (DateTime)result;
+                    }
+                }
+            }
+
+            return ngayKetThuc;
+        }
+
+        private DateTime LayNgayBatDauKhuyenMaiTuCSDL(string maKhuyenMai)
+        {
+            DateTime ngayBatDau = DateTime.MinValue;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT NgayBatDau FROM KhuyenMai WHERE MaKhuyenMai = @MaKhuyenMai";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaKhuyenMai", maKhuyenMai);
+
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        ngayBatDau = (DateTime)result;
+                    }
+                }
+            }
+
+            return ngayBatDau;
+        }
+
+        private string LayTenKhuyenMaiTuCSDL(string maKhuyenMai)
+        {
+            string tenKhuyenMai = null;
+
+            // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Mở kết nối
+                    connection.Open();
+
+                    // Tạo câu truy vấn SQL
+                    string query = "SELECT TenKhuyenMai FROM KhuyenMai WHERE MaKhuyenMai = @MaKhuyenMai";
+
+                    // Tạo đối tượng SqlCommand
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Thêm tham số cho câu truy vấn
+                        command.Parameters.AddWithValue("@MaKhuyenMai", maKhuyenMai);
+
+                        // Thực thi câu truy vấn và đọc dữ liệu từ SqlDataReader
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Đọc giá trị của cột TenKhuyenMai
+                                tenKhuyenMai = reader["TenKhuyenMai"].ToString();
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý ngoại lệ (nếu có)
+                    MessageBox.Show("lỗi: " + ex.Message);
+                }
+            }
+
+            return tenKhuyenMai;
+        }
+
+        private void XulyMuaSanPham(string maSanPham, string maKhuyenMai)
+        {
+            // Kiểm tra xem mã khuyến mãi có tồn tại hay không
+            if (!string.IsNullOrEmpty(maKhuyenMai))
+            {
+                // Nếu có mã khuyến mãi, bạn có thể áp dụng giảm giá
+                double phanTramGiamGia = LayPhanTramGiamGiaTuCSDL(maSanPham, maKhuyenMai);
+
+                // Xử lý áp dụng giảm giá cho đơn hàng ở đây
+                double tongTien = TinhTongTienDonHang(maSanPham);
+                double soTienGiam = tongTien * (phanTramGiamGia / 100);
+                double tongTienSauGiamGia = tongTien - soTienGiam;
+
+                // Hiển thị tổng tiền sau khi đã giảm giá cho khách hàng
+                lblTongTien.Text = tongTienSauGiamGia.ToString();
+            }
+            else
+            {
+                // Nếu không có mã khuyến mãi, không áp dụng giảm giá
+                double tongTien = TinhTongTienDonHang(maSanPham);
+                lblTongTien.Text = tongTien.ToString();
+            }
+        }
+
+        private double LayPhanTramGiamGiaTuCSDL(string maSanPham, string maKhuyenMai)
+        {
+            double phanTramGiamGia = 0;
+
+            // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Mở kết nối
+                connection.Open();
+
+                // Tạo câu truy vấn SQL
+                string query = "SELECT PhanTram FROM ChiTietKhuyenMai WHERE MaSanPham = @MaSanPham AND MaKhuyenMai = @MaKhuyenMai";
+
+                // Tạo đối tượng SqlCommand
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Thêm tham số cho câu truy vấn
+                    command.Parameters.AddWithValue("@MaSanPham", maSanPham);
+                    command.Parameters.AddWithValue("@MaKhuyenMai", maKhuyenMai);
+
+                    // Thực thi câu truy vấn và đọc dữ liệu từ SqlDataReader
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Đọc giá trị của cột PhanTram
+                            phanTramGiamGia = Convert.ToDouble(reader["PhanTram"]);
+                        }
+                    }
+                }
+            }
+
+            return phanTramGiamGia;
+        }
+
+        private double TinhTongTienDonHang(string maSanPham)
+        {
+            double tongTien = 0;
+
+            // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Mở kết nối
+                    connection.Open();
+
+                    // Tạo câu truy vấn SQL
+                    string query = "SELECT Gia FROM SanPham WHERE MaSanPham = @MaSanPham";
+
+                    // Tạo đối tượng SqlCommand
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Thêm tham số cho câu truy vấn
+                        command.Parameters.AddWithValue("@MaSanPham", maSanPham);
+
+                        // Thực thi câu truy vấn và đọc dữ liệu từ SqlDataReader
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Đọc giá trị của cột Gia
+                                double giaSanPham = Convert.ToDouble(reader["Gia"]);
+
+                                // Tính tổng tiền đơn hàng
+                                tongTien += giaSanPham;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý ngoại lệ (nếu có)
+                    Console.WriteLine("Lỗi: " + ex.Message);
+                }
+            }
+
+            return tongTien;
+        }
+
+        private double LayPhanTramKhuyenMaiTuCSDL(string maKhuyenMai)
+        {
+            double phanTram = 0;
+
+            // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Mở kết nối
+                connection.Open();
+
+                // Tạo câu truy vấn SQL
+                string query = "SELECT PhanTram FROM ChiTietKhuyenMai WHERE MaKhuyenMai = @MaKhuyenMai";
+
+                // Tạo đối tượng SqlCommand
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Thêm tham số cho câu truy vấn
+                    command.Parameters.AddWithValue("@MaKhuyenMai", maKhuyenMai);
+
+                    // Thực thi câu truy vấn và đọc dữ liệu từ SqlDataReader
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Đọc giá trị của cột PhanTram
+                            phanTram = Convert.ToDouble(reader["PhanTram"]);
+                        }
+                    }
+                }
+            }
+
+            return phanTram;
+        }
+
         private void ShowOrderDetails(int maHoaDon)
         {
             string query = @"SELECT 
@@ -422,38 +723,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void btnSearchKhuyenMai_Click(object sender, EventArgs e)
         {
-            string tenKhuyenMai = txtMaKhuyenMai.Text;
-            KhuyenMai khuyenMai = GetKhuyenMaiByTen(tenKhuyenMai);
-
-            if (khuyenMai != null)
-            {
-                if (DateTime.Now >= khuyenMai.NgayBatDau && DateTime.Now <= khuyenMai.NgayKetThuc)
-                {
-                    lblCheckMaKhuyenMai.Text = "Mã khuyến mãi hợp lệ!";
-
-                    double tongTien = GetTongTienByMaDonHang(maDonHang);
-                    double soTienGiam = 0;
-
-                    if (khuyenMai.ChiTietKhuyenMais != null)
-                    {
-                        foreach (var chiTiet in khuyenMai.ChiTietKhuyenMais)
-                        {
-                            soTienGiam += tongTien * (chiTiet.PhanTram / 100.0);
-                        }
-                    }
-
-                    lblCheckMaKhuyenMai.Text += $", Số tiền giảm là: {soTienGiam} VND";
-                    lblTongTien.Text = $"{soTienGiam}";
-                }
-                else
-                {
-                    lblCheckMaKhuyenMai.Text = "Mã khuyến mãi đã hết hạn";
-                }
-            }
-            else
-            {
-                lblCheckMaKhuyenMai.Text = "Mã khuyến mãi không tồn tại";
-            }
+            
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -503,33 +773,33 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             if (!string.IsNullOrEmpty(searchText))
             {
                 string searchQuery = @"SELECT 
-                                    tt.MaThanhToan AS MaHoaDon,
-                                    dh.MaDonHang,
-                                    kh.HoTen AS TenKhachHang,
-                                    sp.TenSanPham,
-                                    sp.Gia,
-                                    tt.SoTien,
-                                    ctdh.SoLuong,
-                                    km.TenKhuyenMai,
-                                    tt.NgayThanhToan,
-                                    dh.TrangThai
-                                FROM 
-                                    ThanhToan tt
-                                JOIN 
-                                    DonHang dh ON tt.MaDonHang = dh.MaDonHang
-                                JOIN 
-                                    ChiTietDonHang ctdh ON dh.MaDonHang = ctdh.MaDonHang
-                                JOIN 
-                                    SanPham sp ON ctdh.MaSanPham = sp.MaSanPham
-                                JOIN 
-                                    KhachHang kh ON dh.MaKhachHang = kh.MaKhachHang
-                                LEFT JOIN 
-                                    ChiTietKhuyenMai ctkm ON sp.MaSanPham = ctkm.MaSanPham
-                                LEFT JOIN 
-                                    KhuyenMai km ON ctkm.MaKhuyenMai = km.MaKhuyenMai
-                                WHERE 
-                                    tt.MaThanhToan LIKE @SearchText OR
-                                    kh.HoTen LIKE @SearchText";
+                                        tt.MaThanhToan AS MaHoaDon,
+                                        dh.MaDonHang,
+                                        kh.HoTen AS TenKhachHang,
+                                        sp.TenSanPham,
+                                        sp.Gia,
+                                        tt.SoTien,
+                                        ctdh.SoLuong,
+                                        km.TenKhuyenMai,
+                                        tt.NgayThanhToan,
+                                        dh.TrangThai
+                                    FROM 
+                                        ThanhToan tt
+                                    JOIN 
+                                        DonHang dh ON tt.MaDonHang = dh.MaDonHang
+                                    JOIN 
+                                        ChiTietDonHang ctdh ON dh.MaDonHang = ctdh.MaDonHang
+                                    JOIN 
+                                        SanPham sp ON ctdh.MaSanPham = sp.MaSanPham
+                                    JOIN 
+                                        KhachHang kh ON dh.MaKhachHang = kh.MaKhachHang
+                                    LEFT JOIN 
+                                        ChiTietKhuyenMai ctkm ON sp.MaSanPham = ctkm.MaSanPham
+                                    LEFT JOIN 
+                                        KhuyenMai km ON ctkm.MaKhuyenMai = km.MaKhuyenMai
+                                    WHERE 
+                                        tt.MaThanhToan LIKE @SearchText OR
+                                        kh.HoTen LIKE @SearchText";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     using (SqlCommand command = new SqlCommand(searchQuery, connection))
