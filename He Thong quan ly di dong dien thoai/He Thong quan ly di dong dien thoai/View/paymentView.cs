@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Font = System.Drawing.Font;
 using Rectangle = System.Drawing.Rectangle;
 
 namespace He_Thong_quan_ly_di_dong_dien_thoai.View
@@ -342,7 +343,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
                     if (!string.IsNullOrEmpty(tenKhuyenMai))
                     {
-                        lblCheckMaKhuyenMai.Text = $"Mã khuyến mãi hợp lệ: {tenKhuyenMai}";
+                        lblCheckMaKhuyenMai.Text = $"Mã hợp lệ: {tenKhuyenMai}";
                         DateTime ngayBatDau = LayNgayBatDauKhuyenMaiTuCSDL(maKhuyenMai);
                         DateTime ngayKetThuc = LayNgayKetThucKhuyenMaiTuCSDL(maKhuyenMai);
 
@@ -361,16 +362,20 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                         {
                             // Mã khuyến mãi đã hết hạn
                             lblCheckMaKhuyenMai.Text = "Mã khuyến mãi đã hết hạn";
+                            lblCheckMaKhuyenMai.ForeColor = Color.Red;
                         }
                     }
                     else
                     {
                         lblCheckMaKhuyenMai.Text = "Mã khuyến mãi không tồn tại";
+                        lblCheckMaKhuyenMai.ForeColor = Color.Red;
                     }
                 }
                 else
                 {
                     lblCheckMaKhuyenMai.Text = "Chỉ áp dụng một mã khuyến mãi cho mỗi hóa đơn";
+                    lblCheckMaKhuyenMai.ForeColor = Color.Red;
+                    lblCheckMaKhuyenMai.Font = new Font(lblCheckMaKhuyenMai.Font.FontFamily, 10);
                 }
             }
             else

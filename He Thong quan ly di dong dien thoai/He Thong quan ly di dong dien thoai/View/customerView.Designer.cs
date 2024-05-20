@@ -50,17 +50,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabCustomerList = new MetroFramework.Controls.MetroTabPage();
             this.dgvKhachHang = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnRemoveCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             this.tabControlCustomer.SuspendLayout();
             this.tabCustomerDetail.SuspendLayout();
             this.tabCustomerList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -91,25 +93,14 @@
             this.tabControlCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlCustomer.Location = new System.Drawing.Point(0, 63);
             this.tabControlCustomer.Name = "tabControlCustomer";
-            this.tabControlCustomer.SelectedIndex = 1;
+            this.tabControlCustomer.SelectedIndex = 0;
             this.tabControlCustomer.Size = new System.Drawing.Size(887, 566);
             this.tabControlCustomer.TabIndex = 3;
             this.tabControlCustomer.UseSelectable = true;
             // 
             // tabCustomerDetail
             // 
-            this.tabCustomerDetail.Controls.Add(this.btnCancelCustomer);
-            this.tabCustomerDetail.Controls.Add(this.btnSaveCustomer);
-            this.tabCustomerDetail.Controls.Add(this.txtAddressCustomer);
-            this.tabCustomerDetail.Controls.Add(this.label6);
-            this.tabCustomerDetail.Controls.Add(this.label5);
-            this.tabCustomerDetail.Controls.Add(this.txtPhoneCustomer);
-            this.tabCustomerDetail.Controls.Add(this.txtEmailCustomer);
-            this.tabCustomerDetail.Controls.Add(this.label4);
-            this.tabCustomerDetail.Controls.Add(this.txtCustomerID);
-            this.tabCustomerDetail.Controls.Add(this.label3);
-            this.tabCustomerDetail.Controls.Add(this.txtNameCustomer);
-            this.tabCustomerDetail.Controls.Add(this.label2);
+            this.tabCustomerDetail.Controls.Add(this.panel6);
             this.tabCustomerDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCustomerDetail.HorizontalScrollbarBarColor = true;
             this.tabCustomerDetail.HorizontalScrollbarHighlightOnWheel = false;
@@ -135,7 +126,7 @@
             this.btnCancelCustomer.FillColor = System.Drawing.Color.Red;
             this.btnCancelCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancelCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCancelCustomer.Location = new System.Drawing.Point(448, 343);
+            this.btnCancelCustomer.Location = new System.Drawing.Point(451, 359);
             this.btnCancelCustomer.Name = "btnCancelCustomer";
             this.btnCancelCustomer.Size = new System.Drawing.Size(180, 45);
             this.btnCancelCustomer.TabIndex = 13;
@@ -152,7 +143,7 @@
             this.btnSaveCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSaveCustomer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnSaveCustomer.Location = new System.Drawing.Point(248, 343);
+            this.btnSaveCustomer.Location = new System.Drawing.Point(250, 359);
             this.btnSaveCustomer.Name = "btnSaveCustomer";
             this.btnSaveCustomer.Size = new System.Drawing.Size(180, 45);
             this.btnSaveCustomer.TabIndex = 12;
@@ -172,7 +163,7 @@
             this.txtAddressCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddressCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddressCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddressCustomer.Location = new System.Drawing.Point(216, 279);
+            this.txtAddressCustomer.Location = new System.Drawing.Point(226, 303);
             this.txtAddressCustomer.Name = "txtAddressCustomer";
             this.txtAddressCustomer.PasswordChar = '\0';
             this.txtAddressCustomer.PlaceholderText = "";
@@ -185,7 +176,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(216, 256);
+            this.label6.Location = new System.Drawing.Point(225, 280);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 10;
@@ -196,7 +187,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(456, 175);
+            this.label5.Location = new System.Drawing.Point(461, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 20);
             this.label5.TabIndex = 9;
@@ -216,7 +207,7 @@
             this.txtPhoneCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhoneCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneCustomer.Location = new System.Drawing.Point(460, 198);
+            this.txtPhoneCustomer.Location = new System.Drawing.Point(465, 227);
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
             this.txtPhoneCustomer.PasswordChar = '\0';
             this.txtPhoneCustomer.PlaceholderText = "";
@@ -238,7 +229,7 @@
             this.txtEmailCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmailCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmailCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailCustomer.Location = new System.Drawing.Point(216, 198);
+            this.txtEmailCustomer.Location = new System.Drawing.Point(226, 227);
             this.txtEmailCustomer.Name = "txtEmailCustomer";
             this.txtEmailCustomer.PasswordChar = '\0';
             this.txtEmailCustomer.PlaceholderText = "";
@@ -251,7 +242,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(216, 175);
+            this.label4.Location = new System.Drawing.Point(226, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 6;
@@ -272,7 +263,7 @@
             this.txtCustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCustomerID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCustomerID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomerID.Location = new System.Drawing.Point(460, 115);
+            this.txtCustomerID.Location = new System.Drawing.Point(465, 144);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.PasswordChar = '\0';
             this.txtCustomerID.PlaceholderText = "";
@@ -285,7 +276,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(456, 91);
+            this.label3.Location = new System.Drawing.Point(461, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 20);
             this.label3.TabIndex = 4;
@@ -305,7 +296,7 @@
             this.txtNameCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNameCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameCustomer.Location = new System.Drawing.Point(216, 115);
+            this.txtNameCustomer.Location = new System.Drawing.Point(226, 144);
             this.txtNameCustomer.Name = "txtNameCustomer";
             this.txtNameCustomer.PasswordChar = '\0';
             this.txtNameCustomer.PlaceholderText = "";
@@ -318,7 +309,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 92);
+            this.label2.Location = new System.Drawing.Point(226, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 20);
             this.label2.TabIndex = 2;
@@ -353,9 +344,6 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
             this.dgvKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,6 +362,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKhachHang.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
             this.dgvKhachHang.Location = new System.Drawing.Point(0, 49);
             this.dgvKhachHang.Name = "dgvKhachHang";
@@ -406,37 +395,6 @@
             this.dgvKhachHang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
             this.dgvKhachHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
-            // 
-            // txtSearchCustomer
-            // 
-            this.txtSearchCustomer.AutoRoundedCorners = true;
-            this.txtSearchCustomer.BackColor = System.Drawing.Color.White;
-            this.txtSearchCustomer.BorderRadius = 17;
-            this.txtSearchCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchCustomer.DefaultText = "";
-            this.txtSearchCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearchCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchCustomer.Location = new System.Drawing.Point(14, 7);
-            this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.PasswordChar = '\0';
-            this.txtSearchCustomer.PlaceholderText = "Tìm kiếm khách hàng...";
-            this.txtSearchCustomer.SelectedText = "";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(630, 36);
-            this.txtSearchCustomer.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 49);
-            this.panel1.TabIndex = 4;
             // 
             // btnRemoveCustomer
             // 
@@ -509,6 +467,58 @@
             this.btnSearchCustomer.Size = new System.Drawing.Size(35, 35);
             this.btnSearchCustomer.TabIndex = 3;
             // 
+            // txtSearchCustomer
+            // 
+            this.txtSearchCustomer.AutoRoundedCorners = true;
+            this.txtSearchCustomer.BackColor = System.Drawing.Color.White;
+            this.txtSearchCustomer.BorderRadius = 17;
+            this.txtSearchCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchCustomer.DefaultText = "";
+            this.txtSearchCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearchCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchCustomer.Location = new System.Drawing.Point(14, 7);
+            this.txtSearchCustomer.Name = "txtSearchCustomer";
+            this.txtSearchCustomer.PasswordChar = '\0';
+            this.txtSearchCustomer.PlaceholderText = "Tìm kiếm khách hàng...";
+            this.txtSearchCustomer.SelectedText = "";
+            this.txtSearchCustomer.Size = new System.Drawing.Size(630, 36);
+            this.txtSearchCustomer.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(879, 49);
+            this.panel1.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.txtNameCustomer);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.btnCancelCustomer);
+            this.panel6.Controls.Add(this.txtEmailCustomer);
+            this.panel6.Controls.Add(this.btnSaveCustomer);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.txtAddressCustomer);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.txtCustomerID);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.txtPhoneCustomer);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(879, 524);
+            this.panel6.TabIndex = 18;
+            // 
             // customerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,9 +534,10 @@
             this.guna2Panel1.PerformLayout();
             this.tabControlCustomer.ResumeLayout(false);
             this.tabCustomerDetail.ResumeLayout(false);
-            this.tabCustomerDetail.PerformLayout();
             this.tabCustomerList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -557,5 +568,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAddressCustomer;
         private Guna.UI2.WinForms.Guna2Button btnSaveCustomer;
         private Guna.UI2.WinForms.Guna2Button btnCancelCustomer;
+        private System.Windows.Forms.Panel panel6;
     }
 }

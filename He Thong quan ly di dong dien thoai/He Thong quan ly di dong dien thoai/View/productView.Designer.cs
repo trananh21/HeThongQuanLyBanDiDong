@@ -103,8 +103,8 @@
             // tabPageProductList
             // 
             this.tabPageProductList.Controls.Add(this.searchProduct);
-            this.tabPageProductList.Controls.Add(this.panel2);
             this.tabPageProductList.Controls.Add(this.panel3);
+            this.tabPageProductList.Controls.Add(this.panel2);
             this.tabPageProductList.Location = new System.Drawing.Point(4, 29);
             this.tabPageProductList.Name = "tabPageProductList";
             this.tabPageProductList.Padding = new System.Windows.Forms.Padding(3);
@@ -225,15 +225,14 @@
             // 
             this.panel3.Controls.Add(this.dgvSanPham);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Location = new System.Drawing.Point(3, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(873, 527);
+            this.panel3.Size = new System.Drawing.Size(873, 478);
             this.panel3.TabIndex = 6;
             // 
             // dgvSanPham
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
             this.dgvSanPham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
@@ -253,9 +252,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSanPham.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
-            this.dgvSanPham.Location = new System.Drawing.Point(0, 46);
+            this.dgvSanPham.Location = new System.Drawing.Point(0, 0);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -270,7 +269,7 @@
             this.dgvSanPham.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(54)))), ((int)(((byte)(58)))));
             this.dgvSanPham.RowTemplate.Height = 41;
             this.dgvSanPham.RowTemplate.ReadOnly = true;
-            this.dgvSanPham.Size = new System.Drawing.Size(873, 481);
+            this.dgvSanPham.Size = new System.Drawing.Size(873, 478);
             this.dgvSanPham.TabIndex = 1;
             this.dgvSanPham.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             this.dgvSanPham.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));

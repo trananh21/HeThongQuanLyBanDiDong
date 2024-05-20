@@ -73,6 +73,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.txtOrderID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             this.tabControlOrder.SuspendLayout();
             this.tabOrderList.SuspendLayout();
@@ -81,6 +82,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.tabCreateOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -118,14 +120,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             // 
             // tabOrderList
             // 
-            this.tabOrderList.Controls.Add(this.guna2Button1);
-            this.tabOrderList.Controls.Add(this.goToPayment);
-            this.tabOrderList.Controls.Add(this.showDetailOrder);
-            this.tabOrderList.Controls.Add(this.cbStatus);
+            this.tabOrderList.Controls.Add(this.dgvDonHang);
+            this.tabOrderList.Controls.Add(this.panel1);
             this.tabOrderList.Controls.Add(this.btnSearchOrder);
             this.tabOrderList.Controls.Add(this.txtSearchOrder);
             this.tabOrderList.Controls.Add(this.metroPanel1);
-            this.tabOrderList.Controls.Add(this.dgvDonHang);
             this.tabOrderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabOrderList.ForeColor = System.Drawing.Color.White;
             this.tabOrderList.HorizontalScrollbarBarColor = true;
@@ -153,7 +152,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(103)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(547, 55);
+            this.guna2Button1.Location = new System.Drawing.Point(543, 6);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 36);
             this.guna2Button1.TabIndex = 10;
@@ -172,7 +171,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.goToPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(121)))));
             this.goToPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goToPayment.ForeColor = System.Drawing.Color.White;
-            this.goToPayment.Location = new System.Drawing.Point(361, 55);
+            this.goToPayment.Location = new System.Drawing.Point(358, 6);
             this.goToPayment.Name = "goToPayment";
             this.goToPayment.Size = new System.Drawing.Size(180, 36);
             this.goToPayment.TabIndex = 9;
@@ -191,7 +190,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.showDetailOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.showDetailOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showDetailOrder.ForeColor = System.Drawing.Color.White;
-            this.showDetailOrder.Location = new System.Drawing.Point(215, 55);
+            this.showDetailOrder.Location = new System.Drawing.Point(212, 6);
             this.showDetailOrder.Name = "showDetailOrder";
             this.showDetailOrder.Size = new System.Drawing.Size(140, 36);
             this.showDetailOrder.TabIndex = 8;
@@ -214,7 +213,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             "Chờ xác nhận",
             "Đã thanh toán",
             "Chưa thanh toán"});
-            this.cbStatus.Location = new System.Drawing.Point(14, 55);
+            this.cbStatus.Location = new System.Drawing.Point(11, 6);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(195, 36);
             this.cbStatus.TabIndex = 7;
@@ -357,8 +356,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDonHang.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDonHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
-            this.dgvDonHang.Location = new System.Drawing.Point(0, 97);
+            this.dgvDonHang.Location = new System.Drawing.Point(0, 96);
             this.dgvDonHang.Name = "dgvDonHang";
             this.dgvDonHang.ReadOnly = true;
             this.dgvDonHang.RowHeadersVisible = false;
@@ -367,7 +367,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.dgvDonHang.RowTemplate.Height = 41;
             this.dgvDonHang.RowTemplate.ReadOnly = true;
             this.dgvDonHang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDonHang.Size = new System.Drawing.Size(879, 431);
+            this.dgvDonHang.Size = new System.Drawing.Size(879, 428);
             this.dgvDonHang.TabIndex = 6;
             this.dgvDonHang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
             this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
@@ -772,6 +772,19 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.pbImage.TabStop = false;
             this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cbStatus);
+            this.panel1.Controls.Add(this.showDetailOrder);
+            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.goToPayment);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 49);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(879, 47);
+            this.panel1.TabIndex = 11;
+            // 
             // orderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -793,6 +806,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.tabCreateOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -838,5 +852,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         private Guna.UI2.WinForms.Guna2Button showDetailOrder;
         private Guna.UI2.WinForms.Guna2Button goToPayment;
         private Guna2Button guna2Button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

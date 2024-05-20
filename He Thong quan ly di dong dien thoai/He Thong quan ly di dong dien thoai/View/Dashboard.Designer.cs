@@ -32,30 +32,24 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelLogout = new System.Windows.Forms.Panel();
             this.guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.lblHelloAdmin = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_ddQuanLy = new System.Windows.Forms.Panel();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.btnVoucher = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.Bt_QuanLy = new System.Windows.Forms.Button();
             this.paneldropdown = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnKH = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
-            this.btu_danhmuc = new System.Windows.Forms.Button();
-            this.icbtu_Trangchu = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -100,17 +94,19 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_body_ver2 = new System.Windows.Forms.Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.Bt_QuanLy = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btu_danhmuc = new System.Windows.Forms.Button();
+            this.icbtu_Trangchu = new FontAwesome.Sharp.IconButton();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelLogout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel_ddQuanLy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.paneldropdown.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_Body.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -123,6 +119,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,6 +139,17 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel1.Size = new System.Drawing.Size(1100, 112);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(4)))), ((int)(((byte)(48)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1001, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 7;
             // 
             // guna2ControlBox4
             // 
@@ -193,15 +204,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2Button18.Text = "Đăng xuất";
             this.guna2Button18.Click += new System.EventHandler(this.guna2Button18_Click);
             // 
-            // pictureBoxIcon
-            // 
-            this.pictureBoxIcon.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(20, 20);
-            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxIcon.TabIndex = 4;
-            this.pictureBoxIcon.TabStop = false;
-            // 
             // lblHelloAdmin
             // 
             this.lblHelloAdmin.AutoSize = true;
@@ -221,16 +223,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 112);
             this.panel3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.logo_uneti_smartphone_2;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -258,16 +250,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_ddQuanLy.Name = "panel_ddQuanLy";
             this.panel_ddQuanLy.Size = new System.Drawing.Size(220, 60);
             this.panel_ddQuanLy.TabIndex = 5;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_admin;
-            this.pictureBox18.Location = new System.Drawing.Point(8, 12);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 4;
-            this.pictureBox18.TabStop = false;
             // 
             // btnVoucher
             // 
@@ -317,26 +299,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btnReport.Text = "Báo Cáo và thông kê";
             this.btnReport.UseVisualStyleBackColor = true;
             // 
-            // Bt_QuanLy
-            // 
-            this.Bt_QuanLy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Bt_QuanLy.FlatAppearance.BorderSize = 0;
-            this.Bt_QuanLy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.Bt_QuanLy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.Bt_QuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bt_QuanLy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_QuanLy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Bt_QuanLy.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
-            this.Bt_QuanLy.Location = new System.Drawing.Point(0, 0);
-            this.Bt_QuanLy.Name = "Bt_QuanLy";
-            this.Bt_QuanLy.Size = new System.Drawing.Size(220, 60);
-            this.Bt_QuanLy.TabIndex = 0;
-            this.Bt_QuanLy.Text = "Quản Lý";
-            this.Bt_QuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Bt_QuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Bt_QuanLy.UseVisualStyleBackColor = true;
-            this.Bt_QuanLy.Click += new System.EventHandler(this.Bt_QuanLy_Click_1);
-            // 
             // paneldropdown
             // 
             this.paneldropdown.Controls.Add(this.pictureBox2);
@@ -353,16 +315,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.paneldropdown.Name = "paneldropdown";
             this.paneldropdown.Size = new System.Drawing.Size(220, 60);
             this.paneldropdown.TabIndex = 4;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_menu3;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
             // 
             // btnThanhToan
             // 
@@ -443,50 +395,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.btnSP.Text = "Sản Phẩm";
             this.btnSP.UseVisualStyleBackColor = true;
             this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
-            // 
-            // btu_danhmuc
-            // 
-            this.btu_danhmuc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btu_danhmuc.FlatAppearance.BorderSize = 0;
-            this.btu_danhmuc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.btu_danhmuc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
-            this.btu_danhmuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btu_danhmuc.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btu_danhmuc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btu_danhmuc.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
-            this.btu_danhmuc.Location = new System.Drawing.Point(0, 0);
-            this.btu_danhmuc.MaximumSize = new System.Drawing.Size(220, 310);
-            this.btu_danhmuc.MinimumSize = new System.Drawing.Size(220, 60);
-            this.btu_danhmuc.Name = "btu_danhmuc";
-            this.btu_danhmuc.Size = new System.Drawing.Size(220, 65);
-            this.btu_danhmuc.TabIndex = 0;
-            this.btu_danhmuc.Text = "Danh Mục";
-            this.btu_danhmuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btu_danhmuc.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btu_danhmuc.UseVisualStyleBackColor = true;
-            this.btu_danhmuc.Click += new System.EventHandler(this.btu_danhmuc_Click);
-            // 
-            // icbtu_Trangchu
-            // 
-            this.icbtu_Trangchu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.icbtu_Trangchu.FlatAppearance.BorderSize = 0;
-            this.icbtu_Trangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtu_Trangchu.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtu_Trangchu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.icbtu_Trangchu.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.icbtu_Trangchu.IconColor = System.Drawing.Color.White;
-            this.icbtu_Trangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtu_Trangchu.IconSize = 40;
-            this.icbtu_Trangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtu_Trangchu.Location = new System.Drawing.Point(0, 0);
-            this.icbtu_Trangchu.Name = "icbtu_Trangchu";
-            this.icbtu_Trangchu.Size = new System.Drawing.Size(200, 60);
-            this.icbtu_Trangchu.TabIndex = 2;
-            this.icbtu_Trangchu.Text = " Trang Chủ";
-            this.icbtu_Trangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtu_Trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.icbtu_Trangchu.UseVisualStyleBackColor = true;
-            this.icbtu_Trangchu.Click += new System.EventHandler(this.icbtu_Trangchu_Click);
             // 
             // timer1
             // 
@@ -971,16 +879,108 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel_body_ver2.Size = new System.Drawing.Size(900, 668);
             this.panel_body_ver2.TabIndex = 7;
             // 
-            // guna2ControlBox1
+            // pictureBox18
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(4)))), ((int)(((byte)(48)))));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1001, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 7;
+            this.pictureBox18.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_admin;
+            this.pictureBox18.Location = new System.Drawing.Point(8, 12);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 4;
+            this.pictureBox18.TabStop = false;
+            // 
+            // Bt_QuanLy
+            // 
+            this.Bt_QuanLy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Bt_QuanLy.FlatAppearance.BorderSize = 0;
+            this.Bt_QuanLy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.Bt_QuanLy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.Bt_QuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bt_QuanLy.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_QuanLy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Bt_QuanLy.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
+            this.Bt_QuanLy.Location = new System.Drawing.Point(0, 0);
+            this.Bt_QuanLy.Name = "Bt_QuanLy";
+            this.Bt_QuanLy.Size = new System.Drawing.Size(220, 60);
+            this.Bt_QuanLy.TabIndex = 0;
+            this.Bt_QuanLy.Text = "Quản Lý";
+            this.Bt_QuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bt_QuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.Bt_QuanLy.UseVisualStyleBackColor = true;
+            this.Bt_QuanLy.Click += new System.EventHandler(this.Bt_QuanLy_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.icon_menu3;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btu_danhmuc
+            // 
+            this.btu_danhmuc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btu_danhmuc.FlatAppearance.BorderSize = 0;
+            this.btu_danhmuc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btu_danhmuc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(70)))), ((int)(((byte)(60)))));
+            this.btu_danhmuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btu_danhmuc.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btu_danhmuc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btu_danhmuc.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.IconExpand;
+            this.btu_danhmuc.Location = new System.Drawing.Point(0, 0);
+            this.btu_danhmuc.MaximumSize = new System.Drawing.Size(220, 310);
+            this.btu_danhmuc.MinimumSize = new System.Drawing.Size(220, 60);
+            this.btu_danhmuc.Name = "btu_danhmuc";
+            this.btu_danhmuc.Size = new System.Drawing.Size(220, 65);
+            this.btu_danhmuc.TabIndex = 0;
+            this.btu_danhmuc.Text = "Danh Mục";
+            this.btu_danhmuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btu_danhmuc.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btu_danhmuc.UseVisualStyleBackColor = true;
+            this.btu_danhmuc.Click += new System.EventHandler(this.btu_danhmuc_Click);
+            // 
+            // icbtu_Trangchu
+            // 
+            this.icbtu_Trangchu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.icbtu_Trangchu.FlatAppearance.BorderSize = 0;
+            this.icbtu_Trangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtu_Trangchu.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtu_Trangchu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.icbtu_Trangchu.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.icbtu_Trangchu.IconColor = System.Drawing.Color.White;
+            this.icbtu_Trangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtu_Trangchu.IconSize = 40;
+            this.icbtu_Trangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtu_Trangchu.Location = new System.Drawing.Point(0, 0);
+            this.icbtu_Trangchu.Name = "icbtu_Trangchu";
+            this.icbtu_Trangchu.Size = new System.Drawing.Size(200, 60);
+            this.icbtu_Trangchu.TabIndex = 2;
+            this.icbtu_Trangchu.Text = " Trang Chủ";
+            this.icbtu_Trangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtu_Trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.icbtu_Trangchu.UseVisualStyleBackColor = true;
+            this.icbtu_Trangchu.Click += new System.EventHandler(this.icbtu_Trangchu_Click);
+            // 
+            // pictureBoxIcon
+            // 
+            this.pictureBoxIcon.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxIcon.Name = "pictureBoxIcon";
+            this.pictureBoxIcon.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxIcon.TabIndex = 4;
+            this.pictureBoxIcon.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.logo_uneti_smartphone_2;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
@@ -999,14 +999,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel1.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
             this.panelLogout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel_ddQuanLy.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.paneldropdown.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_Body.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -1030,6 +1026,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

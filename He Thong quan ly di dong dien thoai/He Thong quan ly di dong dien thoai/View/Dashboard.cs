@@ -51,14 +51,22 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             btnOrder.Click += ShowOrderViewForm;
             //payment
             btnThanhToan.Click += ShowPaymentViewForm;
-
+            //voucher
             btnVoucher.Click += ShowVoucherViewForm;
+            //staff
+            btnStaff.Click += ShowStaffViewForm;
             //showDashBoard
             ShowDashboard();
             _orderForm = new orderView();
             _orderForm.GoToPaymentRequested += OrderViewForm_GoToPaymentRequested;
         }
 
+        private void ShowStaffViewForm(object sender, EventArgs e)
+        {
+            staffView staffForm = new staffView();
+
+            OpenFormCon(staffForm);
+        }
 
         public void showfullCategory(iSPRepository repository, iCustomerReponsitory cusRepo, iOrderRepository ordRepo, iVoucherReponsitory vouRepo)
         {

@@ -25,6 +25,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             InitializeComponent();
             txtUsername.KeyPress += TextBox_KeyPressEnter;
             txtPassword.KeyPress += TextBox_KeyPressEnter;
+            //this.Resize += Login_Resize;
         }
 
         private void guna2ControlBox1_Click_1(object sender, EventArgs e)
@@ -111,6 +112,23 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Login_Resize(object sender, EventArgs e)
+        {
+            int newWidth = panel7.Width;
+            int newHeight = panel7.Height;
+
+            // Truy cập hình ảnh từ tài nguyên
+            Bitmap backgroundImage = Properties.Resources.background_login; // Thay "YourImageName" bằng tên hình ảnh trong tài nguyên của bạn
+
+            // Cập nhật kích thước hình ảnh
+            Bitmap resizedImage = new Bitmap(backgroundImage, new Size(newWidth, newHeight));
+
+            // Đặt hình ảnh làm nền cho Panel
+            panel7.BackgroundImage = resizedImage;
+            panel7.BackgroundImageLayout = ImageLayout.Stretch; // Cài đặt kiểu căn chỉnh hình ảnh
 
         }
     }

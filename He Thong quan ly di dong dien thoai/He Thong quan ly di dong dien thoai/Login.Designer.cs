@@ -39,6 +39,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel_middercenter = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,17 +51,18 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.panel5 = new System.Windows.Forms.Panel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1.SuspendLayout();
             this.panel_middercenter.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(4)))), ((int)(((byte)(48)))));
+            this.panel1.Controls.Add(this.guna2ControlBox3);
             this.panel1.Controls.Add(this.guna2ControlBox2);
             this.panel1.Controls.Add(this.guna2ControlBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,7 +77,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(4)))), ((int)(((byte)(48)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(826, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(778, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 1;
@@ -86,7 +88,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(4)))), ((int)(((byte)(48)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(877, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(880, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
@@ -131,13 +133,25 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(4)))), ((int)(((byte)(48)))));
             this.panel7.Controls.Add(this.pictureBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(501, 536);
             this.panel7.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.background_login;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(501, 536);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel6
             // 
@@ -276,17 +290,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // pictureBox1
+            // guna2ControlBox3
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.background_login;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(501, 536);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(4)))), ((int)(((byte)(48)))));
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(829, 0);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox3.TabIndex = 2;
             // 
             // Login
             // 
@@ -304,11 +317,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Resize += new System.EventHandler(this.Login_Resize);
             this.panel1.ResumeLayout(false);
             this.panel_middercenter.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -335,5 +349,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
     }
 }

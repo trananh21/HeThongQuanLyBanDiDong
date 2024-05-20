@@ -144,5 +144,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         {
 
         }
+
+        private void pbImageProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

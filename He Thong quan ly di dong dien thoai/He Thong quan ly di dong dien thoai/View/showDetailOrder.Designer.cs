@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(showDetailOrder));
             this.label1 = new System.Windows.Forms.Label();
             this.detailOrder = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblOrderDate = new System.Windows.Forms.Label();
+            this.lblOrderID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -39,6 +45,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.detailCustomer = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblCustomerID = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -46,32 +56,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.detailPayment = new System.Windows.Forms.Panel();
+            this.lblPriceSP = new System.Windows.Forms.Label();
+            this.lblMoTa = new System.Windows.Forms.Label();
+            this.lblCategoryName = new System.Windows.Forms.Label();
+            this.lblCategoryID = new System.Windows.Forms.Label();
+            this.lblProductID = new System.Windows.Forms.Label();
+            this.lblProductName = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.lblOrderID = new System.Windows.Forms.Label();
-            this.lblOrderDate = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.lblProductName = new System.Windows.Forms.Label();
-            this.lblCustomerName = new System.Windows.Forms.Label();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblProductID = new System.Windows.Forms.Label();
-            this.lblCategoryID = new System.Windows.Forms.Label();
-            this.lblCategoryName = new System.Windows.Forms.Label();
-            this.lblMoTa = new System.Windows.Forms.Label();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pbImageProduct = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblCustomerID = new System.Windows.Forms.Label();
-            this.lblPriceSP = new System.Windows.Forms.Label();
             this.detailOrder.SuspendLayout();
             this.detailCustomer.SuspendLayout();
             this.detailPayment.SuspendLayout();
@@ -114,6 +114,66 @@
             this.detailOrder.Size = new System.Drawing.Size(339, 309);
             this.detailOrder.TabIndex = 2;
             this.detailOrder.Paint += new System.Windows.Forms.PaintEventHandler(this.detailOrder_Paint);
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(138, 268);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 20);
+            this.lblStatus.TabIndex = 8;
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.White;
+            this.lblTotalPrice.Location = new System.Drawing.Point(139, 226);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(0, 20);
+            this.lblTotalPrice.TabIndex = 7;
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.Color.White;
+            this.lblAmount.Location = new System.Drawing.Point(138, 183);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(0, 20);
+            this.lblAmount.TabIndex = 6;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
+            this.lblPrice.Location = new System.Drawing.Point(139, 147);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(0, 20);
+            this.lblPrice.TabIndex = 5;
+            // 
+            // lblOrderDate
+            // 
+            this.lblOrderDate.AutoSize = true;
+            this.lblOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderDate.ForeColor = System.Drawing.Color.White;
+            this.lblOrderDate.Location = new System.Drawing.Point(138, 99);
+            this.lblOrderDate.Name = "lblOrderDate";
+            this.lblOrderDate.Size = new System.Drawing.Size(0, 20);
+            this.lblOrderDate.TabIndex = 4;
+            // 
+            // lblOrderID
+            // 
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderID.ForeColor = System.Drawing.Color.White;
+            this.lblOrderID.Location = new System.Drawing.Point(138, 55);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(0, 20);
+            this.lblOrderID.TabIndex = 3;
             // 
             // label5
             // 
@@ -212,6 +272,42 @@
             this.detailCustomer.Size = new System.Drawing.Size(339, 309);
             this.detailCustomer.TabIndex = 2;
             // 
+            // lblCustomerID
+            // 
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerID.Location = new System.Drawing.Point(165, 59);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(0, 20);
+            this.lblCustomerID.TabIndex = 6;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(165, 178);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(0, 20);
+            this.lblAddress.TabIndex = 5;
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(165, 139);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(0, 20);
+            this.lblPhoneNumber.TabIndex = 4;
+            // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.Location = new System.Drawing.Point(165, 99);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(0, 20);
+            this.lblCustomerName.TabIndex = 3;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -307,6 +403,62 @@
             this.detailPayment.TabIndex = 3;
             this.detailPayment.Paint += new System.Windows.Forms.PaintEventHandler(this.detailPayment_Paint);
             // 
+            // lblPriceSP
+            // 
+            this.lblPriceSP.AutoSize = true;
+            this.lblPriceSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceSP.ForeColor = System.Drawing.Color.White;
+            this.lblPriceSP.Location = new System.Drawing.Point(138, 248);
+            this.lblPriceSP.Name = "lblPriceSP";
+            this.lblPriceSP.Size = new System.Drawing.Size(0, 20);
+            this.lblPriceSP.TabIndex = 10;
+            // 
+            // lblMoTa
+            // 
+            this.lblMoTa.AutoSize = true;
+            this.lblMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoTa.Location = new System.Drawing.Point(139, 290);
+            this.lblMoTa.MaximumSize = new System.Drawing.Size(283, 0);
+            this.lblMoTa.Name = "lblMoTa";
+            this.lblMoTa.Size = new System.Drawing.Size(0, 20);
+            this.lblMoTa.TabIndex = 9;
+            // 
+            // lblCategoryName
+            // 
+            this.lblCategoryName.AutoSize = true;
+            this.lblCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryName.Location = new System.Drawing.Point(139, 207);
+            this.lblCategoryName.Name = "lblCategoryName";
+            this.lblCategoryName.Size = new System.Drawing.Size(0, 20);
+            this.lblCategoryName.TabIndex = 8;
+            // 
+            // lblCategoryID
+            // 
+            this.lblCategoryID.AutoSize = true;
+            this.lblCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryID.Location = new System.Drawing.Point(139, 163);
+            this.lblCategoryID.Name = "lblCategoryID";
+            this.lblCategoryID.Size = new System.Drawing.Size(0, 20);
+            this.lblCategoryID.TabIndex = 7;
+            // 
+            // lblProductID
+            // 
+            this.lblProductID.AutoSize = true;
+            this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductID.Location = new System.Drawing.Point(139, 79);
+            this.lblProductID.Name = "lblProductID";
+            this.lblProductID.Size = new System.Drawing.Size(0, 20);
+            this.lblProductID.TabIndex = 6;
+            // 
+            // lblProductName
+            // 
+            this.lblProductName.AutoSize = true;
+            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductName.Location = new System.Drawing.Point(139, 122);
+            this.lblProductName.Name = "lblProductName";
+            this.lblProductName.Size = new System.Drawing.Size(0, 20);
+            this.lblProductName.TabIndex = 3;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -341,6 +493,18 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "Giá:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label20.Location = new System.Drawing.Point(18, 207);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(114, 20);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Tên danh mục:";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label17
             // 
@@ -378,154 +542,9 @@
             this.label15.Text = "Mã sản phẩm:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblOrderID
-            // 
-            this.lblOrderID.AutoSize = true;
-            this.lblOrderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderID.ForeColor = System.Drawing.Color.White;
-            this.lblOrderID.Location = new System.Drawing.Point(138, 55);
-            this.lblOrderID.Name = "lblOrderID";
-            this.lblOrderID.Size = new System.Drawing.Size(0, 20);
-            this.lblOrderID.TabIndex = 3;
-            // 
-            // lblOrderDate
-            // 
-            this.lblOrderDate.AutoSize = true;
-            this.lblOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderDate.ForeColor = System.Drawing.Color.White;
-            this.lblOrderDate.Location = new System.Drawing.Point(138, 99);
-            this.lblOrderDate.Name = "lblOrderDate";
-            this.lblOrderDate.Size = new System.Drawing.Size(0, 20);
-            this.lblOrderDate.TabIndex = 4;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.White;
-            this.lblPrice.Location = new System.Drawing.Point(139, 147);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(0, 20);
-            this.lblPrice.TabIndex = 5;
-            // 
-            // lblAmount
-            // 
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.ForeColor = System.Drawing.Color.White;
-            this.lblAmount.Location = new System.Drawing.Point(138, 183);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(0, 20);
-            this.lblAmount.TabIndex = 6;
-            // 
-            // lblTotalPrice
-            // 
-            this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPrice.Location = new System.Drawing.Point(139, 226);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(0, 20);
-            this.lblTotalPrice.TabIndex = 7;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(138, 268);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 20);
-            this.lblStatus.TabIndex = 8;
-            // 
-            // lblProductName
-            // 
-            this.lblProductName.AutoSize = true;
-            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.Location = new System.Drawing.Point(139, 122);
-            this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(0, 20);
-            this.lblProductName.TabIndex = 3;
-            // 
-            // lblCustomerName
-            // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(165, 99);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(0, 20);
-            this.lblCustomerName.TabIndex = 3;
-            // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(165, 139);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(0, 20);
-            this.lblPhoneNumber.TabIndex = 4;
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(165, 178);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(0, 20);
-            this.lblAddress.TabIndex = 5;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(18, 207);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(114, 20);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "Tên danh mục:";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // timer1
             // 
             this.timer1.Interval = 10;
-            // 
-            // lblProductID
-            // 
-            this.lblProductID.AutoSize = true;
-            this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductID.Location = new System.Drawing.Point(139, 79);
-            this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(0, 20);
-            this.lblProductID.TabIndex = 6;
-            // 
-            // lblCategoryID
-            // 
-            this.lblCategoryID.AutoSize = true;
-            this.lblCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryID.Location = new System.Drawing.Point(139, 163);
-            this.lblCategoryID.Name = "lblCategoryID";
-            this.lblCategoryID.Size = new System.Drawing.Size(0, 20);
-            this.lblCategoryID.TabIndex = 7;
-            // 
-            // lblCategoryName
-            // 
-            this.lblCategoryName.AutoSize = true;
-            this.lblCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryName.Location = new System.Drawing.Point(139, 207);
-            this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(0, 20);
-            this.lblCategoryName.TabIndex = 8;
-            // 
-            // lblMoTa
-            // 
-            this.lblMoTa.AutoSize = true;
-            this.lblMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoTa.Location = new System.Drawing.Point(139, 290);
-            this.lblMoTa.MaximumSize = new System.Drawing.Size(283, 0);
-            this.lblMoTa.Name = "lblMoTa";
-            this.lblMoTa.Size = new System.Drawing.Size(0, 20);
-            this.lblMoTa.TabIndex = 9;
             // 
             // guna2GradientButton1
             // 
@@ -560,25 +579,7 @@
             this.pbImageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImageProduct.TabIndex = 2;
             this.pbImageProduct.TabStop = false;
-            // 
-            // lblCustomerID
-            // 
-            this.lblCustomerID.AutoSize = true;
-            this.lblCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerID.Location = new System.Drawing.Point(165, 59);
-            this.lblCustomerID.Name = "lblCustomerID";
-            this.lblCustomerID.Size = new System.Drawing.Size(0, 20);
-            this.lblCustomerID.TabIndex = 6;
-            // 
-            // lblPriceSP
-            // 
-            this.lblPriceSP.AutoSize = true;
-            this.lblPriceSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceSP.ForeColor = System.Drawing.Color.White;
-            this.lblPriceSP.Location = new System.Drawing.Point(138, 248);
-            this.lblPriceSP.Name = "lblPriceSP";
-            this.lblPriceSP.Size = new System.Drawing.Size(0, 20);
-            this.lblPriceSP.TabIndex = 10;
+            this.pbImageProduct.Click += new System.EventHandler(this.pbImageProduct_Click);
             // 
             // showDetailOrder
             // 

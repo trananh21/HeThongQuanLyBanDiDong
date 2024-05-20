@@ -63,6 +63,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1200px_Add_user_icon__blue_ {
+            get {
+                object obj = ResourceManager.GetObject("1200px-Add_user_icon_(blue)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _400375207_1127218218241055_5104573296620581637_n {
             get {
                 object obj = ResourceManager.GetObject("400375207_1127218218241055_5104573296620581637_n", resourceCulture);
@@ -203,6 +213,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_add_staff {
+            get {
+                object obj = ResourceManager.GetObject("icon-add-staff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_admin {
             get {
                 object obj = ResourceManager.GetObject("icon-admin", resourceCulture);
@@ -226,6 +246,26 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap icon_back_2 {
             get {
                 object obj = ResourceManager.GetObject("icon-back-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_copy {
+            get {
+                object obj = ResourceManager.GetObject("icon-copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_copy_ver2 {
+            get {
+                object obj = ResourceManager.GetObject("icon-copy-ver2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +326,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap icon_edit_order {
             get {
                 object obj = ResourceManager.GetObject("icon-edit-order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_edit_staff {
+            get {
+                object obj = ResourceManager.GetObject("icon-edit-staff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,6 +483,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_staff {
+            get {
+                object obj = ResourceManager.GetObject("icon-remove-staff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_search_ver1 {
             get {
                 object obj = ResourceManager.GetObject("icon-search-ver1", resourceCulture);
@@ -496,6 +556,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap IconExpand2 {
             get {
                 object obj = ResourceManager.GetObject("IconExpand2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_staff {
+            get {
+                object obj = ResourceManager.GetObject("image-staff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

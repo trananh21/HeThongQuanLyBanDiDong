@@ -144,5 +144,25 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
             }
         }
+
+        private void txtSearchVoucher_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            if (dgvVoucher.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvVoucher.SelectedRows[0];
+                string maKhuyenMai = selectedRow.Cells[0].Value.ToString(); 
+                Clipboard.SetText(maKhuyenMai);
+                MessageBox.Show("Mã Khuyến Mãi đã được sao chép!");
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng để sao chép Mã Khuyến Mãi.");
+            }
+        }
     }
 }

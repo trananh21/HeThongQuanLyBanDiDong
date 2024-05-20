@@ -80,3 +80,4 @@ D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly d
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Reflection.Metadata.xml
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.voucherView.resources
+D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.staffView.resources

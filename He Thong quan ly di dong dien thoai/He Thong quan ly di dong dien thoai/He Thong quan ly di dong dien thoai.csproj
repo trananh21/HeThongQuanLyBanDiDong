@@ -172,6 +172,12 @@
     <Compile Include="View\showDetailOrder.Designer.cs">
       <DependentUpon>showDetailOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\staffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\staffView.Designer.cs">
+      <DependentUpon>staffView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\voucherView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\showDetailOrder.resx">
       <DependentUpon>showDetailOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\staffView.resx">
+      <DependentUpon>staffView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\voucherView.resx">
       <DependentUpon>voucherView.cs</DependentUpon>
@@ -413,6 +422,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit-voucher-ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-copy-ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Add_user_icon_%28blue%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-add-staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-edit-staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-remove-staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-staff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
