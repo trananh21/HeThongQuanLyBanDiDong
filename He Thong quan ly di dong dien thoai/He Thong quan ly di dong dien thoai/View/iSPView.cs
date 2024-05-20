@@ -31,8 +31,5 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         void SetProductBindingSource(BindingSource productList);
         void Show();
 
-
-
-
     }
 }

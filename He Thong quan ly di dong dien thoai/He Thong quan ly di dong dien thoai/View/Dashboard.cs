@@ -22,22 +22,25 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private ProductPresenter productPresenter;
         private CustomerPresenter customerPresenter;
         private OrderPresenter orderPresenter;
+        private VoucherPresenter voucherPresenter;
         private bool isCollapsed;
         private productView productForm;
         private customerView customerForm;
         private orderView orderForm;
+        private voucherView voucherForm;
+        private productView _productForm;
+        private customerView _customerForm;
+        private orderView _ordersForm;
+        private voucherView _voucherForm;
         private orderView _orderForm;
-        public Dashboard(string username, iSPRepository repository, iCustomerReponsitory cusRepo, iOrderRepository ordRepo)
+        public Dashboard(string username, iSPRepository repository, iCustomerReponsitory cusRepo, iOrderRepository ordRepo, iVoucherReponsitory vouRepo)
         {
             InitializeComponent();
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
             // Set this form as the MDI container
             this.IsMdiContainer = true;
-
-            productPresenter = new ProductPresenter(new productView(), repository);
-            customerPresenter = new CustomerPresenter(new customerView(), cusRepo);
-            orderPresenter = new OrderPresenter(new orderView(), ordRepo);
+            showfullCategory(repository, cusRepo, ordRepo, vouRepo);
             //home
             icbtu_Trangchu.Click += ShowDashboardV;
             //product
@@ -48,10 +51,64 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             btnOrder.Click += ShowOrderViewForm;
             //payment
             btnThanhToan.Click += ShowPaymentViewForm;
+
+            btnVoucher.Click += ShowVoucherViewForm;
             //showDashBoard
             ShowDashboard();
             _orderForm = new orderView();
             _orderForm.GoToPaymentRequested += OrderViewForm_GoToPaymentRequested;
+        }
+
+
+        public void showfullCategory(iSPRepository repository, iCustomerReponsitory cusRepo, iOrderRepository ordRepo, iVoucherReponsitory vouRepo)
+        {
+            _productForm = new productView();
+            _customerForm = new customerView();
+            _ordersForm = new orderView();
+            _voucherForm = new voucherView();
+
+            //productPresenter = new ProductPresenter(new productView(), repository);
+            //customerPresenter = new CustomerPresenter(new customerView(), cusRepo);
+            //orderPresenter = new OrderPresenter(new orderView(), ordRepo);
+            //voucherPresenter = new VoucherPresenter(new voucherView(), vouRepo);
+
+            productPresenter = new ProductPresenter((productView)_productForm, repository);
+            customerPresenter = new CustomerPresenter((customerView)_customerForm, cusRepo);
+            orderPresenter = new OrderPresenter((orderView)_ordersForm, ordRepo);
+            voucherPresenter = new VoucherPresenter((voucherView)_voucherForm, vouRepo);
+        }
+
+        public void HideChildForms()
+        {
+            _productForm?.Hide();
+            _customerForm?.Hide();
+            _ordersForm?.Hide();
+            _voucherForm?.Hide();
+        }
+
+        public void ShowChildForms()
+        {
+            _productForm?.Show();
+            _customerForm?.Show();
+            _ordersForm?.Show();
+            _voucherForm?.Show();
+        }
+
+        private void ShowVoucherViewForm(object sender, EventArgs e)
+        {
+            try
+            {
+                if (voucherForm == null || voucherForm.IsDisposed)
+                {
+                    voucherForm = (voucherView)voucherPresenter.GetVoucherViewForm();
+                }
+                voucherForm.Visible = true;
+                OpenFormCon(voucherForm);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("voucher fix: " + ex.Message);
+            }
         }
 
         public void OpenChildForm(Form childForm)
@@ -217,11 +274,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         public event EventHandler ShowOrderView;
         public event EventHandler ShowAdminOrderView;
         public event EventHandler ShowOrdersView;
-
-        //order
-        //public event EventHandler ShowOrderView;
-        //public event EventHandler ShowAdminOrderView;
-        //public event EventHandler ShowOrdersView;
+        //voucher
+        public event EventHandler ShowVoucherView;
+        public event EventHandler ShowAdminVoucherView;
+        public event EventHandler ShowVouchersView;
 
         private void OpenFormCon(Form childForm)
         {

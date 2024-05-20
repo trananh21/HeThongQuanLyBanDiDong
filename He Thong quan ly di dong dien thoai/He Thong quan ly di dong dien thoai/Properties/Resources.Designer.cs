@@ -103,6 +103,16 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_voucher {
+            get {
+                object obj = ResourceManager.GetObject("add-voucher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_login {
             get {
                 object obj = ResourceManager.GetObject("background-login", resourceCulture);
@@ -136,6 +146,36 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Properties {
         internal static System.Drawing.Bitmap edit_customer {
             get {
                 object obj = ResourceManager.GetObject("edit-customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_voucher {
+            get {
+                object obj = ResourceManager.GetObject("edit-voucher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_voucher_ver2 {
+            get {
+                object obj = ResourceManager.GetObject("edit-voucher-ver2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_voucher1 {
+            get {
+                object obj = ResourceManager.GetObject("edit-voucher1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

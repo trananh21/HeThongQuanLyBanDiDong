@@ -23,5 +23,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         event EventHandler ShowOrderView;
         event EventHandler ShowAdminOrderView;
         event EventHandler ShowOrdersView;
+
+
+        //voucher
+        event EventHandler ShowVoucherView;
+        event EventHandler ShowAdminVoucherView;
+        event EventHandler ShowVouchersView;
     }
 }

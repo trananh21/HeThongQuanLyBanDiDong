@@ -309,7 +309,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 }
             }
 
-            // Cập nhật DataGridView với các bản ghi tương ứng
             dgvDonHang.DataSource = orders;
         }
 
@@ -729,7 +728,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                             string categoryName = reader["TenDanhMuc"].ToString();
                             string description = reader["MoTa"].ToString();
                             string imagePath = productImageMap.ContainsKey(productName) ? productImageMap[productName] : null;
-                            // Hiển thị form showDetailOrder và gán các thông tin cơ bản cùng với thông tin bổ sung từ cơ sở dữ liệu
                             showDetailOrder sdo = new showDetailOrder(orderId, productName, price, amount, totalPrice, orderDate, customerName, phoneNumber, address, status, customerID, productID, categoryID, categoryName, description, imagePath);
                             sdo.Show();
                         }
@@ -780,6 +778,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             LoadOrderData();
+        }
+
+        private void btnRemoveOrder_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

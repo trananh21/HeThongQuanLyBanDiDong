@@ -85,6 +85,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -101,14 +102,17 @@
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\iCustomerReponsitory.cs" />
     <Compile Include="Model\iOrderRepository.cs" />
+    <Compile Include="Model\iVoucherReponsitory.cs" />
     <Compile Include="Model\KhuyenMai.cs" />
     <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Model\PaymentInfo.cs" />
+    <Compile Include="Model\VoucherModel.cs" />
     <Compile Include="Presenter\Common\ModelDataValidation.cs" />
     <Compile Include="Presenter\CustomerPresenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Presenter\OrderPresenter.cs" />
     <Compile Include="Presenter\PaymentPresenter.cs" />
+    <Compile Include="Presenter\VoucherPresenter.cs" />
     <Compile Include="View\customerView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +147,7 @@
     <Compile Include="View\iMainView.cs" />
     <Compile Include="View\iOrderView.cs" />
     <Compile Include="View\iSPView.cs" />
+    <Compile Include="View\iVoucherView.cs" />
     <Compile Include="View\orderView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,10 +172,17 @@
     <Compile Include="View\showDetailOrder.Designer.cs">
       <DependentUpon>showDetailOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\voucherView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\voucherView.Designer.cs">
+      <DependentUpon>voucherView.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Repositories\BaseRepository.cs" />
     <Compile Include="_Repositories\customerRepository.cs" />
     <Compile Include="_Repositories\orderRepository.cs" />
     <Compile Include="_Repositories\spRepository.cs" />
+    <Compile Include="_Repositories\voucherRepository.cs" />
     <EmbeddedResource Include="View\customerView.resx">
       <DependentUpon>customerView.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\showDetailOrder.resx">
       <DependentUpon>showDetailOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\voucherView.resx">
+      <DependentUpon>voucherView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -386,6 +401,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\QR-payment-ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-voucher1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-voucher-ver2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

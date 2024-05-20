@@ -38,6 +38,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
                 PerformLogin();
             }
         }
+        Dashboard dboard;
         private void PerformLogin()
         {
             string username = txtUsername.Text;
@@ -45,13 +46,19 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             iSPRepository repository = new SpRepository(connectionString); // truy 
             iCustomerReponsitory cusRepo = new customerRepository(connectionString);
             iOrderRepository ordRepo =  new orderRepository(connectionString);
+            iVoucherReponsitory vouRepo = new voucherRepository(connectionString);
             if (AuthenticateUser(username, password))
             {
                 // Hiển thị form Dashboard nếu chưa hiển thị
                 if (Application.OpenForms.OfType<Dashboard>().Count() == 0)
                 {
-                    Dashboard dboard = new Dashboard(username, repository, cusRepo, ordRepo);
+                    dboard = new Dashboard(username, repository, cusRepo, ordRepo, vouRepo);
+                    dboard.HideChildForms();
                     dboard.Show();
+                } else
+                {
+                    dboard = Application.OpenForms.OfType<Dashboard>().FirstOrDefault();
+                    dboard?.HideChildForms();
                 }
 
                 // Ẩn form LoginForm
