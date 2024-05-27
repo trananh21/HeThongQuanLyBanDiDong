@@ -46,7 +46,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                             JOIN 
                                 KhachHang KH ON DH.MaKhachHang = KH.MaKhachHang
                             ORDER BY 
-                                DH.MaDonHang;";
+                                DH.MaDonHang DESC";
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -110,7 +110,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                             WHERE 
                                 DH.MaDonHang LIKE @value OR KH.HoTen LIKE @value
                             ORDER BY 
-                                DH.MaDonHang;";
+                                DH.MaDonHang DESC";
                 cmd.Parameters.AddWithValue("@value", "%" + value + "%");
                 using (var reader = cmd.ExecuteReader())
                 {

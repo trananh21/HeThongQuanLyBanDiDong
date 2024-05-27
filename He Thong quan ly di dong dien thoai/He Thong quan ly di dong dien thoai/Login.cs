@@ -18,14 +18,17 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Login : Form
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-
+        //string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        private SqlConnection conn;
+        private string connectionString;
         public Login()
         {
             InitializeComponent();
             txtUsername.KeyPress += TextBox_KeyPressEnter;
             txtPassword.KeyPress += TextBox_KeyPressEnter;
             //this.Resize += Login_Resize;
+            conn = new SqlConnection(SQLConnections.KetnoiSQL());
+            connectionString = conn.ConnectionString;
         }
 
         private void guna2ControlBox1_Click_1(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
-
+using System.Data.SqlClient;
+using System.Data.SqlClient;
 namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 {
     partial class orderView
@@ -28,6 +29,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+
+        // Khởi tạo connectionString trong phương thức InitializeConnectionString
+        private void InitializeConnectionString()
+        {
+            connectionString = conn.ConnectionString;
+        }
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,17 +45,18 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlOrder = new MetroFramework.Controls.MetroTabControl();
             this.tabOrderList = new MetroFramework.Controls.MetroTabPage();
+            this.dgvDonHang = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.showDetailOrder = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.goToPayment = new Guna.UI2.WinForms.Guna2Button();
-            this.showDetailOrder = new Guna.UI2.WinForms.Guna2Button();
-            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearchOrder = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearchOrder = new Guna.UI2.WinForms.Guna2TextBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnRemoveOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.btnCreateOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.btnEditOrder = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.dgvDonHang = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabCreateOrder = new MetroFramework.Controls.MetroTabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.sumPrice = new System.Windows.Forms.Label();
@@ -73,16 +81,15 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.txtOrderID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             this.tabControlOrder.SuspendLayout();
             this.tabOrderList.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
             this.tabCreateOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -140,62 +147,79 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.tabOrderList.VerticalScrollbarSize = 10;
             this.tabOrderList.Click += new System.EventHandler(this.tabOrderList_Click);
             // 
-            // guna2Button1
+            // dgvDonHang
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.White;
-            this.guna2Button1.BorderRadius = 17;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(103)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(543, 6);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 36);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Text = "Hiển Thị Danh Sách";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
+            this.dgvDonHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(61)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDonHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDonHang.ColumnHeadersHeight = 60;
+            this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDonHang.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDonHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
+            this.dgvDonHang.Location = new System.Drawing.Point(0, 96);
+            this.dgvDonHang.Name = "dgvDonHang";
+            this.dgvDonHang.ReadOnly = true;
+            this.dgvDonHang.RowHeadersVisible = false;
+            this.dgvDonHang.RowHeadersWidth = 40;
+            this.dgvDonHang.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonHang.RowTemplate.Height = 41;
+            this.dgvDonHang.RowTemplate.ReadOnly = true;
+            this.dgvDonHang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvDonHang.Size = new System.Drawing.Size(879, 428);
+            this.dgvDonHang.TabIndex = 6;
+            this.dgvDonHang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
+            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
+            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvDonHang.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDonHang.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
+            this.dgvDonHang.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.dgvDonHang.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDonHang.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonHang.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvDonHang.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvDonHang.ThemeStyle.HeaderStyle.Height = 60;
+            this.dgvDonHang.ThemeStyle.ReadOnly = true;
+            this.dgvDonHang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
+            this.dgvDonHang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDonHang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonHang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvDonHang.ThemeStyle.RowsStyle.Height = 41;
+            this.dgvDonHang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
+            this.dgvDonHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
+            this.dgvDonHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellContentClick);
+            this.dgvDonHang.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvDonHang_Scroll);
             // 
-            // goToPayment
+            // panel1
             // 
-            this.goToPayment.AutoRoundedCorners = true;
-            this.goToPayment.BackColor = System.Drawing.Color.White;
-            this.goToPayment.BorderRadius = 17;
-            this.goToPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.goToPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.goToPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.goToPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.goToPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(121)))));
-            this.goToPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goToPayment.ForeColor = System.Drawing.Color.White;
-            this.goToPayment.Location = new System.Drawing.Point(358, 6);
-            this.goToPayment.Name = "goToPayment";
-            this.goToPayment.Size = new System.Drawing.Size(180, 36);
-            this.goToPayment.TabIndex = 9;
-            this.goToPayment.Text = "Đi đến thanh toán";
-            this.goToPayment.Click += new System.EventHandler(this.goToPayment_Click);
-            // 
-            // showDetailOrder
-            // 
-            this.showDetailOrder.AutoRoundedCorners = true;
-            this.showDetailOrder.BackColor = System.Drawing.Color.White;
-            this.showDetailOrder.BorderRadius = 17;
-            this.showDetailOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.showDetailOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.showDetailOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.showDetailOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.showDetailOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.showDetailOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showDetailOrder.ForeColor = System.Drawing.Color.White;
-            this.showDetailOrder.Location = new System.Drawing.Point(212, 6);
-            this.showDetailOrder.Name = "showDetailOrder";
-            this.showDetailOrder.Size = new System.Drawing.Size(140, 36);
-            this.showDetailOrder.TabIndex = 8;
-            this.showDetailOrder.Text = "Xem Chi Tiết";
-            this.showDetailOrder.Click += new System.EventHandler(this.showDetailOrder_Click);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cbStatus);
+            this.panel1.Controls.Add(this.showDetailOrder);
+            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.goToPayment);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 49);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(879, 47);
+            this.panel1.TabIndex = 11;
             // 
             // cbStatus
             // 
@@ -218,6 +242,63 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.cbStatus.Size = new System.Drawing.Size(195, 36);
             this.cbStatus.TabIndex = 7;
             this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            // 
+            // showDetailOrder
+            // 
+            this.showDetailOrder.AutoRoundedCorners = true;
+            this.showDetailOrder.BackColor = System.Drawing.Color.White;
+            this.showDetailOrder.BorderRadius = 17;
+            this.showDetailOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.showDetailOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.showDetailOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.showDetailOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showDetailOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.showDetailOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showDetailOrder.ForeColor = System.Drawing.Color.White;
+            this.showDetailOrder.Location = new System.Drawing.Point(212, 6);
+            this.showDetailOrder.Name = "showDetailOrder";
+            this.showDetailOrder.Size = new System.Drawing.Size(140, 36);
+            this.showDetailOrder.TabIndex = 8;
+            this.showDetailOrder.Text = "Xem Chi Tiết";
+            this.showDetailOrder.Click += new System.EventHandler(this.showDetailOrder_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.White;
+            this.guna2Button1.BorderRadius = 17;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(104)))), ((int)(((byte)(103)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(543, 6);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(101, 36);
+            this.guna2Button1.TabIndex = 10;
+            this.guna2Button1.Text = "Làm mới";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // goToPayment
+            // 
+            this.goToPayment.AutoRoundedCorners = true;
+            this.goToPayment.BackColor = System.Drawing.Color.White;
+            this.goToPayment.BorderRadius = 17;
+            this.goToPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.goToPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.goToPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.goToPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.goToPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(121)))));
+            this.goToPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToPayment.ForeColor = System.Drawing.Color.White;
+            this.goToPayment.Location = new System.Drawing.Point(358, 6);
+            this.goToPayment.Name = "goToPayment";
+            this.goToPayment.Size = new System.Drawing.Size(180, 36);
+            this.goToPayment.TabIndex = 9;
+            this.goToPayment.Text = "Đi đến thanh toán";
+            this.goToPayment.Click += new System.EventHandler(this.goToPayment_Click);
             // 
             // btnSearchOrder
             // 
@@ -333,67 +414,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.btnEditOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnEditOrder.Size = new System.Drawing.Size(35, 35);
             this.btnEditOrder.TabIndex = 7;
-            // 
-            // dgvDonHang
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
-            this.dgvDonHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(61)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDonHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDonHang.ColumnHeadersHeight = 60;
-            this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDonHang.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDonHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
-            this.dgvDonHang.Location = new System.Drawing.Point(0, 96);
-            this.dgvDonHang.Name = "dgvDonHang";
-            this.dgvDonHang.ReadOnly = true;
-            this.dgvDonHang.RowHeadersVisible = false;
-            this.dgvDonHang.RowHeadersWidth = 40;
-            this.dgvDonHang.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDonHang.RowTemplate.Height = 41;
-            this.dgvDonHang.RowTemplate.ReadOnly = true;
-            this.dgvDonHang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDonHang.Size = new System.Drawing.Size(879, 428);
-            this.dgvDonHang.TabIndex = 6;
-            this.dgvDonHang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Alizarin;
-            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
-            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvDonHang.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvDonHang.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDonHang.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
-            this.dgvDonHang.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.dgvDonHang.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvDonHang.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDonHang.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvDonHang.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvDonHang.ThemeStyle.HeaderStyle.Height = 60;
-            this.dgvDonHang.ThemeStyle.ReadOnly = true;
-            this.dgvDonHang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
-            this.dgvDonHang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDonHang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDonHang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvDonHang.ThemeStyle.RowsStyle.Height = 41;
-            this.dgvDonHang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
-            this.dgvDonHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
-            this.dgvDonHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellContentClick);
-            this.dgvDonHang.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvDonHang_Scroll);
             // 
             // tabCreateOrder
             // 
@@ -772,19 +792,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.pbImage.TabStop = false;
             this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cbStatus);
-            this.panel1.Controls.Add(this.showDetailOrder);
-            this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Controls.Add(this.goToPayment);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 47);
-            this.panel1.TabIndex = 11;
-            // 
             // orderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -800,13 +807,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.guna2Panel1.PerformLayout();
             this.tabControlOrder.ResumeLayout(false);
             this.tabOrderList.ResumeLayout(false);
-            this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.metroPanel1.ResumeLayout(false);
             this.tabCreateOrder.ResumeLayout(false);
             this.tabCreateOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

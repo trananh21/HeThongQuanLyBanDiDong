@@ -25,7 +25,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT * FROM KhachHang";
+                cmd.CommandText = "SELECT * FROM KhachHang ORDER BY MaKhachHang DESC";
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -56,7 +56,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                 cmd.Connection = conn;
                 cmd.CommandText = @"SELECT * 
                             FROM KhachHang WHERE MaKhachHang = @id OR HoTen LIKE @name + '%'
-                            ORDER BY MaKhachHang ASC";
+                            ORDER BY MaKhachHang DESC";
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = cusID;
                 cmd.Parameters.Add("@name", SqlDbType.NVarChar).Value = cusName;
                 using (var reader = cmd.ExecuteReader())

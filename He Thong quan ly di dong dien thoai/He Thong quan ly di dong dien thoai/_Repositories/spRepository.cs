@@ -25,7 +25,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT sp.MaSanPham, sp.TenSanPham, dm.TenDanhMuc, sp.Gia, sp.MoTa FROM SanPham sp INNER JOIN DanhMucSanPham dm ON sp.MaDanhMuc = dm.MaDanhMuc ORDER BY Gia ASC;";
+                cmd.CommandText = "SELECT sp.MaSanPham, sp.TenSanPham, dm.TenDanhMuc, sp.Gia, sp.MoTa FROM SanPham sp INNER JOIN DanhMucSanPham dm ON sp.MaDanhMuc = dm.MaDanhMuc ORDER BY sp.MaSanPham DESC;";
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -58,7 +58,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai._Repositories
                             FROM SanPham sp
                             INNER JOIN DanhMucSanPham dm ON sp.MaDanhMuc = dm.MaDanhMuc
                             WHERE sp.MaSanPham = @MaSanPham1 OR sp.TenSanPham LIKE @TenSanPham1 + '%'
-                            ORDER BY sp.MaSanPham ASC";
+                            ORDER BY sp.MaSanPham DESC";
                 cmd.Parameters.Add("@MaSanPham1", SqlDbType.Int).Value = spMaSanPham;
                 cmd.Parameters.Add("@TenSanPham1", SqlDbType.NVarChar).Value = spTenSanPham;
                 using (var reader = cmd.ExecuteReader())

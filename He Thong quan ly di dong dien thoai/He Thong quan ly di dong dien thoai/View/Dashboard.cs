@@ -75,11 +75,6 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             _ordersForm = new orderView();
             _voucherForm = new voucherView();
 
-            //productPresenter = new ProductPresenter(new productView(), repository);
-            //customerPresenter = new CustomerPresenter(new customerView(), cusRepo);
-            //orderPresenter = new OrderPresenter(new orderView(), ordRepo);
-            //voucherPresenter = new VoucherPresenter(new voucherView(), vouRepo);
-
             productPresenter = new ProductPresenter((productView)_productForm, repository);
             customerPresenter = new CustomerPresenter((customerView)_customerForm, cusRepo);
             orderPresenter = new OrderPresenter((orderView)_ordersForm, ordRepo);

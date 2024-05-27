@@ -23,7 +23,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         private iOrderView _view;
         private bool _isEdit;
         private int selectedOrderID;
-        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        private SqlConnection conn = new SqlConnection(SQLConnections.KetnoiSQL());
+        private string connectionString;
 
         public event EventHandler SearchOrderEvent;
         public event EventHandler CreateOrder;
@@ -143,9 +144,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
             // Đăng ký sự kiện Click cho nút goToPayment
             goToPayment.Click += new EventHandler(goToPayment_Click);
+            InitializeConnectionString();
+
         }
         private void LoadOrderData()
         {
+            InitializeConnectionString();
             string query = @"SELECT 
                                 DH.MaDonHang,
                                 SP.TenSanPham,
@@ -166,7 +170,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                             JOIN 
                                 KhachHang KH ON DH.MaKhachHang = KH.MaKhachHang
                             ORDER BY 
-                                DH.MaDonHang;
+                                DH.MaDonHang DESC
                             ";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -179,6 +183,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
         public orderView(Dashboard dashboard)
         {
+            InitializeConnectionString();
             InitializeComponent();
             LienKetVaNangCaoLuotXem();
             LoadDanhMuc();
@@ -243,6 +248,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         
         private void LoadOrdersByStatus(string selectedStatus)
         {
+            InitializeConnectionString();
             List<OrderModel> orders = new List<OrderModel>();
 
             // Kết nối đến cơ sở dữ liệu
@@ -325,6 +331,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
         private List<string> GetDanhMucListFromDatabase()
         {
+            InitializeConnectionString();
             List<string> productList = new List<string>();
             // Khởi tạo kết nối tới cơ sở dữ liệu
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -552,6 +559,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private decimal GetPriceForProduct(string selectedProductName)
         {
+            InitializeConnectionString();
             decimal price = 0; // Giá tiền mặc định
 
             // Kết nối đến cơ sở dữ liệu
@@ -694,6 +702,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void showDetailOrder_Click(object sender, EventArgs e)
         {
+            InitializeConnectionString();
             if (dgvDonHang.SelectedRows.Count > 0)
             {
                 // Lấy các thông tin cơ bản từ DataGridView

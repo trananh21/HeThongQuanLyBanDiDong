@@ -23,7 +23,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 {
     public partial class paymentView : Form
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        private SqlConnection conn = new SqlConnection(SQLConnections.KetnoiSQL());
+        public string connectionString;
         private bool showNotification = false;
 
         public paymentView()
@@ -60,6 +61,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void LoadPaymentData()
         {
+            connectionString = conn.ConnectionString;
             string query = @"SELECT 
                 tt.MaThanhToan AS MaHoaDon,
                 dh.MaDonHang,
@@ -166,6 +168,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private List<ChiTietKhuyenMai> GetChiTietKhuyenMaisByMaKhuyenMai(int maKhuyenMai)
         {
+            connectionString = conn.ConnectionString;
             List<ChiTietKhuyenMai> chiTietKhuyenMais = new List<ChiTietKhuyenMai>();
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -193,6 +196,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private void btnConfirmPayment_Click(object sender, EventArgs e)
         {
+            connectionString = conn.ConnectionString;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -289,6 +293,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
         public string LayMaKhuyenMaiTuCSDL(string maKhuyenMai)
         {
+            connectionString = conn.ConnectionString;
             string tenKhuyenMai = "";
 
             // Kết nối đến cơ sở dữ liệu
@@ -387,6 +392,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private DateTime LayNgayKetThucKhuyenMaiTuCSDL(string maKhuyenMai)
         {
+            connectionString = conn.ConnectionString;
             DateTime ngayKetThuc = DateTime.MinValue;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -412,6 +418,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private DateTime LayNgayBatDauKhuyenMaiTuCSDL(string maKhuyenMai)
         {
+            connectionString = conn.ConnectionString;
             DateTime ngayBatDau = DateTime.MinValue;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -437,6 +444,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private string LayTenKhuyenMaiTuCSDL(string maKhuyenMai)
         {
+            connectionString = conn.ConnectionString;
             string tenKhuyenMai = null;
 
             // Kết nối đến cơ sở dữ liệu
@@ -503,6 +511,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private double LayPhanTramGiamGiaTuCSDL(string maSanPham, string maKhuyenMai)
         {
+            connectionString = conn.ConnectionString;
             double phanTramGiamGia = 0;
 
             // Kết nối đến cơ sở dữ liệu
@@ -538,6 +547,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 
         private double TinhTongTienDonHang(string maSanPham)
         {
+            connectionString = conn.ConnectionString;
             double tongTien = 0;
 
             // Kết nối đến cơ sở dữ liệu

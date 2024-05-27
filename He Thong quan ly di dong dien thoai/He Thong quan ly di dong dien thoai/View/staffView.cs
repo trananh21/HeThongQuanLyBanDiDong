@@ -15,7 +15,8 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
 {
     public partial class staffView : Form
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        private SqlConnection conn = new SqlConnection(SQLConnections.KetnoiSQL());
+        private string connectionString;
         public staffView()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         }
         private void LoadStaffData()
         {
+            connectionString = conn.ConnectionString;
             string query = @"SELECT * FROM NhanVien";
 
             using (SqlConnection connection = new SqlConnection(connectionString))

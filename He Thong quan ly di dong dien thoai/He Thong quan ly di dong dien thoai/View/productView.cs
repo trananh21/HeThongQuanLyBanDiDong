@@ -43,9 +43,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 cbDanhMuc.Items.Add(danhMuc);
             }
         }
-        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        private SqlConnection conn = new SqlConnection(SQLConnections.KetnoiSQL());
+        private string connectionString;
         private List<string> GetDanhMucListFromDatabase()
         {
+            connectionString = conn.ConnectionString;
             List<string> danhMucList = new List<string>();
             // Khởi tạo kết nối tới cơ sở dữ liệu
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -363,6 +365,11 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
                 // Lấy giá trị của trường mã sản phẩm từ hàng được chọn và gán vào txtMaSanPham
                 txtMaSanPham.Text = row.Cells[0].Value.ToString();
                 selectIdProduct = int.Parse(row.Cells[0].Value.ToString());
+
+                txtTenSanPham.Text = row.Cells[1].Value?.ToString();
+                cbDanhMuc.SelectedItem = row.Cells[2].Value?.ToString();
+                txtGiaTien.Text = row.Cells[3].Value?.ToString();
+                txtMoTa.Text = row.Cells[4].Value?.ToString();
             }
         }
 

@@ -81,3 +81,57 @@ D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly d
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.voucherView.resources
 D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.staffView.resources
+D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd.mdf
+D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd_log.ldf
+D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.exe.manifest
+D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.application
+D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.exe.manifest
+D:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.application
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.exe.config
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.exe.manifest
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.application
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.exe
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\He Thong quan ly di dong dien thoai.pdb
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\BouncyCastle.Crypto.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\FontAwesome.Sharp.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\Guna.UI2.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\itextsharp.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\MetroFramework.Design.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\MetroFramework.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\MetroFramework.Fonts.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Buffers.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Collections.Immutable.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Memory.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Numerics.Vectors.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Reflection.Metadata.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\itextsharp.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Buffers.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Collections.Immutable.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Memory.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Numerics.Vectors.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Reflection.Metadata.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.AssemblyReference.cache
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.customerView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.Dashboard.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.form1.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.Login.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.orderView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.paymentView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.productView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.showDetailOrder.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.staffView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He_Thong_quan_ly_di_dong_dien_thoai.View.voucherView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.GenerateResource.cache
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.csproj.CoreCompileInputs.cache
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.exe.manifest
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.application
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong.F54CD154.Up2Date
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.exe
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.pdb
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd.mdf
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd_log.ldf

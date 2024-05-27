@@ -8,6 +8,7 @@ using He_Thong_quan_ly_di_dong_dien_thoai.Model;
 using He_Thong_quan_ly_di_dong_dien_thoai.Presenter;
 using He_Thong_quan_ly_di_dong_dien_thoai.View;
 using System.Configuration;
+using System.Data.SqlClient;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     static class Program
@@ -20,7 +21,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            string sqlConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+            SqlConnection conn = new SqlConnection(SQLConnections.KetnoiSQL());
+            string sqlConnectionString = conn.ConnectionString;
+            //string sqlConnectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
             iMainView view = new form1();
             new MainPresenter(view, sqlConnectionString);
             //Application.Run(new Dashboard("", repository));

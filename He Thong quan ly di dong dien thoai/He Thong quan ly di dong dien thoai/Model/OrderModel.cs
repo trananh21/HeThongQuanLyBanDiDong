@@ -56,19 +56,13 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.Model
 
         // tên khách hàng 
         [DisplayName("Tên Khách Hàng")]
-        [Required(ErrorMessage = "Tên khách hàng không được để trống!")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Tên khách hàng không được nhỏ hơn 3 ký tự và quá 50 ký tự!")]
         public string NameCustomer { get => nameCustomer; set => nameCustomer = value; }
 
         // số điện thoại
         [DisplayName("Điện Thoại")]
-        [Required(ErrorMessage = "Số điện thoại không được để trống!")]
-        [StringLength(11, MinimumLength = 3, ErrorMessage = "Số điện thoại không được nhỏ hơn 3 ký tự và quá 11 ký tự!")]
         public string PhonenumberOrder { get => phonenumberOrder; set => phonenumberOrder = value; }
 
         [DisplayName("Địa Chỉ")]
-        [Required(ErrorMessage = "Địa chỉ không được để trống!")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Địa chỉ không được nhỏ hơn 3 ký tự và quá 50 ký tự!")]
         public string AddressOrder { get => addressOrder; set => addressOrder = value; }
 
         [DisplayName("Trạng Thái")]
