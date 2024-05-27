@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="He Thong quan ly di dong dien thoai.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="He Thong quan ly di dong dien thoai.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="He Thong quan ly di dong dien thoai" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="He Thong quan ly di dong dien thoai.exe" size="5786536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="He Thong quan ly di dong dien thoai.exe" size="5787560">
       <assemblyIdentity name="He Thong quan ly di dong dien thoai" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZujO4PPo9ZLfjvCCqjaGlxSi0JZ1E+YX3dnY/st6aN8=</dsig:DigestValue>
+        <dsig:DigestValue>BwO6uh9TsKgixg0TbOCOmYUw+cmvt7luTtMw6MqQQfM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -230,22 +230,31 @@
       <dsig:DigestValue>ThIFb2xv99BfTf2VdYautB/lY2d8V64vxDr/iqK8+XA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="qlbdtdd.mdf" size="8388608" writeableType="applicationData">
+  <file name="logo-US.ico" size="33842">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>pvmlpWpG/g7986RsDAgk7eqH+a4sTOBlJwYSFA5UFHs=</dsig:DigestValue>
+      <dsig:DigestValue>Bpa0KiN+ePh8LJ1bLgyREwA2z9J8AJ9O5VeOYU31+9Q=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="qlbdtdd_log.ldf" size="8388608" writeableType="applicationData">
+  <file name="qlbdtdd-ver2.mdf" size="8388608" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+vPRtUstyJseBQ3Io+Wj6enMiPDkrffCALH0/YOJtTs=</dsig:DigestValue>
+      <dsig:DigestValue>cHT8+gDy391525rnSjQ97OdLOVsoNtNJpayIw47yVYw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="qlbdtdd-ver2_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ce+Z0pTGP4BlMExY5MxzDc4OTixebZ+CgsivLKNJyEk=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

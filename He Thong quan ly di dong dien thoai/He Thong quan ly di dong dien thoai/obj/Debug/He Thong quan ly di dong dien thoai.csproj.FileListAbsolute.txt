@@ -133,5 +133,5 @@ C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly d
 C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong.F54CD154.Up2Date
 C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.exe
 C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Debug\He Thong quan ly di dong dien thoai.pdb
-C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd.mdf
-C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd_log.ldf
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd-ver2.mdf
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Debug\qlbdtdd-ver2_log.ldf

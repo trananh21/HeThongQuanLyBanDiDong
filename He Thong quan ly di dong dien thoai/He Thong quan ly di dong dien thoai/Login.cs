@@ -14,6 +14,8 @@ using He_Thong_quan_ly_di_dong_dien_thoai._Repositories;
 using He_Thong_quan_ly_di_dong_dien_thoai.Model;
 using He_Thong_quan_ly_di_dong_dien_thoai.View;
 using Guna.UI2.WinForms;
+using System.Diagnostics;
+using System.IO;
 namespace He_Thong_quan_ly_di_dong_dien_thoai
 {
     public partial class Login : Form
@@ -133,6 +135,35 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             panel7.BackgroundImage = resizedImage;
             panel7.BackgroundImageLayout = ImageLayout.Stretch; // Cài đặt kiểu căn chỉnh hình ảnh
 
+        }
+
+        private static void RunAsAdministrator(string filePath)
+        {
+            try
+            {
+                // Tạo đối tượng ProcessStartInfo để cấu hình quyền và đường dẫn của quy trình
+                ProcessStartInfo processInfo = new ProcessStartInfo();
+                processInfo.FileName = filePath; // Đường dẫn đến tệp batch
+                processInfo.Verb = "runas"; // Yêu cầu chạy với quyền admin
+                processInfo.UseShellExecute = true; // Sử dụng Shell để thực thi
+                processInfo.WindowStyle = ProcessWindowStyle.Normal; // Cài đặt kiểu cửa sổ
+
+                // Tạo một đối tượng Process để thực thi tệp batch
+                Process process = new Process();
+                process.StartInfo = processInfo;
+                process.Start();
+                process.WaitForExit(); // Tùy chọn: Đợi quá trình thực thi hoàn tất
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi thực thi tệp batch: " + ex.Message);
+            }
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            string batchFilePath = @"C:\Program Files (x86)\CellPhone App\CellPhone App\AppSellPhone\Data\CreateDatabase.bat";
+            RunAsAdministrator(batchFilePath);
         }
     }
 }

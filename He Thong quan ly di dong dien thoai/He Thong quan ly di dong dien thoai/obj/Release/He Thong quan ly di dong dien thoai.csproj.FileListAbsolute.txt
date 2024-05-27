@@ -1,0 +1,46 @@
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\He Thong quan ly di dong dien thoai.exe.config
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\He Thong quan ly di dong dien thoai.exe.manifest
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\He Thong quan ly di dong dien thoai.application
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\He Thong quan ly di dong dien thoai.exe
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\He Thong quan ly di dong dien thoai.pdb
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\BouncyCastle.Crypto.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\FontAwesome.Sharp.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\Guna.UI2.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\itextsharp.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\MetroFramework.Design.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\MetroFramework.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\MetroFramework.Fonts.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Buffers.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Collections.Immutable.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Configuration.ConfigurationManager.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Memory.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Numerics.Vectors.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Reflection.Metadata.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\itextsharp.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Buffers.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Collections.Immutable.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Configuration.ConfigurationManager.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Memory.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Numerics.Vectors.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Reflection.Metadata.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong quan ly di dong dien thoai.csproj.AssemblyReference.cache
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.View.customerView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.Dashboard.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.form1.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.Login.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.Properties.Resources.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.View.orderView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.View.paymentView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.View.productView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.View.showDetailOrder.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.View.staffView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He_Thong_quan_ly_di_dong_dien_thoai.View.voucherView.resources
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong quan ly di dong dien thoai.csproj.GenerateResource.cache
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong quan ly di dong dien thoai.csproj.CoreCompileInputs.cache
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong quan ly di dong dien thoai.exe.manifest
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong quan ly di dong dien thoai.application
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong.F54CD154.Up2Date
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong quan ly di dong dien thoai.exe
+C:\HeThongQuanLyBanDiDong\He Thong quan ly di dong dien thoai\He Thong quan ly di dong dien thoai\obj\Release\He Thong quan ly di dong dien thoai.pdb

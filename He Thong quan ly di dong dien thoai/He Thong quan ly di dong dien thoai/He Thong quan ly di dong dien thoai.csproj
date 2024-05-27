@@ -24,11 +24,11 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <SupportUrl>http://duongkenh24h.site/how-to-install-phonepal-pro</SupportUrl>
-    <ProductName>PhonePal Pro</ProductName>
-    <PublisherName>TechConnect Media</PublisherName>
-    <SuiteName>TechSync Suite</SuiteName>
+    <ProductName>CellPhone App</ProductName>
+    <PublisherName>CellPhone App</PublisherName>
+    <SuiteName>CellPhone App</SuiteName>
     <WebPage>duongkenh24h.site</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -65,6 +65,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo-US.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -264,6 +270,7 @@
     <EmbeddedResource Include="View\voucherView.resx">
       <DependentUpon>voucherView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CreateDatabase.bat" />
     <None Include="He Thong quan ly di dong dien thoai_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -493,13 +500,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="qlbdtdd.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="qlbdtdd_log.ldf">
-      <DependentUpon>qlbdtdd.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="logo-US.ico" />
+    <Content Include="vanchien-ver4.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
