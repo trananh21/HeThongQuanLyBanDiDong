@@ -33,11 +33,27 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         private orderView _ordersForm;
         private voucherView _voucherForm;
         private orderView _orderForm;
-        public Dashboard(string username, iSPRepository repository, iCustomerReponsitory cusRepo, iOrderRepository ordRepo, iVoucherReponsitory vouRepo)
+        private string _role;
+        public Dashboard(string username, string role, iSPRepository repository, iCustomerReponsitory cusRepo, iOrderRepository ordRepo, iVoucherReponsitory vouRepo)
         {
             InitializeComponent();
             pictureBoxIcon.Image = Resources.icon_admin;
             lblHelloAdmin.Text = " Xin chào! " + username;
+            _role = role;
+            var restrictedRoles = new List<string>
+            {
+                "Nhân viên",
+                "Nhân viên thu ngân",
+                "Nhân viên kho",
+                "Nhân viên kỹ thuật",
+                "Nhân viên marketing",
+                "Nhân viên CSKH"
+            };
+
+            if (restrictedRoles.Contains(_role))
+            {
+                panel_ddQuanLy.Visible = false;
+            }
             // Set this form as the MDI container
             this.IsMdiContainer = true;
             showfullCategory(repository, cusRepo, ordRepo, vouRepo);
@@ -171,9 +187,9 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
             dashboardPanel.BackColor = Color.White;
             System.Windows.Forms.Label titleLabel = new System.Windows.Forms.Label();
             titleLabel.Text = "HỆ THỐNG QUẢN LÍ BÁN ĐIỆN THOẠI DI ĐỘNG";
-            titleLabel.Font = new Font("Arial", 24, FontStyle.Bold); 
+            titleLabel.Font = new Font("Arial", 24, FontStyle.Bold);
             titleLabel.AutoSize = true;
-            titleLabel.ForeColor = Color.Black; 
+            titleLabel.ForeColor = Color.Black;
             titleLabel.TextAlign = ContentAlignment.MiddleCenter;
             dashboardPanel.SizeChanged += (s, args) =>
             {
@@ -471,12 +487,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void icbtu_Trangchu_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label13_Click(object sender, EventArgs e)

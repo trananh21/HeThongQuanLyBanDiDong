@@ -149,5 +149,10 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

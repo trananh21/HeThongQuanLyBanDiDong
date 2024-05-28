@@ -395,6 +395,7 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai.View
             this.btnCreateOrder.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnCreateOrder.Size = new System.Drawing.Size(35, 35);
             this.btnCreateOrder.TabIndex = 9;
+            this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
             // 
             // btnEditOrder
             // 

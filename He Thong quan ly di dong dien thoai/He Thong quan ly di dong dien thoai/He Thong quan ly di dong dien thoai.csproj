@@ -28,7 +28,7 @@
     <PublisherName>CellPhone App</PublisherName>
     <SuiteName>CellPhone App</SuiteName>
     <WebPage>duongkenh24h.site</WebPage>
-    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationRevision>27</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -139,6 +139,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListAccount.Designer.cs">
+      <DependentUpon>ListAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\iCustomerReponsitory.cs" />
     <Compile Include="Model\iOrderRepository.cs" />
@@ -230,6 +236,9 @@
     <Compile Include="_Repositories\orderRepository.cs" />
     <Compile Include="_Repositories\spRepository.cs" />
     <Compile Include="_Repositories\voucherRepository.cs" />
+    <EmbeddedResource Include="ListAccount.resx">
+      <DependentUpon>ListAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\customerView.resx">
       <DependentUpon>customerView.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,6 +510,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo-US.ico" />
+    <None Include="Resources\icon-refresh.png" />
     <Content Include="vanchien-ver4.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

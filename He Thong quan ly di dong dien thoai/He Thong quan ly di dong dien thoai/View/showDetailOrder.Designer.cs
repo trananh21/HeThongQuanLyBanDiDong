@@ -69,9 +69,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.pbImageProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.pbImageProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.detailOrder.SuspendLayout();
             this.detailCustomer.SuspendLayout();
             this.detailPayment.SuspendLayout();
@@ -542,9 +542,22 @@
             this.label15.Text = "Mã sản phẩm:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pbImageProduct
+            // 
+            this.pbImageProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(102)))));
+            this.pbImageProduct.ImageRotate = 0F;
+            this.pbImageProduct.Location = new System.Drawing.Point(424, 55);
+            this.pbImageProduct.Name = "pbImageProduct";
+            this.pbImageProduct.Size = new System.Drawing.Size(233, 278);
+            this.pbImageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImageProduct.TabIndex = 2;
+            this.pbImageProduct.TabStop = false;
+            this.pbImageProduct.Click += new System.EventHandler(this.pbImageProduct_Click);
+            // 
             // timer1
             // 
             this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // guna2GradientButton1
             // 
@@ -568,18 +581,6 @@
             this.guna2GradientButton1.TabIndex = 4;
             this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
-            // 
-            // pbImageProduct
-            // 
-            this.pbImageProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(102)))));
-            this.pbImageProduct.ImageRotate = 0F;
-            this.pbImageProduct.Location = new System.Drawing.Point(424, 55);
-            this.pbImageProduct.Name = "pbImageProduct";
-            this.pbImageProduct.Size = new System.Drawing.Size(233, 278);
-            this.pbImageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImageProduct.TabIndex = 2;
-            this.pbImageProduct.TabStop = false;
-            this.pbImageProduct.Click += new System.EventHandler(this.pbImageProduct_Click);
             // 
             // showDetailOrder
             // 

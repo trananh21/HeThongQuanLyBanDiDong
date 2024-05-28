@@ -49,25 +49,27 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            iSPRepository repository = new SpRepository(connectionString); // truy 
+            iSPRepository repository = new SpRepository(connectionString);
             iCustomerReponsitory cusRepo = new customerRepository(connectionString);
-            iOrderRepository ordRepo =  new orderRepository(connectionString);
+            iOrderRepository ordRepo = new orderRepository(connectionString);
             iVoucherReponsitory vouRepo = new voucherRepository(connectionString);
-            if (AuthenticateUser(username, password))
+
+            if (AuthenticateUser(username, password, out string role))
             {
-                // Hiển thị form Dashboard nếu chưa hiển thị
+                // Display Dashboard form if not already open
                 if (Application.OpenForms.OfType<Dashboard>().Count() == 0)
                 {
-                    dboard = new Dashboard(username, repository, cusRepo, ordRepo, vouRepo);
+                    dboard = new Dashboard(username, role, repository, cusRepo, ordRepo, vouRepo);
                     dboard.HideChildForms();
                     dboard.Show();
-                } else
+                }
+                else
                 {
                     dboard = Application.OpenForms.OfType<Dashboard>().FirstOrDefault();
                     dboard?.HideChildForms();
                 }
 
-                // Ẩn form LoginForm
+                // Hide LoginForm
                 this.Hide();
             }
             else
@@ -79,36 +81,25 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             PerformLogin();
         }
-        private bool AuthenticateUser(string username, string password)
+        private bool AuthenticateUser(string username, string password, out string role)
         {
-            int result = 0;
-            try
+            role = string.Empty;
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                string query = "SELECT ChucVu FROM NhanVien WHERE Username = @Username AND Password = @Password";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password);
+
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
                 {
-                    try
-                    {
-                        string queryString = "SELECT COUNT(*) FROM login WHERE username = @Username AND password = @Password";
-                        SqlCommand command = new SqlCommand(queryString, connection);
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
-
-                        connection.Open();
-
-                        result = (int)command.ExecuteScalar();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Fix: " + ex.Message);
-                    }
-
+                    role = result.ToString();
+                    return true;
                 }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("connection: " + ex.Message);
-            }
-            return result > 0; // Trả về true nếu result > 0, ngược lại trả về false
+            return false;
         }
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)
@@ -164,6 +155,12 @@ namespace He_Thong_quan_ly_di_dong_dien_thoai
         {
             string batchFilePath = @"C:\Program Files (x86)\CellPhone App\CellPhone App\AppSellPhone\Data\CreateDatabase.bat";
             RunAsAdministrator(batchFilePath);
+        }
+
+        private void dsthunghiem_Click(object sender, EventArgs e)
+        {
+            ListAccount la = new ListAccount();
+            la.Show();
         }
     }
 }
